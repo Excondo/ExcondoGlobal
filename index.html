@@ -1,0 +1,2887 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excondo Global Logistics FZC — Base Oils & Lubricants</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  :root {
+    --black: #0a0a0a;
+    --dark: #1a1a1a;
+    --mid: #5a5a5a;
+    --light: #999999;
+    --border: #e8e6e2;
+    --bg: #ffffff;
+    --bg2: #f8f7f4;
+    --gold: #b8924a;
+    --gold-light: #f5eedd;
+    --gold-mid: rgba(184,146,74,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--black);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* RTL */
+  html[dir="rtl"] body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+  html[dir="rtl"] .nav-inner,
+  html[dir="rtl"] .hero-inner,
+  html[dir="rtl"] .section-header { text-align: right; }
+  html[dir="rtl"] .nav-links { flex-direction: row-reverse; }
+  html[dir="rtl"] .bullet-item { flex-direction: row-reverse; }
+  html[dir="rtl"] .about-grid { direction: rtl; }
+  html[dir="rtl"] .geo-grid { direction: rtl; }
+  html[dir="rtl"] .contact-details { direction: rtl; }
+
+  /* LANG BAR */
+  .lang-bar {
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 48px;
+    height: 36px;
+    gap: 4px;
+    background: var(--bg2);
+  }
+  .lang-btn {
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 2px;
+    transition: color 0.15s;
+    font-family: inherit;
+  }
+  .lang-btn:hover { color: var(--black); }
+  .lang-btn.active {
+    color: var(--gold);
+    font-weight: 700;
+  }
+  .lang-sep { color: var(--border); font-size: 11px; }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 1px 16px rgba(0,0,0,0.04);
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 48px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .logo-name {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--black);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .logo-tagline {
+    font-size: 9px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 3px;
+    font-weight: 500;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+  }
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mid);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--black); }
+  .nav-cta {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--bg) !important;
+    background: var(--black);
+    padding: 9px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .nav-cta:hover { background: var(--gold) !important; }
+
+  /* HERO */
+  .hero-bg {
+    background: #0a0a0a;
+    position: relative;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(184,146,74,0.5) 40%, rgba(184,146,74,0.5) 60%, transparent 100%);
+  }
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 48px;
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: rgba(184,146,74,0.9);
+    margin-bottom: 36px;
+  }
+  .hero h1 {
+    font-size: clamp(3.2rem, 7vw, 6.4rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -3px;
+    color: #ffffff;
+    max-width: 860px;
+    margin-bottom: 36px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.75;
+    max-width: 500px;
+    margin-bottom: 52px;
+    font-weight: 400;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .btn-dark {
+    background: var(--gold);
+    color: #0a0a0a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 15px 32px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .btn-dark:hover { background: #ffffff; color: #0a0a0a; }
+  .btn-ghost {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .btn-ghost:hover { color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.5); }
+
+  .hero-stats {
+    position: absolute;
+    right: 48px;
+    bottom: 100px;
+    display: flex;
+    gap: 52px;
+  }
+  .stat { text-align: left; }
+  .stat-n {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+  .stat-n span { color: var(--gold); }
+  .stat-l {
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  /* MARQUEE STRIP */
+  .strip {
+    background: var(--black);
+    overflow: hidden;
+    padding: 14px 0;
+    white-space: nowrap;
+  }
+  .strip-inner {
+    display: inline-flex;
+    animation: marquee 30s linear infinite;
+  }
+  .strip-item {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    padding: 0 40px;
+  }
+  .strip-item span { color: var(--gold); }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* SECTION BASE */
+  .wrap {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+  .section { padding: 100px 0; }
+  .section-alt { background: var(--bg2); }
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .section-h {
+    font-size: clamp(2rem, 4.2vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--black);
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+  .section-h em { font-style: normal; color: var(--gold); }
+  .section-p {
+    font-size: 0.975rem;
+    color: var(--mid);
+    line-height: 1.8;
+    max-width: 540px;
+    margin-bottom: 56px;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about-img {
+    position: relative;
+  }
+  .about-img img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    filter: grayscale(15%);
+  }
+  .about-text .section-p { margin-bottom: 32px; }
+  .bullets { display: flex; flex-direction: column; gap: 14px; }
+  .bullet-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    font-size: 0.9rem;
+    color: var(--dark);
+    line-height: 1.55;
+  }
+  .bdot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  /* PRODUCTS */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .product-card {
+    background: var(--bg);
+    padding: 52px 44px 44px;
+    transition: background 0.25s, border-top-color 0.25s;
+    position: relative;
+    border-top: 3px solid transparent;
+    overflow: hidden;
+  }
+  .product-card[data-catalog] { cursor: pointer; }
+  .product-card:hover {
+    background: var(--gold-light);
+    border-top-color: var(--gold);
+  }
+  .p-num {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: var(--gold-mid);
+    margin-bottom: 16px;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+  .p-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+  }
+  .p-desc {
+    font-size: 0.85rem;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .p-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .p-tag {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(184,146,74,0.08);
+    border: 1px solid rgba(184,146,74,0.2);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+  .p-arrow {
+    position: absolute;
+    bottom: 24px;
+    right: 28px;
+    font-size: 1.1rem;
+    color: rgba(184,146,74,0.3);
+    transition: color 0.2s, transform 0.2s;
+  }
+  .product-card[data-catalog]:hover .p-arrow {
+    color: var(--gold);
+    transform: translate(3px, -2px);
+  }
+
+  /* ADVANTAGES */
+  .adv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 80px;
+  }
+  .adv-item {
+    border-top: 2px solid var(--border);
+    padding-top: 28px;
+    transition: border-top-color 0.25s;
+  }
+  .adv-item:hover { border-top-color: var(--gold); }
+  .adv-num {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(184,146,74,0.5);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .adv-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .adv-desc { font-size: 0.875rem; color: var(--mid); line-height: 1.7; }
+
+  /* GEOGRAPHY */
+  .geo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .regions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 40px;
+  }
+  .region-cell {
+    background: var(--bg);
+    padding: 20px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    transition: background 0.15s;
+  }
+  .region-cell:hover { background: var(--gold-light); }
+  .rflag { font-size: 1.3rem; }
+  .rname { font-size: 0.875rem; font-weight: 600; color: var(--dark); }
+  .geo-img img { width: 100%; display: block; border-radius: 4px; }
+
+  /* CONTACT */
+  .contact-dark {
+    background: var(--black);
+    padding: 100px 0;
+  }
+  .contact-dark .eyebrow { color: rgba(184,146,74,0.8); }
+  .contact-dark .section-h { color: #ffffff; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .contact-details { display: flex; flex-direction: column; gap: 36px; }
+  .cd-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 6px;
+  }
+  .cd-val {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+  }
+  .cd-val a { color: var(--gold); text-decoration: none; }
+
+  .contact-form-wrap {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 40px;
+  }
+  .fg { margin-bottom: 18px; }
+  .fg label {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 7px;
+  }
+  .fg input, .fg textarea, .fg select {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    padding: 11px 14px;
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .fg input:focus, .fg textarea:focus, .fg select:focus {
+    border-color: var(--gold);
+  }
+  .fg textarea { height: 96px; resize: vertical; }
+  .fg select option { background: #1a1a1a; }
+  .form-btn {
+    width: 100%;
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 14px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    font-family: inherit;
+    margin-top: 6px;
+  }
+  .form-btn:hover { opacity: 0.85; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 36px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-left { font-size: 13px; font-weight: 700; color: var(--black); letter-spacing: 0.5px; }
+  .footer-right { font-size: 12px; color: var(--light); }
+
+  /* CATALOG */
+  .cat-tabs {
+    display: flex;
+    gap: 0;
+    margin: 48px 0 40px;
+    border-bottom: 2px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .cat-tab {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    padding: 12px 28px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--light);
+    cursor: pointer;
+    transition: color 0.15s;
+    font-family: inherit;
+  }
+  .cat-tab:hover { color: var(--black); }
+  .cat-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+  .cat-panel { display: none; }
+  .cat-panel.active { display: block; }
+  .cat-group { margin-bottom: 56px; }
+  .cat-group-h {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .tbl-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .spec-tbl {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    min-width: 700px;
+  }
+  .spec-tbl th {
+    text-align: left;
+    padding: 9px 13px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--light);
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .spec-tbl td {
+    padding: 9px 13px;
+    border-bottom: 1px solid var(--border);
+    color: var(--dark);
+    line-height: 1.5;
+    vertical-align: top;
+  }
+  .spec-tbl tr:last-child td { border-bottom: none; }
+  .spec-tbl tr:hover td { background: var(--gold-light); }
+  .prod-name { font-weight: 700; color: var(--black); white-space: nowrap; }
+  .badge-synth, .badge-fi {
+    display: inline-block;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-left: 5px;
+    white-space: nowrap;
+  }
+  .badge-synth { color: var(--gold); background: var(--gold-light); border: 1px solid rgba(184,146,74,0.25); }
+  .badge-fi { color: #b04020; background: #fdf1ed; border: 1px solid rgba(176,64,32,0.2); }
+
+  /* RESPONSIVE */
+  @media (max-width: 860px) {
+    .lang-bar, nav .nav-inner { padding: 0 24px; }
+    .hero { padding: 60px 24px; min-height: auto; }
+    .hero-stats { position: static; margin-top: 60px; }
+    .wrap { padding: 0 24px; }
+    .about-grid, .geo-grid, .contact-grid { grid-template-columns: 1fr; }
+    .products-grid { grid-template-columns: 1fr 1fr; }
+    .adv-grid { grid-template-columns: 1fr; gap: 32px; }
+    .nav-links { display: none; }
+    footer { padding: 24px; }
+  }
+  @media (max-width: 520px) {
+    .products-grid { grid-template-columns: 1fr; }
+    .hero h1 { letter-spacing: -1px; }
+  }
+
+  /* COST COMPARISON */
+  .cost-compare {
+    margin-top: 64px;
+    background: #0a0a0a;
+    border-radius: 6px;
+    padding: 52px 56px;
+    color: #fff;
+  }
+  .cost-compare-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    margin-bottom: 44px;
+  }
+  .cc-grid {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+  .cc-col-head {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .cc-diy .cc-col-head { color: rgba(255,255,255,0.3); }
+  .cc-excondo .cc-col-head { color: var(--gold); }
+  .cc-item {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.83rem;
+  }
+  .cc-diy .cc-item { color: rgba(255,255,255,0.38); }
+  .cc-excondo .cc-item { color: rgba(255,255,255,0.78); }
+  .cc-icon { flex-shrink: 0; color: rgba(255,255,255,0.15); font-size: 0.7rem; }
+  .cc-check { flex-shrink: 0; color: var(--gold); font-weight: 700; font-size: 0.85rem; }
+  .cc-total {
+    margin-top: 18px;
+    padding: 11px 14px;
+    border-radius: 3px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .cc-total-high { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.28); }
+  .cc-total-low { background: rgba(184,146,74,0.14); color: var(--gold); border: 1px solid rgba(184,146,74,0.28); }
+  .cc-vs {
+    text-align: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.12);
+    text-transform: uppercase;
+  }
+  @media (max-width: 700px) {
+    .cc-grid { grid-template-columns: 1fr; }
+    .cc-vs { display: none; }
+    .cost-compare { padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('pt')" id="btn-pt">PT</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('zh')" id="btn-zh">中文</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('hi')" id="btn-hi">हिन्दी</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('fr')" id="btn-fr">FR</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('ar')" id="btn-ar">عربي</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('he')" id="btn-he">עב׳</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('el')" id="btn-el">ΕΛ</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('es')" id="btn-es">ES</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('tr')" id="btn-tr">TR</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('id')" id="btn-id">ID</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('th')" id="btn-th">ไทย</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('af')" id="btn-af">AF</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('sw')" id="btn-sw">SW</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('ha')" id="btn-ha">HA</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" onclick="setLang('arc')" id="btn-arc">ܐܪܡ</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-name">Excondo</span>
+      <span class="logo-tagline">Global Logistics FZC · UAE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#products" data-i18n="nav_products">Products</a></li>
+      <li><a href="#catalog" data-i18n="nav_catalog">Catalog</a></li>
+      <li><a href="#advantages" data-i18n="nav_adv">Advantages</a></li>
+      <li><a href="#geography" data-i18n="nav_geo">Geography</a></li>
+      <li><a href="#contact" class="nav-cta" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-bg" id="home">
+<section class="hero">
+  <div class="hero-label" data-i18n="hero_label">Base Oils · PAO · Finished Lubricants</div>
+  <h1 data-i18n="hero_h1">Global supply.<br><em>Fueling forward.</em></h1>
+  <p class="hero-sub" data-i18n="hero_sub">Excondo Global Logistics FZC delivers base oils, PAO and lubricants in bulk — straight from refinery to your facility. UAE-based. 7+ years. 50+ markets.</p>
+  <div class="hero-actions">
+    <a href="#products" class="btn-dark" data-i18n="hero_btn1">View Products</a>
+    <a href="#contact" class="btn-ghost" data-i18n="hero_btn2">Request a quote →</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-n">7<span>+</span></div>
+      <div class="stat-l" data-i18n="s1">Years in market</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">50<span>+</span></div>
+      <div class="stat-l" data-i18n="s2">Markets supplied</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">I<span>–</span>IV</div>
+      <div class="stat-l" data-i18n="s3">API groups</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- MARQUEE -->
+<div class="strip">
+  <div class="strip-inner">
+    <span class="strip-item">Base Oils <span>·</span></span>
+    <span class="strip-item">PAO Group IV <span>·</span></span>
+    <span class="strip-item">Finished Lubricants <span>·</span></span>
+    <span class="strip-item">Bulk Container <span>·</span></span>
+    <span class="strip-item">Direct from Plant <span>·</span></span>
+    <span class="strip-item">UAE — FZC <span>·</span></span>
+    <span class="strip-item">7+ Years <span>·</span></span>
+    <span class="strip-item">50+ Markets <span>·</span></span>
+    <span class="strip-item">Base Oils <span>·</span></span>
+    <span class="strip-item">PAO Group IV <span>·</span></span>
+    <span class="strip-item">Finished Lubricants <span>·</span></span>
+    <span class="strip-item">Bulk Container <span>·</span></span>
+    <span class="strip-item">Direct from Plant <span>·</span></span>
+    <span class="strip-item">UAE — FZC <span>·</span></span>
+    <span class="strip-item">7+ Years <span>·</span></span>
+    <span class="strip-item">50+ Markets <span>·</span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="img/refinery_pin.jpg" alt="Oil refinery">
+      </div>
+      <div class="about-text">
+        <div class="eyebrow" data-i18n="about_tag">About</div>
+        <h2 class="section-h" data-i18n="about_h">Your trustworthy partner<br>in <em>oil products trade</em></h2>
+        <p class="section-p" data-i18n="about_p1">Excondo Global Logistics FZC is registered in the UAE and has over 7 years of experience in international trading of base oils — Group I through Group IV (PAO) — and finished lubricants.</p>
+        <p class="section-p" data-i18n="about_p2">We specialise in containerised bulk shipments — delivering product directly to the end user, cutting intermediary costs and preserving quality in transit.</p>
+        <div class="bullets">
+          <div class="bullet-item"><span class="bdot"></span><span data-i18n="b1">All products carry Safety Data Sheets and quality certificates</span></div>
+          <div class="bullet-item"><span class="bdot"></span><span data-i18n="b2">Flexible lots — from one 20ft container to full vessel</span></div>
+          <div class="bullet-item"><span class="bdot"></span><span data-i18n="b3">Multi-currency payments and financing options available</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="section section-alt" id="advantages">
+  <div class="wrap">
+    <div class="eyebrow" data-i18n="adv_tag">Why Excondo</div>
+    <h2 class="section-h" data-i18n="adv_h">The way we<br><em>work</em></h2>
+    <p class="section-p" data-i18n="adv_p">Logistics expertise, financial flexibility, and direct refinery relationships — aligned to deliver value to your business.</p>
+    <div class="adv-grid">
+
+      <div class="adv-item">
+        <div class="adv-num">01</div>
+        <div class="adv-title" data-i18n="a1t">Direct from Refinery</div>
+        <div class="adv-desc" data-i18n="a1d">Containerised shipments from refinery gate to your warehouse. No transshipment, no quality loss, no hidden margins.</div>
+      </div>
+
+      <div class="adv-item">
+        <div class="adv-num">02</div>
+        <div class="adv-title" data-i18n="a2t">Flexible Batch Sizes</div>
+        <div class="adv-desc" data-i18n="a2d">Order regularly in bulk. Mitigate price risk and avoid demurrage exposure.</div>
+      </div>
+
+      <div class="adv-item">
+        <div class="adv-num">03</div>
+        <div class="adv-title" data-i18n="a3t">Financial Solutions</div>
+        <div class="adv-desc" data-i18n="a3d">Multiple currencies accepted. Deferred payment and trade finance instruments available for qualified buyers.</div>
+      </div>
+
+      <div class="adv-item">
+        <div class="adv-num">04</div>
+        <div class="adv-title" data-i18n="a4t">Complete Documentation</div>
+        <div class="adv-desc" data-i18n="a4d">Every shipment includes SDS, Certificate of Analysis, and country-of-origin documentation for seamless customs clearance.</div>
+      </div>
+
+      <div class="adv-item">
+        <div class="adv-num">05</div>
+        <div class="adv-title" data-i18n="a7t">Quality Preserved — Direct from Plant</div>
+        <div class="adv-desc" data-i18n="a7d">Finished lubricants ship direct from the manufacturing facility. No intermediate storage, no blending variation — the product you receive matches exactly what was certified.</div>
+      </div>
+
+      <div class="adv-item">
+        <div class="adv-num">06</div>
+        <div class="adv-title" data-i18n="a8t">Better Economics than Blending In-House</div>
+        <div class="adv-desc" data-i18n="a8d">On a volatile commodity market, buying ready-made lubricants from us can be cheaper than assembling the product yourself — eliminating base oil price swings, additives procurement, blending costs, and QC overhead. Just pack and sell.</div>
+      </div>
+
+      <div class="adv-item">
+        <div class="adv-num">07</div>
+        <div class="adv-title" data-i18n="a6t">Long-Term Partnership</div>
+        <div class="adv-desc" data-i18n="a6d">7+ years building relationships with blenders, traders and distributors across 5 continents. We think in decades.</div>
+      </div>
+
+    </div>
+
+    <!-- Cost comparison visualization -->
+    <div class="cost-compare">
+      <div class="cost-compare-title" data-i18n="cc_title">Finished Lubricants — Make vs. Buy</div>
+      <div class="cc-grid">
+        <div class="cc-col cc-diy">
+          <div class="cc-col-head" data-i18n="cc_diy_h">Blend In-House</div>
+          <div class="cc-items">
+            <div class="cc-item"><span class="cc-icon">—</span><span data-i18n="cc_i1">Base oil — price volatile on open market</span></div>
+            <div class="cc-item"><span class="cc-icon">—</span><span data-i18n="cc_i2">Additives package</span></div>
+            <div class="cc-item"><span class="cc-icon">—</span><span data-i18n="cc_i3">Blending, filtration &amp; QC costs</span></div>
+            <div class="cc-item"><span class="cc-icon">—</span><span data-i18n="cc_i4">Inventory holding &amp; logistics</span></div>
+            <div class="cc-item"><span class="cc-icon">—</span><span data-i18n="cc_i5">Quality risk, rework, off-spec loss</span></div>
+          </div>
+          <div class="cc-total cc-total-high" data-i18n="cc_total_diy">Total: high &amp; unpredictable</div>
+        </div>
+        <div class="cc-vs">VS</div>
+        <div class="cc-col cc-excondo">
+          <div class="cc-col-head" data-i18n="cc_exc_h">Buy Finished from Excondo</div>
+          <div class="cc-items">
+            <div class="cc-item"><span class="cc-check">✓</span><span data-i18n="cc_e1">One transparent, market-competitive price</span></div>
+            <div class="cc-item"><span class="cc-check">✓</span><span data-i18n="cc_e2">Certified quality — direct from manufacturing plant</span></div>
+            <div class="cc-item"><span class="cc-check">✓</span><span data-i18n="cc_e3">No raw-material price exposure</span></div>
+            <div class="cc-item"><span class="cc-check">✓</span><span data-i18n="cc_e4">Pack &amp; sell immediately — zero blending overhead</span></div>
+            <div class="cc-item"><span class="cc-check">✓</span><span data-i18n="cc_e5">On volatile markets, often cheaper than blending</span></div>
+          </div>
+          <div class="cc-total cc-total-low" data-i18n="cc_total_exc">Total: competitive &amp; predictable</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+  <div class="wrap">
+    <div class="eyebrow" data-i18n="prod_tag">Products</div>
+    <h2 class="section-h" data-i18n="prod_h">What we <em>supply</em></h2>
+    <p class="section-p" data-i18n="prod_p">Full range of base oils across all API groups, finished lubricants and chemical specialties — in bulk containerised lots.</p>
+    <div class="products-grid">
+
+      <div class="product-card" data-catalog="baseoils">
+        <div class="p-num">01</div>
+        <div class="p-title" data-i18n="p1t">Mineral Base Oils</div>
+        <div class="p-desc" data-i18n="p1d">Solvent-refined and hydroprocessed base stocks for automotive and industrial lubricant blending.</div>
+        <div class="p-tags"><span class="p-tag">Group I</span><span class="p-tag">Group II</span><span class="p-tag">Group III</span></div>
+        <div class="p-arrow">↗</div>
+      </div>
+
+      <div class="product-card" data-catalog="pao">
+        <div class="p-num">02</div>
+        <div class="p-title" data-i18n="p2t">PAO — Synthetic Base Oil</div>
+        <div class="p-desc" data-i18n="p2d">Polyalphaolefins for extreme-temperature applications. Low volatility, extended drain intervals, superior performance.</div>
+        <div class="p-tags"><span class="p-tag">Group IV</span><span class="p-tag">PAO 2 · 4 · 6 · 8 · 12</span></div>
+        <div class="p-arrow">↗</div>
+      </div>
+
+      <div class="product-card" data-catalog="transport">
+        <div class="p-num">03</div>
+        <div class="p-title" data-i18n="p3t">Finished Lubricants</div>
+        <div class="p-desc" data-i18n="p3d">Delivered direct from the manufacturing plant — no intermediary storage, no quality drift. Bulk supply in IBCs and flexitanks lets you bottle, blend and private-label under your own brand, expanding output without building new capacity.</div>
+        <div class="p-arrow">↗</div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="section" id="catalog">
+  <div class="wrap">
+    <div class="eyebrow" data-i18n="cat_tag">Catalog</div>
+    <h2 class="section-h" data-i18n="cat_h">Technical <em>specifications</em></h2>
+    <p class="section-p" data-i18n="cat_p">Complete finished lubricant range with full specifications — diesel engine oils, passenger car oils, hydraulics, transmission fluids, industrial and mining products. Physico-chemical values are typical (ASTM D445 unless noted).</p>
+
+    <div class="cat-tabs">
+      <button class="cat-tab active" data-panel="transport" data-i18n="cat_t1">Heavy-Duty</button>
+      <button class="cat-tab" data-panel="passenger" data-i18n="cat_t2">Passenger Car</button>
+      <button class="cat-tab" data-panel="industrial" data-i18n="cat_t3">Industrial</button>
+      <button class="cat-tab" data-panel="mining" data-i18n="cat_t4">Mining</button>
+      <button class="cat-tab" data-panel="pao" data-i18n="cat_t5">PAO</button>
+      <button class="cat-tab" data-panel="baseoils" data-i18n="cat_t6">Base Oils</button>
+    </div>
+
+    <!-- HEAVY-DUTY TRANSPORT -->
+    <div class="cat-panel active" id="panel-transport">
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_diesel">Diesel Engine Oils</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th data-i18n="th_prod">Product</th><th data-i18n="th_sae">SAE</th>
+            <th data-i18n="th_spec">API / ACEA</th><th data-i18n="th_oem">Meet Requirements</th>
+            <th>ν 40°C <small>mm²/s</small></th><th>ν 100°C <small>mm²/s</small></th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Diesel Ultra CS</td><td>10W-40</td><td>API CK-4, SN; ACEA E7, E9</td><td>Allison TES-439 · Cat ECF-2 · Cat ECF-3 · Cummins CES 20086/20081 · DDC 93K222 · Deutz DQC III-18 LA · JASO DH-2 · MACK EOS-4.5 · MAN M3575/M3775 · MB 228.31 · MTU Cat.2.1 · New Holland CNH MAT 3571 · Renault RLD-3 · Volvo VDS-4.5</td><td>105</td><td>15.25</td></tr>
+            <tr><td class="prod-name">Diesel Ultra LA</td><td>10W-40</td><td>API CI-4; ACEA E6, E7, E9</td><td>Cummins CES 20076/77 · Deutz DQC IV-18 LA · JASO DH-2 · MACK EO-N · MAN M3271/M3477 · MB 228.51 · MTU Cat.3.1 · Renault RLD-2 · Volvo VDS-3</td><td>95.5</td><td>14.31</td></tr>
+            <tr><td class="prod-name">Diesel Ultra Plus</td><td>10W-40</td><td>API CI-4; ACEA E4, E7</td><td>Cummins CES 20078 · DDC 93K215 · Global DHD-1 · JASO DH-1 · MACK EO-N · MAN M3277 · MB 228.5 · MTU Cat.3 · Renault RLD-2 · Volvo VDS-3 · ZF TE-ML 03A/05K/07D/21K</td><td>99.5</td><td>15.04</td></tr>
+            <tr><td class="prod-name">Diesel Ultra</td><td>5W-30</td><td>API CI-4; ACEA E4, E7</td><td>Cummins CES 20078 · Deutz DQC IV-18 · Global DHD-1 · Iveco 18-1804 TFE · JASO DH-1 · MACK EO-N · MAN M3277 · MB 228.5 · MTU Cat.3 · Renault RLD-2 · Volvo VDS-3 — formula meets Scania LDF-3</td><td>75.2</td><td>12.32</td></tr>
+            <tr><td class="prod-name">Diesel Ultra</td><td>10W-40</td><td>API CI-4; ACEA E4, E7</td><td>Cummins CES 20078 · Deutz DQC IV-18 · Global DHD-1 · Iveco 18-1804 TFE · JASO DH-1 · MACK EO-N · MAN M3277 · MB 228.5 · MTU Cat.3 · Renault RLD-2 · Volvo VDS-3 — formula meets Scania LDF-3</td><td>101</td><td>14.93</td></tr>
+            <tr><td class="prod-name">Diesel Ultra</td><td>15W-40</td><td>API CI-4; ACEA E4, E7</td><td>Cummins CES 20078 · DDC 93K215 · Global DHD-1 · JASO DH-1 · MACK EO-N · MTU Cat.3 · Renault RLD-2 · Volvo VDS-3</td><td>111.5</td><td>15.18</td></tr>
+            <tr><td class="prod-name">Diesel Premium</td><td>5W-40</td><td>API CI-4/SL; ACEA E7</td><td>Cat ECF-1a/ECF-2 · Cummins CES 20076/77/78 · Deutz DQC III-18 · Global DHD-1 · JASO DH-1 · MACK EO-M Plus · MACK EO-N · MAN M3275-1 · MB 228.3 · MTU Cat.2 · Renault RLD/RLD-2 · Volvo VDS-3</td><td>87.9</td><td>14.5</td></tr>
+            <tr><td class="prod-name">Diesel Premium</td><td>10W-30</td><td>API CI-4/SL; ACEA E7</td><td>Cat ECF-1a/ECF-2 · Cummins CES 20076/77/78 · Deutz DQC III-18 · Global DHD-1 · JASO DH-1 · MACK EO-M Plus · MACK EO-N · MAN M3275-1 · MB 228.3 · MTU Cat.2 · Renault RLD/RLD-2 · Volvo VDS-3</td><td>73.2</td><td>11.5</td></tr>
+            <tr><td class="prod-name">Diesel Premium</td><td>10W-40</td><td>API CI-4/SL; ACEA E7</td><td>Cat ECF-1a/ECF-2 · Cummins CES 20076/77/78 · Deutz DQC III-18 · Global DHD-1 · JASO DH-1 · MACK EO-M Plus · MACK EO-N · MAN M3275-1 · MB 228.3 · MTU Cat.2 · Renault RLD/RLD-2 · Volvo VDS-3</td><td>100.1</td><td>14.8</td></tr>
+            <tr><td class="prod-name">Diesel Premium</td><td>15W-40</td><td>API CI-4/SL; ACEA E7</td><td>Cat ECF-1a/ECF-2 · Cummins CES 20076/77/78 · Deutz DQC III-18 · Global DHD-1 · JASO DH-1 · MACK EO-M Plus · MACK EO-N · MAN M3275-1 · MB 228.3 · MTU Cat.2 · Renault RLD/RLD-2 · Volvo VDS-3</td><td>111.8</td><td>14.9</td></tr>
+            <tr><td class="prod-name">Diesel Prioritet</td><td>10W-30, 10W-40, 15W-40, 20W-50</td><td>API CH-4/SJ</td><td>Cummins CES 20076 · MAN M3275-1 · MTU Cat.2</td><td>71.8</td><td>11.3</td></tr>
+            <tr><td class="prod-name">Diesel Extra</td><td>10W-40, 15W-40, 20W-50, 40, 50</td><td>API CF-4/SG</td><td>—</td><td>100–261</td><td>14.9</td></tr>
+            <tr><td class="prod-name">Turbo Universal</td><td>15W-40, 20W-50</td><td>API CD</td><td>—</td><td>109–172</td><td>—</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_trans">Transmission &amp; Drive-Train Oils</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>SAE</th><th>API</th><th>Meet Requirements</th>
+            <th>ν 100°C <small>mm²/s</small></th><th>Flash <small>°C</small></th><th>Pour <small>°C</small></th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">GL-4/GL-5 <span class="badge-synth">Synthetic</span></td><td>75W-90</td><td>GL-4, GL-5, MT-1</td><td>MAN 341 E2/E3/Z2; MAN 342 M3; MIL-PRF-2105E; SAE J2360; Scania STO 1:0/1:1G; ZF TE-ML 02B/05A/12L/12M/12N/16B/17B/19C/21A</td><td>17.1</td><td>173</td><td>−42</td></tr>
+            <tr><td class="prod-name">GL-5</td><td>75W-90</td><td>GL-5</td><td>ZF TE-ML 05A/16C/17B/19B/21A</td><td>15.8</td><td>200</td><td>−42</td></tr>
+            <tr><td class="prod-name">GL-5</td><td>80W-90</td><td>GL-5</td><td>MAN 342 M2; MIL-L-2105D; ZF TE-ML 05A/07A/08/12E/16B/17B/19B/21A</td><td>14.3</td><td>230</td><td>−32</td></tr>
+            <tr><td class="prod-name">GL-5</td><td>85W-140</td><td>GL-5</td><td>DAF Axle; Iveco Axle; Scania STO 1:0; Volvo 97310/97321; ZF TE-ML 05A/07A/08/12E/16C/16D/21A</td><td>25.2</td><td>250</td><td>−19</td></tr>
+            <tr><td class="prod-name">Super T-3</td><td>SAE 85W-90</td><td>GL-5</td><td>MAN 342 M1; MB 235.0; ZF TE-ML 16C/17B/19B/21A</td><td>17.3</td><td>218</td><td>−25</td></tr>
+            <tr><td class="prod-name">GL-4</td><td>75W-85, 75W-90</td><td>GL-4</td><td>—</td><td>15.36</td><td>218</td><td>−42</td></tr>
+            <tr><td class="prod-name">GL-4</td><td>80W-85, 80W-90</td><td>GL-4</td><td>ZF TE-ML 08/17A</td><td>12.5–14.5</td><td>224–232</td><td>−30</td></tr>
+            <tr><td class="prod-name">ATF DX III</td><td>—</td><td>Dexron IIIH</td><td>Allison C-4; Cat TO-2; Ford MERCON; MAN 339 V1/Z1; MB 236.1–236.7; ZF TE-ML 02F/03D/04D/05L/09/11B/14A/17C/20B/21L; Volvo CE 97340/97341</td><td>7.24</td><td>213</td><td>−48</td></tr>
+            <tr><td class="prod-name">ATF DX II</td><td>—</td><td>Dexron IID</td><td>GM DEXRON IID</td><td>7.3</td><td>220</td><td>−44</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_hyd_mob">Hydraulic Oils — Mobile Equipment</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>ISO VG</th><th>Standard</th><th>Meet Requirements</th>
+            <th>VI</th><th>Flash <small>°C</small></th><th>Pour <small>°C</small></th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Hydraulic Nord-32 <span class="badge-synth">Synthetic · PAO+GV</span></td><td>32</td><td>DIN 51524-3</td><td>—</td><td>302</td><td>112</td><td>−56</td></tr>
+            <tr><td class="prod-name">Hydraulic HVZF <span class="badge-synth">Synthetic · Zn-free</span></td><td>22, 32, 46, 68</td><td>DIN 51524-3; ISO 11158 HV</td><td>Bosch Rexroth RDE 90235; Denison HF-0,1,2; Eaton E-FDGN-TB002-E; Fives P-68/P-69/P-70</td><td>164–183</td><td>210–254</td><td>−39 to −54</td></tr>
+            <tr><td class="prod-name">Hydraulic All Seasons <span class="badge-synth">Synthetic</span></td><td>22</td><td>DIN 51524-3; ISO 6743-4 HV</td><td>PSM-HYDRAULICS</td><td>222</td><td>162</td><td>−60</td></tr>
+            <tr><td class="prod-name">Hydraulic HVLP</td><td>10, 15, 22, 32, 46, 68</td><td>DIN 51524-3; ISO 11158 HV</td><td>ABB Azipod; Bosch Rexroth RDE 90245; Beltramelli; Denison HF-0,1,2; Eaton Vickers 35VQ25; Fives P68/P69/P70</td><td>141–170</td><td>160–230</td><td>−38 to −60</td></tr>
+            <tr><td class="prod-name">Hydraulic HLP</td><td>32, 46, 68, 100</td><td>DIN 51524-2</td><td>—</td><td>94–101</td><td>221–242</td><td>−30 to −34</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_grease">Greases</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>NLGI</th><th>DIN 51502</th><th>Temp. Range °C</th><th>Thickener</th><th>Application</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Grease L EP 00, 0, 1, 2, 3</td><td>00–3</td><td>KP 0-3 K-30</td><td>−30 / +120 (peak +150)</td><td>Lithium soap</td><td>General bearings, medium/high loads; centralised lube systems</td></tr>
+            <tr><td class="prod-name">Grease L Moly EP 2</td><td>2</td><td>KPF 2 K-30</td><td>−30 / +120 (peak +150)</td><td>Li soap + MoS₂</td><td>High-load joints, chassis, extreme loads</td></tr>
+            <tr><td class="prod-name">Grease LTS 1, 2</td><td>1/2</td><td>KP 2 K-40</td><td>−40 / +130 (peak +150)</td><td>Li-Ca soap</td><td>Truck friction nodes; water &amp; dust resistance</td></tr>
+            <tr><td class="prod-name">Grease LTS Moly EP 2</td><td>2</td><td>KPF 2 K-30</td><td>−30 / +120 (peak +150)</td><td>Li-Ca soap + MoS₂</td><td>Extreme-load; saddle couplings; works in water</td></tr>
+            <tr><td class="prod-name">Grease Synth LX EP 2 <span class="badge-synth">Synthetic</span></td><td>2</td><td>KP 2 K-40</td><td>−40 / +130 (peak +150)</td><td>Li-complex soap</td><td>High-speed, high-load bearings</td></tr>
+            <tr><td class="prod-name">Grease HighSpeed EP 3</td><td>3</td><td>KP 3 N-40</td><td>−40 / +140</td><td>Li-complex soap</td><td>High-speed precision bearings</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+    </div><!-- /transport -->
+
+    <!-- PASSENGER CAR -->
+    <div class="cat-panel" id="panel-passenger">
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_pc_eu">Fully Synthetic — European Standards</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>SAE</th><th>API / ACEA</th><th>Meet Requirements</th>
+            <th>ν 40°C</th><th>ν 100°C</th><th>VI</th><th>TBN</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Premium C3</td><td>5W-30</td><td>API SP; ACEA C2, C3</td><td>BMW Longlife-04 · dexos2 · Iveco 18-1811 SC1 · MB 229.51/229.52 · Opel-Vauxhall OV0401547 · VW 505 00/505 01 · Renault RN17</td><td>71.7</td><td>12.1</td><td>167</td><td>8.4</td></tr>
+            <tr><td class="prod-name">Premium C3</td><td>5W-40</td><td>API SP; ACEA C3</td><td>dexos2 · Fiat 9.55535-S2 · Ford WSS-M2C917-A · MB 229.31 · VW 505 00/505 01</td><td>88.8</td><td>14.7</td><td>174</td><td>10.8</td></tr>
+            <tr><td class="prod-name">F Synth C2/C3</td><td>5W-30</td><td>API SP/SN; ACEA C2, C3</td><td>BMW Longlife-04 · Chrysler MS-11106 · dexos2 · Fiat 9.55535-S1/S3 · Iveco 18-1811 SC1 · MB 229.31/229.51/229.52 · Opel-Vauxhall OV0401547 · PSA B71 2290 · VW 505 00/505 01</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="prod-name">F Synth W</td><td>0W-30</td><td>ACEA C3</td><td>Porsche C30 · VW 504 00 · VW 507 00</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="prod-name">Premium P</td><td>5W-40</td><td>API SP/SN/CF; ACEA A3/B3, A3/B4</td><td>BMW Longlife-01 · MB 226.5/229.3/229.5 · Renault RN700/710 · VW 502 00/505 00 — LSPI protection</td><td>87.4</td><td>14.4</td><td>172</td><td>12.3</td></tr>
+            <tr><td class="prod-name">Premium N</td><td>5W-40</td><td>API SN/CF; ACEA A3/B3, A3/B4</td><td>BMW Longlife-01 · GM LL-B-025 · MB 226.5/229.3 · Porsche A40 · PSA B71 2296 · Renault RN700/710 · VW 505 00/502 00</td><td>89.1</td><td>14.8</td><td>173</td><td>11.6</td></tr>
+            <tr><td class="prod-name">Premium N</td><td>10W-40</td><td>API SN; ACEA A3/B3, A3/B4</td><td>GM LL-A/B-025 · MB 229.3 · PSA B71 2230 · Renault RN700/710 · VW 501 01/502 00/505 00</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="prod-name">F Synth</td><td>0W-40</td><td>API SP/SN/CF; ACEA A3/B3, A3/B4</td><td>BMW Longlife-01 · MB 226.5/229.3/229.5 · Porsche A40 · Renault RN700/710 · VW 502 00/505 00</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="prod-name">F Synth</td><td>0W-30</td><td>API SP/SN/CF; ACEA A3/B3, A3/B4</td><td>BMW Longlife-01 · MB 226.5/229.3/229.5 · PSA B71 2293/2296 · Renault RN700/710 · VW 502 00/505 00</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="prod-name">F Synth</td><td>5W-30</td><td>API SP/SN/CF; ACEA A3/B3, A3/B4</td><td>BMW Longlife-01 · GM LL-A/B-025 · MB 226.5/229.3/229.5 · Renault RN700/710 · VW 502 00/505 00</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="prod-name">F Synth</td><td>5W-40</td><td>API SN/CF; ACEA A3/B3, A3/B4</td><td>BMW Longlife-01 · GM LL-B-025 · MB 229.5 · Porsche A40 · PSA B71 2296 · Renault RN700/710 · VW 502 00/505 00</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="prod-name">F Synth EC</td><td>0W-30</td><td>API SP/SN/CF; ACEA A5/B5, A1/B1</td><td>Renault RN700 · Volvo 95200377</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="prod-name">F Synth EC</td><td>5W-30</td><td>API SP/SN/CF; ACEA A7/B7, A5/B5, A1/B1</td><td>Fiat 9.55535-G1 · Ford WSS-M2C913-A/B/C/D · JLR STJLR.03.5003 · Renault RN700</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="prod-name">Premium A5B5</td><td>5W-30</td><td>API SL/CF; ACEA A1/B1, A5/B5</td><td>Ford WSS-M2C913-B/C/D · Renault RN700 — fuel economy</td><td>—</td><td>10.3</td><td>157</td><td>10.7</td></tr>
+            <tr><td class="prod-name">Premium A3</td><td>5W-30</td><td>API SL/CF; ACEA A3/B3, A3/B4</td><td>BMW Longlife-01 · MB 229.3 · Renault RN700/710 · VW 505 00/502 00</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_pc_asia">Fully Synthetic — Asian &amp; American Vehicles</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>SAE</th><th>API / ILSAC</th><th>Meet Requirements</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Premium JK</td><td>5W-30</td><td>API SP/SN; ILSAC GF-6A, GF-5</td><td>Chrysler MS-6395 · Fiat 9.55535-CR1 · Ford WSS-M2C-929-A — Toyota, Lexus, Honda, Mazda, Subaru, Kia, Hyundai, Mitsubishi, Suzuki</td></tr>
+            <tr><td class="prod-name">Premium JK</td><td>0W-20, 5W-20</td><td>API SP/SN; ILSAC GF-6A, GF-5</td><td>Chrysler MS-6395 · Fiat 9.55535-CR1 — fuel-economy Asian &amp; American engines</td></tr>
+            <tr><td class="prod-name">Premium JK</td><td>0W-16</td><td>API SP; ILSAC GF-6B</td><td>Ultra-low viscosity; latest fuel-economy engines</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_pc_gen">Semi-Synthetic &amp; Mineral Motor Oils</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>SAE</th><th>API</th><th>Notes</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Premium L</td><td>5W-30, 5W-40, 10W-30, 10W-40 (synth); 15W-40, 20W-50 (mineral)</td><td>API SL/CF</td><td>Universal; petrol &amp; diesel engines</td></tr>
+            <tr><td class="prod-name">Super</td><td>5W-30, 5W-40, 10W-30, 10W-40, 15W-40</td><td>API SG/CD</td><td>High-mileage engine protection</td></tr>
+            <tr><td class="prod-name">Standard</td><td>10W-40, 15W-40, 20W-50</td><td>API SF/CC</td><td>Mineral; older naturally-aspirated engines</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_pc_tran">Transmission Fluids — Passenger Car</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>Grade</th><th>Specification</th><th>Meet Requirements</th>
+            <th>ν 100°C</th><th>Pour <small>°C</small></th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">ATF DX III</td><td>—</td><td>Dexron IIIH</td><td>Allison C-4; Cat TO-2; Ford MERCON; MAN 339 V1/Z1; MB 236.1–236.7; ZF TE-ML 02F/03D/04D/05L/09/11B/14A/17C/20B/21L; Volvo CE 97340/97341</td><td>7.6</td><td>−50</td></tr>
+            <tr><td class="prod-name">ATF DX II</td><td>—</td><td>Dexron IID</td><td>GM DEXRON IID</td><td>7.1</td><td>−40</td></tr>
+            <tr><td class="prod-name">GL-4/GL-5 <span class="badge-synth">Synthetic</span></td><td>75W-90</td><td>GL-4, GL-5, MT-1</td><td>MAN 341 E2/E3/Z2; MAN 342 M3; ZF TE-ML 02B/05A/12L/12M/12N/16B/17B/19C/21A; MIL-PRF-2105E; SAE J2360</td><td>17.3</td><td>−48</td></tr>
+            <tr><td class="prod-name">GL-5</td><td>75W-90, 80W-90, 85W-140, 90, 140</td><td>GL-5</td><td>MAN 342 M1/M2; MB 235.0; ZF TE-ML 05A/07A/08</td><td>14.6–28.0</td><td>−43 to −15</td></tr>
+            <tr><td class="prod-name">GL-4</td><td>75W-80, 75W-85, 75W-90, 80W-85, 80W-90, 90, 140</td><td>GL-4</td><td>ZF TE-ML 08/17A; BAIC (75W-85)</td><td>12.4–25.9</td><td>−44 to −14</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+    </div><!-- /passenger -->
+
+    <!-- INDUSTRIAL -->
+    <div class="cat-panel" id="panel-industrial">
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_ind_hyd">Industrial Hydraulic Oils</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>ISO VG</th><th>Standard</th><th>Meet Requirements</th>
+            <th>ν 40°C <small>mm²/s</small></th><th>VI</th><th>Flash <small>°C</small></th><th>Pour <small>°C</small></th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Hydraulic Nord-32 <span class="badge-synth">Synthetic · PAO+GV</span></td><td>32</td><td>DIN 51524-3</td><td>—</td><td>32</td><td>302</td><td>112</td><td>−56</td></tr>
+            <tr><td class="prod-name">Hydraulic HVZF <span class="badge-synth">Synthetic · Zn-free</span></td><td>22, 32, 46, 68</td><td>DIN 51524-3; ISO 11158 HV</td><td>Bosch Rexroth RDE 90235; Denison HF-0,1,2; Eaton E-FDGN-TB002-E; Fives Cincinnati P-68/P-69/P-70</td><td>22–68</td><td>164–183</td><td>210–254</td><td>−39 to −54</td></tr>
+            <tr><td class="prod-name">Hydraulic All Seasons <span class="badge-synth">Synthetic</span></td><td>22</td><td>DIN 51524-3; ISO 6743-4 HV</td><td>PSM-HYDRAULICS</td><td>22</td><td>222</td><td>162</td><td>−60</td></tr>
+            <tr><td class="prod-name">Hydraulic HVLP</td><td>10, 15, 22, 32, 46, 68</td><td>DIN 51524-3; ISO 11158 HV</td><td>Beltramelli; Bosch Rexroth RDE 90235; Denison HF-0,1,2; Eaton E-FDGN-TB002-E; Fives Cincinnati P-68/P-69/P-70; Sierra T 1000</td><td>10–68</td><td>141–170</td><td>160–230</td><td>−38 to −60</td></tr>
+            <tr><td class="prod-name">Hydraulic HZF (Zn-free)</td><td>32, 46, 68</td><td>DIN 51524-2 HM</td><td>—</td><td>32–68</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td class="prod-name">Hydraulic HLP</td><td>32, 46, 68, 100</td><td>DIN 51524-2; ISO 11158 HM</td><td>AIST; Beltramelli; Bosch Rexroth RDE 90245; Danieli (ISO 68); Denison HF-0,1,2; Eaton E-FDGN-TB002-E; Fives Cincinnati P-68/P-69/P-70</td><td>32–100</td><td>94–101</td><td>221–242</td><td>−30 to −34</td></tr>
+            <tr><td class="prod-name">Hydraulic HFDU <span class="badge-fi">Fire-Resistant</span></td><td>46, 68</td><td>DIN 51502 HFDU; ISO 6743/4 HFDU</td><td>—</td><td>46/68</td><td>—</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_gear">Industrial Gear (Reductor) Oils</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>ISO VG</th><th>Standard</th><th>Notes</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Reductor PAO Synth <span class="badge-synth">PAO Synthetic</span></td><td>150, 220, 320, 460, 680</td><td>DIN 51517-3 CLP; ISO 12925-1 CKD; AGMA 9005-E02; AIST 224</td><td>FLENDER — heavily loaded gearboxes, extended drain</td></tr>
+            <tr><td class="prod-name">Reductor F Synth <span class="badge-synth">Synthetic</span></td><td>150, 220, 320, 460</td><td>DIN 51517-3 CLP; ISO 12925-1 CKD; AGMA 9005-E02</td><td>FLENDER; Hansen Industrial Transmissions NV — extended drain intervals</td></tr>
+            <tr><td class="prod-name">Reductor WS</td><td>100, 150, 220</td><td>DIN 51517-3; Wartsila (ISO 150)</td><td>Cold-climate gearboxes: ISO 100 to −30°C; ISO 150 to −25°C; ISO 220 to −20°C</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_comp">Compressor Oils</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>ISO VG</th><th>Standard</th><th>Meet Requirements</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Compressor F Synth <span class="badge-synth">Fully Synthetic</span></td><td>46, 68</td><td>DIN 51506 VDL; ISO 6743 DAJ</td><td>Rotary screw &amp; vane air compressors; ROTORCOMP VERDICHTER GmbH approved; ash-free; extended change intervals</td></tr>
+            <tr><td class="prod-name">Compressor S Synth <span class="badge-synth">Semi-Synthetic</span></td><td>46, 68, 100, 150</td><td>DIN 51506 VDL</td><td>Screw, piston &amp; vane compressors; KKZ Boretz (ISO 100/150); ROTORCOMP (ISO 46/68/100); ash-free</td></tr>
+            <tr><td class="prod-name">Compressor PAO Synth <span class="badge-synth">PAO Synthetic</span></td><td>46, 100, 150, 220, 460</td><td>DIN 51506 VDL</td><td>Fully synthetic ash-free; high final compression temperatures; extended service life vs mineral</td></tr>
+            <tr><td class="prod-name">Compressor Oil T-46</td><td>46</td><td>—</td><td>Centrifugal turbine compressors; ν 40°C = 46 mm²/s; flash = 228°C; pour = −15°C; acid no. = 0.07 mg KOH/g</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_turb">Turbine Oils</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>ISO VG</th><th>Meet Requirements</th>
+            <th>ν 40°C <small>mm²/s</small></th><th>VI</th><th>Flash <small>°C</small></th><th>Pour <small>°C</small></th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Turbine Oil F Synth EP <span class="badge-synth">Synthetic</span></td><td>32, 46</td><td>DIN 51515-1 L-TD; DIN 51515-2 L-TG; ISO 8068:2006 L-TSA/TGA, L-TSE/TGE; GE GEK 101941A/GEK 32568J/GEK 107395A/GEK 3121608 (ISO 32); Siemens TLV 901304 &amp; TLV 901305; ABB (ISO 32); Alstom HTGD 90117 Rev.Y (ISO 32); Brush (ISO 32)</td><td>32.7–46.5</td><td>115–120</td><td>236–244</td><td>−39 to −41</td></tr>
+            <tr><td class="prod-name">Turbine Oil Tp-22S Grade 1</td><td>22</td><td>TURBOATOM; VTI; RAO UES</td><td>29.6</td><td>95</td><td>220</td><td>−17</td></tr>
+            <tr><td class="prod-name">Turbine Oil TP-30</td><td>30</td><td>—</td><td>44.5</td><td>95</td><td>234</td><td>−16</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_slide">Slideway Oils</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>ISO VG</th><th>Standards</th><th>Meet Requirements</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Slide Way</td><td>68, 220</td><td>DIN 51524-2 HLP; DIN 51517-3 CLP; DIN 51502 CGLP; ISO 19378 (L-GA); ISO 6743-13 L-GA/GB</td><td>MAG-47 (ISO 68); MAG-50 (ISO 220) — stick-slip free slideway lubrication</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_gas_eng">Gas Engine Oils</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>SAE</th><th>Technology</th><th>Meet Requirements</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Gas Engine Oil SGE 40 NAB <span class="badge-synth">Low-SAPS Synthetic</span></td><td>40</td><td>Synthetic; DPF/SCR compatible; stationary CHP/genset</td><td>Caterpillar · Cummins · Dresser-Rand · Guascor · Jenbacher TA 1000-1109 · MAN · MTU · MWM · Niigata · Wartsila · Waukesha</td></tr>
+            <tr><td class="prod-name">Gas Engine Oil SGE Premium 40 <span class="badge-synth">Low-SAPS Synthetic</span></td><td>40</td><td>Synthetic; latest-gen incl. steel-piston engines</td><td>Caterpillar · Jenbacher Types 2/3/4/6 (A,B,C,D,E,F,H,J,K) · MAN · MTU · MWM · Rolls Royce · Wartsila · Waukesha</td></tr>
+            <tr><td class="prod-name">GEO 40 <span class="badge-synth">Low-SAPS</span></td><td>40</td><td>Mineral; lean-burn stationary gas engines</td><td>Caterpillar · Cummins · Guascor · Jenbacher Type 3 · MAN · Wartsila · Waukesha</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_rolling">Rolling Mill Oils</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>ISO VG</th><th>Meet Requirements</th><th>Notes</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">Romil</td><td>46, 100, 150, 220, 320, 460</td><td>Danieli; Morgoil SN 180-3:2009-01; SN 180-4:2009-01</td><td>Circulation oils for rolling mill fluid-film bearings (PZhT); excellent demulsification properties</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+    </div><!-- /industrial -->
+
+    <!-- MINING -->
+    <div class="cat-panel" id="panel-mining">
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_mining_motor">Motor Oils — Mining &amp; Quarry Equipment</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>SAE</th><th>API / ACEA</th><th>Meet Requirements</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">GTS <span class="badge-synth">Synthetic · Extended Drain</span></td><td>5W-30, 10W-40</td><td>API CI-4; ACEA E4, E7</td><td>Cummins CES 20078 · DAF Extended Drain · Deutz DQC IV-18 · Global DHD-1 · Iveco 18-1804 TFE · JASO DH-1 · MACK EO-N · MAN M3277 · MB 228.5 · MTU Cat.3 · Renault RLD/RLD-2 · Volvo VDS-3 · Voith Retarder Oil Class A</td></tr>
+            <tr><td class="prod-name">GT</td><td>5W-30, 10W-40</td><td>API CI-4; ACEA E4, E7</td><td>Cat ECF-2 · Cummins CES 20078 · Deutz DQC IV-18 · Global DHD-1 · Iveco 18-1804 TFE · JASO DH-1 · MACK EO-N · MAN M3277 · MB 228.5 · MTU Cat.3 · Renault RLD-2 · Scania LDF 3 · Volvo VDS-3</td></tr>
+            <tr><td class="prod-name">GT LA</td><td>10W-40</td><td>API CJ-4; API CK-4; ACEA E4, E6, E7, E9</td><td>Cat ECF-3 · Cummins CES 20081/86 · DAF Extended Drain · DDC 93K222 · Deutz DQC IV-18 LA · JASO DH-2 · MACK EO-O PP · MACK EOS-4.5 · MAN M3271-1 · MAN M3477 · MAN M3775 · MB 228.31 · MB 228.51 · MB 228.52 · MTU Cat.2.1 · MTU Cat.3.1 · Renault RLD-3 · Volvo VDS-4 · Volvo VDS-4.5</td></tr>
+            <tr><td class="prod-name">MSK</td><td>5W-30</td><td>API CK-4; ACEA E6, E9</td><td>Cat ECF-3 · Cummins CES 20086 · DDC 93K222 · JASO DH-2 · MACK EOS-4.5 · MAN M3677 · MB 228.51 · Renault RLD-3 · Volvo VDS-4.5</td></tr>
+            <tr><td class="prod-name">MSK</td><td>5W-40, 10W-30, 15W-40</td><td>API CJ-4; API CK-4; ACEA E7, E9</td><td>Allison TES-439 · Cat ECF-2/3 · Cummins CES 20081/86 · DDC 93K218/93K222 · Deutz DQC III-18 LA · Ford WSS-M2C171-F1 · JASO DH-2 · MACK EO-N · MACK EO-O PP · MACK EOS-4.5 · MAN M3271-1 · MAN M3275-1 · MAN M3575 · MAN M3775 · MB 228.31 · MTU Cat.2.1 · Renault RLD-2/RLD-3 · Volvo VDS-4/4.5</td></tr>
+            <tr><td class="prod-name">MSI Plus</td><td>15W-40</td><td>API CI-4; ACEA E7</td><td>Cat ECF-1a · Cat ECF-2 · Cummins CES 20076/77/78 · DDC 93K215 · Deutz DQC III-18 · Global DHD-1 · JASO DH-1 · Komatsu · MACK EO-N · MAN M3275-1 · MB 228.3 · MTU Cat.2 · Renault RLD-2 · Volvo VDS-3</td></tr>
+            <tr><td class="prod-name">FLI <span class="badge-synth">UHPD Synthetic</span></td><td>15W-40</td><td>API CI-4; ACEA E4, E7</td><td>Cat ECF-2 · Cummins CES 20078 · Deutz DQC III-18 · Global DHD-1 · JASO DH-1 · MACK EO-N · MB 228.5 · MTU Cat.3 · Renault RLD-2 · Volvo VDS-3</td></tr>
+            <tr><td class="prod-name">MSI</td><td>5W-40, 10W-30, 10W-40</td><td>API CI-4; ACEA E7</td><td>Cat ECF-1a/ECF-2 · Cummins CES 20076/77/78 · DDC 93K215 · Deutz DQC III-18 · Komatsu · MACK EO-M Plus/EO-N · MAN M3275-1 · MB 228.3 · MTU Cat.2 · Renault RLD-2 · Volvo VDS-3</td></tr>
+            <tr><td class="prod-name">MSH</td><td>10W-40, 15W-40</td><td>API CH-4; ACEA E7</td><td>Cat ECF-1a · Cummins CES 20076/77 · Deutz DQC II-18 · Komatsu · MACK EO-M Plus · MAN M3275-1 · MB 228.3 · MTU Cat.2 · Renault RD/RD-2 · Volvo VDS-2</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_to4">Universal Drive-Train Oils — TO-4 / UTTO / STOU</div>
+        <div class="tbl-wrap"><table class="spec-tbl">
+          <thead><tr>
+            <th>Product</th><th>SAE</th><th>Type</th><th>Meet Requirements</th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">TO-4 Arctic <span class="badge-synth">Synthetic</span></td><td>0W-20</td><td>TO-4</td><td>Cat TO-4 · Allison C-4 · Komatsu Micro-Clutch · Eaton E-FDGN-TB002-E</td></tr>
+            <tr><td class="prod-name">TO-4</td><td>5W-30</td><td>TO-4</td><td>Cat TO-4 · Allison C-4 · Komatsu KES 07.871 · ZF TE-ML 03C · ZF TE-ML 07F</td></tr>
+            <tr><td class="prod-name">TO-4</td><td>10W, 30, 50</td><td>TO-4</td><td>Cat TO-4 · Allison C-4 · Komatsu KES 07.868.1 · ZF TE-ML 03C</td></tr>
+            <tr><td class="prod-name">FD-1</td><td>60</td><td>FD-1</td><td>Cat FD-1</td></tr>
+            <tr><td class="prod-name">UTTO Premium</td><td>10W-30</td><td>UTTO</td><td>API GL-4 · Allison C-4 · AGCO Powerfluid 821XL · AGCO Q-186 · Cat TO-2 · Claas · Deutz-Fahr · Fendt · Ford ESN M2C 86 B/C · Ford ESN M2C 134-D · John Deere JDM J20C · Komatsu · Kubota UDT · Landini · Massey Ferguson CMS M1135/M1141/M1143/M1145 · New Holland CNH MAT 3505/3506/3509/3510/3525/3526/3540 · SAME · Valtra G02-08 · Volvo 97303 · ZF TE-ML 03E/05F/06D/06E/06K/17E/21F</td></tr>
+            <tr><td class="prod-name">UTTO</td><td>10W-30</td><td>UTTO</td><td>API GL-4 · Allison C-4 · John Deere JDM J20C · Massey Ferguson CMS M1143/M1145 · New Holland CNH MAT 3505/3506/3509/3525/3540 · Volvo 97303 · ZF TE-ML 03E/05F/17E/21F</td></tr>
+            <tr><td class="prod-name">STOU</td><td>10W-30, 10W-40</td><td>STOU</td><td>API GL-4 · Allison C-4 · Caterpillar TO-2 · John Deere JDM J27 · Massey Ferguson CMS M1127A/1135/1139/M1144/M1145 · MB 227.1 · New Holland NH 024C/NH410B/NH420A · ZF TE-ML 05K/06B/06C/07B/07D</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+    </div><!-- /mining -->
+
+    <!-- PAO -->
+    <div class="cat-panel" id="panel-pao">
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_pao">PAO — Polyalphaolefin Base Oil <span class="badge-synth">Group IV · Synthetic</span></div>
+        <p style="font-size:0.78rem;color:var(--light);margin:0 0 18px">STO 42490024-089-2023 · GOST 33 / ASTM D445 / ISO 3104 · Values from current batch certificates</p>
+        <div class="tbl-wrap"><table class="spec-tbl" style="min-width:860px">
+          <thead><tr>
+            <th>Grade</th>
+            <th>ν 100°C <small>mm²/s</small></th>
+            <th>ν 40°C <small>mm²/s</small></th>
+            <th>ν −40°C <small>mm²/s</small></th>
+            <th>VI</th>
+            <th>Density <small>kg/m³</small></th>
+            <th>Pour <small>°C</small></th>
+            <th>Flash <small>°C</small></th>
+            <th>NOACK <small>%</small></th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td class="prod-name">PAO-2</td>
+              <td><strong>2.041</strong><br><small style="color:var(--light)">(1.7–2.4)</small></td>
+              <td>6.695</td>
+              <td>475</td>
+              <td>—</td>
+              <td><strong>801</strong><br><small style="color:var(--light)">(780–815)</small></td>
+              <td>−60<br><small style="color:var(--light)">(≤−60)</small></td>
+              <td>152<br><small style="color:var(--light)">(≥140)</small></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td class="prod-name">PAO-4</td>
+              <td><strong>4.517</strong><br><small style="color:var(--light)">(3.8–4.8)</small></td>
+              <td>22.43</td>
+              <td>5 511</td>
+              <td><strong>115</strong><br><small style="color:var(--light)">(≥103)</small></td>
+              <td><strong>819</strong><br><small style="color:var(--light)">(815–830)</small></td>
+              <td>−64<br><small style="color:var(--light)">(≤−60)</small></td>
+              <td>220<br><small style="color:var(--light)">(≥210)</small></td>
+              <td>13.5<br><small style="color:var(--light)">(≤15.0)</small></td>
+            </tr>
+            <tr>
+              <td class="prod-name">PAO-6</td>
+              <td><strong>6.324</strong><br><small style="color:var(--light)">(5.8–6.8)</small></td>
+              <td>37.22</td>
+              <td>16 137</td>
+              <td><strong>120</strong><br><small style="color:var(--light)">(≥110)</small></td>
+              <td><strong>828</strong><br><small style="color:var(--light)">(825–835)</small></td>
+              <td>−61<br><small style="color:var(--light)">(≤−55)</small></td>
+              <td>248<br><small style="color:var(--light)">(≥230)</small></td>
+              <td>7.7<br><small style="color:var(--light)">(≤9.0)</small></td>
+            </tr>
+            <tr>
+              <td class="prod-name">PAO-8</td>
+              <td><strong>7.710</strong><br><small style="color:var(--light)">(7.2–8.8)</small></td>
+              <td>50.08</td>
+              <td>31 086</td>
+              <td><strong>120</strong><br><small style="color:var(--light)">(≥115)</small></td>
+              <td><strong>831</strong><br><small style="color:var(--light)">(830–845)</small></td>
+              <td>−58<br><small style="color:var(--light)">(≤−55)</small></td>
+              <td>250<br><small style="color:var(--light)">(≥235)</small></td>
+              <td>4.3<br><small style="color:var(--light)">(≤7.0)</small></td>
+            </tr>
+            <tr>
+              <td class="prod-name">PAO-12</td>
+              <td><strong>12.27</strong><br><small style="color:var(--light)">(11.0–13.2)</small></td>
+              <td>97.68</td>
+              <td>123 099</td>
+              <td><strong>118</strong><br><small style="color:var(--light)">(≥115)</small></td>
+              <td><strong>839</strong><br><small style="color:var(--light)">(835–850)</small></td>
+              <td>−52<br><small style="color:var(--light)">(≤−50)</small></td>
+              <td>273<br><small style="color:var(--light)">(≥260)</small></td>
+              <td>1.8<br><small style="color:var(--light)">(≤4.0)</small></td>
+            </tr>
+          </tbody>
+        </table></div>
+        <p style="font-size:0.72rem;color:var(--light);margin:14px 0 0">All PAO-2/4/6/8: clear colourless liquid · PAO-12: clear light yellow liquid · Water content all grades: 0.01% (spec ≤0.03%) · Mech. impurities all grades: 0.004% / absent</p>
+      </div>
+    </div><!-- /pao -->
+
+    <!-- BASE OILS -->
+    <div class="cat-panel" id="panel-baseoils">
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_g1">Group I — Solvent-Refined Mineral Base Oils</div>
+        <p style="font-size:0.78rem;color:var(--light);margin:0 0 18px">GOST 33 / GOST 25371 / GOST 4333 / GOST 32330 · Density at 20°C</p>
+        <div class="tbl-wrap"><table class="spec-tbl" style="min-width:820px">
+          <thead><tr>
+            <th>Grade</th>
+            <th>ν 100°C <small>mm²/s</small></th>
+            <th>VI</th>
+            <th>Density <small>kg/m³</small></th>
+            <th>Flash <small>°C</small></th>
+            <th>Sulfur <small>%</small></th>
+            <th>Color <small>ASTM D1500</small></th>
+            <th>NOACK <small>%</small></th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">SN-150</td><td>5.23</td><td>97</td><td>872</td><td>202</td><td>1.00</td><td>1.0</td><td>14.1</td></tr>
+            <tr><td class="prod-name">SN-150 <span style="font-weight:400;font-size:0.78rem;color:var(--light)">(low-S)</span></td><td>5.30</td><td>94</td><td>871</td><td>208</td><td>0.10</td><td>0.5</td><td>14.0</td></tr>
+            <tr><td class="prod-name">SN-350</td><td>8.09</td><td>91</td><td>880</td><td>224</td><td>1.08</td><td>2.0</td><td>6.5</td></tr>
+            <tr><td class="prod-name">SN-400</td><td>9.30</td><td>90</td><td>885</td><td>232</td><td>0.20</td><td>1.0</td><td>5.0</td></tr>
+            <tr><td class="prod-name">BS <span style="font-weight:400;font-size:0.78rem;color:var(--light)">(SN-400 type)</span></td><td>9.30</td><td>90</td><td>894</td><td>256</td><td>0.20</td><td>3.5</td><td>2.0</td></tr>
+            <tr><td class="prod-name">SN-650</td><td>13.82</td><td>90</td><td>886</td><td>260</td><td>1.12</td><td>3.0</td><td>5.8</td></tr>
+            <tr><td class="prod-name">450N</td><td>11.30</td><td>92</td><td>885.8</td><td>244</td><td>0.132</td><td>2.5</td><td>6.7</td></tr>
+            <tr><td class="prod-name">1200N</td><td>20.86</td><td>90</td><td>894.4</td><td>273</td><td>0.372</td><td>3.0</td><td>2.4</td></tr>
+            <tr><td class="prod-name">BS-150 <span style="font-weight:400;font-size:0.78rem;color:var(--light)">(Bright Stock)</span></td><td>33.52</td><td>94</td><td>901</td><td>301</td><td>1.32</td><td>5.0</td><td>—</td></tr>
+            <tr><td class="prod-name">I-20A <span style="font-weight:400;font-size:0.78rem;color:var(--light)">(ν40)</span></td><td>34 <small style="color:var(--light)">@40°C</small></td><td>—</td><td>874</td><td>214</td><td>0.100</td><td>1.0</td><td>14.9</td></tr>
+            <tr><td class="prod-name">I-40A <span style="font-weight:400;font-size:0.78rem;color:var(--light)">(ν40)</span></td><td>65.85 <small style="color:var(--light)">@40°C</small></td><td>—</td><td>874</td><td>234</td><td>0.139</td><td>2.0</td><td>14.9</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="cat-group">
+        <div class="cat-group-h" data-i18n="cg_g23">Group II / Group III — Hydrotreated &amp; Hydrocracked Base Oils</div>
+        <p style="font-size:0.78rem;color:var(--light);margin:0 0 18px">GOST 33 / GOST 25371 / GOST 4333 / GOST 32330 · Density at 15°C · Sulfur in mg/kg</p>
+        <div class="tbl-wrap"><table class="spec-tbl" style="min-width:800px">
+          <thead><tr>
+            <th>Grade</th>
+            <th>API Group</th>
+            <th>ν 100°C <small>mm²/s</small></th>
+            <th>VI</th>
+            <th>Density <small>kg/m³ @15°C</small></th>
+            <th>Flash <small>°C</small></th>
+            <th>Sulfur <small>mg/kg</small></th>
+            <th>Color <small>CNT</small></th>
+            <th>NOACK <small>%</small></th>
+          </tr></thead>
+          <tbody>
+            <tr><td class="prod-name">HVI-4 <span class="badge-fi">Group II</span></td><td>II</td><td>4.39</td><td>112</td><td>841.1</td><td>226</td><td>4</td><td>0.5</td><td>14.4</td></tr>
+            <tr><td class="prod-name">HVI-6 <span class="badge-fi">Group II</span></td><td>II</td><td>6.28</td><td>117</td><td>847.4</td><td>236</td><td>4</td><td>0.5</td><td>7.9</td></tr>
+            <tr><td class="prod-name">HVI-8 <span class="badge-fi">Group II</span></td><td>II</td><td>9.13</td><td>114</td><td>853.4</td><td>262</td><td>4</td><td>0.5</td><td>2.3</td></tr>
+            <tr><td class="prod-name">VHVI-4 <span class="badge-synth">Group III</span></td><td>III</td><td>4.43</td><td>121</td><td>835.2</td><td>224</td><td>3</td><td>&lt;0.5</td><td>11.5</td></tr>
+            <tr><td class="prod-name">VHVI-6 <span class="badge-synth">Group III</span></td><td>III</td><td>6.33</td><td>127</td><td>841.5</td><td>236</td><td>4</td><td>0.5</td><td>5.9</td></tr>
+            <tr><td class="prod-name">VHVI-8 <span class="badge-synth">Group III</span></td><td>III</td><td>8.33</td><td>124</td><td>847.7</td><td>258</td><td>4</td><td>0.5</td><td>3.0</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+    </div><!-- /baseoils -->
+
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<!-- GEOGRAPHY -->
+<section class="section section-alt" id="geography">
+  <div class="wrap">
+    <div class="geo-grid">
+      <div>
+        <div class="eyebrow" data-i18n="geo_tag">Geography</div>
+        <h2 class="section-h" data-i18n="geo_h">5 continents.<br><em>One partner.</em></h2>
+        <p class="section-p" data-i18n="geo_p">From our UAE base we serve lubricant producers, blenders, and traders across Europe, Asia, the Middle East, India, and Latin America.</p>
+        <div class="regions">
+          <div class="region-cell"><span class="rflag">🇪🇺</span><span class="rname" data-i18n="r1">Europe</span></div>
+          <div class="region-cell"><span class="rflag">🇨🇳</span><span class="rname" data-i18n="r2">China &amp; Asia</span></div>
+          <div class="region-cell"><span class="rflag">🇮🇳</span><span class="rname" data-i18n="r3">India</span></div>
+          <div class="region-cell"><span class="rflag">🇦🇪</span><span class="rname" data-i18n="r4">Middle East</span></div>
+          <div class="region-cell"><span class="rflag">🇧🇷</span><span class="rname" data-i18n="r5">Latin America</span></div>
+          <div class="region-cell"><span class="rflag">🌍</span><span class="rname" data-i18n="r6">Africa</span></div>
+        </div>
+      </div>
+      <div class="geo-img">
+        <img src="img/refinery_pin.jpg" alt="Oil refinery">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-dark" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" data-i18n="con_tag">Contact</div>
+    <h2 class="section-h" data-i18n="con_h">Let's talk <em>supply.</em></h2>
+    <div style="height:56px"></div>
+    <div class="contact-grid">
+      <div class="contact-details">
+        <div>
+          <div class="cd-label" data-i18n="cd1l">Company</div>
+          <div class="cd-val">Excondo Global Logistics FZC<br>Sharjah Free Zone, UAE</div>
+        </div>
+        <div>
+          <div class="cd-label" data-i18n="cd2l">Email</div>
+          <div class="cd-val"><a href="mailto:sales@excondo.ae">sales@excondo.ae</a></div>
+        </div>
+        <div>
+          <div class="cd-label" data-i18n="cd3l">Response time</div>
+          <div class="cd-val" data-i18n="cd3v">Within 24 hours</div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <div class="fg">
+          <label data-i18n="fl1">Company / Name</label>
+          <input type="text" data-i18n-ph="fp1" placeholder="Your company">
+        </div>
+        <div class="fg">
+          <label data-i18n="fl2">Email</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="fg">
+          <label data-i18n="fl3">Product</label>
+          <select>
+            <option data-i18n="fo1">Mineral Base Oils (Group I–III)</option>
+            <option data-i18n="fo2">PAO – Synthetic Base Oil (Group IV)</option>
+            <option data-i18n="fo3">Ester Base Oils (Group V)</option>
+            <option data-i18n="fo4">Finished Lubricants</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label data-i18n="fl4">Message</label>
+          <textarea data-i18n-ph="fp4" placeholder="Volume, specifications, delivery port..."></textarea>
+        </div>
+        <button class="form-btn" data-i18n="fsub">Send Inquiry</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">EXCONDO Global Logistics FZC</div>
+  <div class="footer-right" data-i18n="fcopy">© 2026 · All rights reserved · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a></div>
+</footer>
+
+<script>
+const T = {
+  en: {
+    dir:'ltr',
+    nav_about:'About', nav_products:'Products', nav_adv:'Advantages', nav_geo:'Geography', nav_contact:'Contact',
+    hero_label:'Base Oils · PAO · Finished Lubricants',
+    hero_h1:'Global supply.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC delivers base oils, PAO and lubricants in bulk — straight from refinery to your facility. UAE-based. 7+ years. 50+ markets.',
+    hero_btn1:'View Products', hero_btn2:'Request a quote →',
+    s1:'Years in market', s2:'Markets supplied', s3:'API groups',
+    about_tag:'About',
+    about_h:'Your trustworthy partner<br>in <em>oil products trade</em>',
+    about_p1:'Excondo Global Logistics FZC is registered in the UAE and has over 7 years of experience in international trading of base oils — Group I through Group IV (PAO) — and finished lubricants.',
+    about_p2:'We specialise in containerised bulk shipments — delivering product directly to the end user, cutting intermediary costs and preserving quality in transit.',
+    b1:'All products carry Safety Data Sheets and quality certificates',
+    b2:'Flexible lots — from one 20ft container to full vessel',
+    b3:'Multi-currency payments and financing options available',
+    b4:'Full compliance with international sanctions and trade regulations',
+    prod_tag:'Products', prod_h:'What we <em>supply</em>',
+    prod_p:'Full range of base oils across all API groups and finished lubricants — in bulk containerised lots.',
+    p1t:'Mineral Base Oils', p1d:'Solvent-refined and hydroprocessed base stocks for automotive and industrial lubricant blending.',
+    p2t:'PAO — Synthetic Base Oil', p2d:'Polyalphaolefins for extreme-temperature applications. Low volatility, extended drain intervals, superior performance.',
+    p3t:'Finished Lubricants', p3d:'Delivered direct from the manufacturing plant — no intermediary storage, no quality drift. Bulk supply in IBCs and flexitanks lets you bottle, blend and private-label under your own brand, expanding output without building new capacity.',
+    p5t:'Additives', p5d:'Viscosity improvers, antioxidants, detergents, dispersants, anti-wear and corrosion inhibitors for your blending plant.',
+    p6t:'Paraffin & Wax', p6d:'Paraffin and microcrystalline waxes for candle production, coatings, rubber, and packaging applications.',
+    adv_tag:'Why Excondo', adv_h:'The way we<br><em>work</em>',
+    adv_p:'Logistics expertise, financial flexibility, and direct refinery relationships — aligned to deliver value to your business.',
+    a1t:'Direct from Refinery', a1d:'Containerised shipments from refinery gate to your warehouse. No transshipment, no quality loss, no hidden margins.',
+    a2t:'Flexible Batch Sizes', a2d:'Order regularly in bulk. Mitigate price risk and avoid demurrage exposure.',
+    a3t:'Financial Solutions', a3d:'Multiple currencies accepted. Deferred payment and trade finance instruments available for qualified buyers.',
+    a4t:'Complete Documentation', a4d:'Every shipment includes SDS, Certificate of Analysis, and country-of-origin documentation for seamless customs clearance.',
+    a5t:'Sanctions Compliance', a5d:'We trade exclusively with non-sanctioned destinations and counterparties. Full compliance with international trade law.',
+    a6t:'Long-Term Partnership', a6d:'7+ years building relationships with blenders, traders and distributors across 5 continents. We think in decades.',
+    geo_tag:'Geography', geo_h:'5 continents.<br><em>One partner.</em>',
+    geo_p:'From our UAE base we serve lubricant producers, blenders, and traders across Europe, Asia, the Middle East, India, and Latin America.',
+    r1:'Europe', r2:'China & Asia', r3:'India', r4:'Middle East', r5:'Latin America', r6:'Africa',
+    con_tag:'Contact', con_h:'Let\'s talk <em>supply.</em>',
+    cd1l:'Company', cd2l:'Email', cd3l:'Response time', cd3v:'Within 24 hours',
+    fl1:'Company / Name', fp1:'Your company', fl2:'Email', fl3:'Product', fl4:'Message', fp4:'Volume, specifications, delivery port...',
+    fo1:'Mineral Base Oils (Group I–III)', fo2:'PAO – Synthetic (Group IV)', fo3:'Ester Base Oils (Group V)', fo4:'Finished Lubricants', fo5:'Additives', fo6:'Paraffin / Wax',
+    fsub:'Send Inquiry',
+    fcopy:'© 2026 · All rights reserved · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'Catalog',
+    cat_tag:'Catalog', cat_h:'Technical <em>specifications</em>',
+    cat_p:'Complete finished lubricant range with full specifications — diesel engine oils, passenger car oils, hydraulics, transmission fluids, industrial and mining products.',
+    cat_t1:'Heavy-Duty', cat_t2:'Passenger Car', cat_t3:'Industrial', cat_t4:'Mining',
+    cg_diesel:'Diesel Engine Oils', cg_trans:'Transmission &amp; Drive-Train Oils',
+    cg_hyd_mob:'Hydraulic Oils — Mobile Equipment', cg_grease:'Greases',
+    cg_pc_eu:'Fully Synthetic — European Standards',
+    cg_pc_asia:'Fully Synthetic — Asian &amp; American Vehicles',
+    cg_pc_gen:'Semi-Synthetic &amp; Mineral Motor Oils',
+    cg_pc_tran:'Transmission Fluids — Passenger Car',
+    cg_ind_hyd:'Industrial Hydraulic Oils', cg_gear:'Industrial Gear (Reductor) Oils',
+    cg_comp:'Compressor Oils', cg_turb:'Turbine Oils', cg_slide:'Slideway Oils',
+    cg_gas_eng:'Gas Engine Oils', cg_rolling:'Rolling Mill Oils',
+    cg_mining_motor:'Motor Oils — Mining &amp; Quarry Equipment',
+    cg_to4:'Universal Drive-Train Oils — TO-4 / UTTO / STOU',
+    th_prod:'Product', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'Meet Requirements',
+    cat_t5:'PAO', cat_t6:'Base Oils',
+    cg_pao:'PAO — Polyalphaolefin Base Oil', cg_g1:'Group I — Solvent-Refined Mineral Base Oils',
+    cg_g23:'Group II / Group III — Hydrotreated &amp; Hydrocracked Base Oils',
+    th_param:'Parameter', th_unit:'Unit', th_method:'Test Method',
+    th_norm:'Specification', th_actual:'Actual Value',
+    a7t:'Quality Preserved — Direct from Plant',
+    a7d:'Finished lubricants ship direct from the manufacturing facility. No intermediate storage, no blending variation — the product you receive matches exactly what was certified.',
+    a8t:'Better Economics than Blending In-House',
+    a8d:'On a volatile commodity market, buying ready-made lubricants from us can be cheaper than assembling the product yourself — eliminating base oil price swings, additives procurement, blending costs, and QC overhead. Just pack and sell.',
+    cc_title:'Finished Lubricants — Make vs. Buy',
+    cc_diy_h:'Blend In-House', cc_exc_h:'Buy Finished from Excondo',
+    cc_i1:'Base oil — price volatile on open market', cc_i2:'Additives package',
+    cc_i3:'Blending, filtration &amp; QC costs', cc_i4:'Inventory holding &amp; logistics',
+    cc_i5:'Quality risk, rework, off-spec loss',
+    cc_total_diy:'Total: high &amp; unpredictable',
+    cc_e1:'One transparent, market-competitive price',
+    cc_e2:'Certified quality — direct from manufacturing plant',
+    cc_e3:'No raw-material price exposure',
+    cc_e4:'Pack &amp; sell immediately — zero blending overhead',
+    cc_e5:'On volatile markets, often cheaper than blending',
+    cc_total_exc:'Total: competitive &amp; predictable'
+  },
+
+  pt: {
+    dir:'ltr',
+    nav_about:'Sobre', nav_products:'Produtos', nav_adv:'Vantagens', nav_geo:'Cobertura', nav_contact:'Contato',
+    hero_label:'Óleos Base · PAO · Lubrificantes Acabados',
+    hero_h1:'Fornecimento global.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC fornece óleos base, PAO e lubrificantes a granel — direto da refinaria para a sua unidade. Com sede nos EAU. 7+ anos. 50+ mercados.',
+    hero_btn1:'Ver Produtos', hero_btn2:'Solicitar cotação →',
+    s1:'Anos no mercado', s2:'Mercados atendidos', s3:'Grupos API',
+    about_tag:'Sobre',
+    about_h:'Seu parceiro confiável em<br><em>produtos de petróleo</em>',
+    about_p1:'Excondo Global Logistics FZC está registrada nos Emirados Árabes Unidos e possui mais de 7 anos de experiência em comércio internacional de óleos base — dos Grupos I ao IV (PAO) — e lubrificantes acabados.',
+    about_p2:'Especializamo-nos em embarques a granel conteinerizados — entregando o produto diretamente ao usuário final, reduzindo custos intermediários e preservando a qualidade.',
+    b1:'Todos os produtos acompanham FISPQ e certificados de qualidade',
+    b2:'Lotes flexíveis — de 1 contêiner 20" até navio completo',
+    b3:'Pagamento em múltiplas moedas e opções de financiamento disponíveis',
+    b4:'Total conformidade com sanções internacionais e normas de comércio',
+    prod_tag:'Produtos', prod_h:'O que <em>fornecemos</em>',
+    prod_p:'Gama completa de óleos base em todos os grupos API e lubrificantes acabados — em lotes a granel.',
+    p1t:'Óleos Base Minerais', p1d:'Bases minerais refinadas por solvente e hidrotratadas para formulação de lubrificantes automotivos e industriais.',
+    p2t:'PAO — Óleo Sintético', p2d:'Polialfaolefinas para aplicações em temperaturas extremas. Baixa volatilidade, maior intervalo de troca, desempenho superior.',
+    p3t:'Lubrificantes Acabados', p3d:'Entregues diretamente da planta de fabricação — sem armazenamento intermediário, sem perda de qualidade. O fornecimento a granel em IBC e flexitanks permite envasar, misturar e relabular sob a sua própria marca, expandindo a produção sem investir em nova capacidade.',
+    p5t:'Aditivos', p5d:'Melhoradores de viscosidade, antioxidantes, detergentes, dispersantes e inibidores de corrosão para sua planta.',
+    p6t:'Parafina e Cera', p6d:'Parafinas e ceras microcristalinas para velas, revestimentos, borracha e embalagens.',
+    adv_tag:'Por Que a Excondo', adv_h:'Como nós<br><em>trabalhamos</em>',
+    adv_p:'Expertise logística, flexibilidade financeira e relacionamentos diretos com refinarias — para gerar valor ao seu negócio.',
+    a1t:'Direto da Refinaria', a1d:'Embarques conteinerizados do portão da refinaria ao seu armazém. Sem transbordo, sem perda de qualidade, sem margens ocultas.',
+    a2t:'Lotes Flexíveis', a2d:'Compre regularmente em pequenas quantidades. Reduza risco de preço, libere capital de giro e elimine sobrestadias.',
+    a3t:'Soluções Financeiras', a3d:'Múltiplas moedas aceitas. Pagamento diferido e instrumentos de trade finance para compradores qualificados.',
+    a4t:'Documentação Completa', a4d:'Cada embarque inclui FISPQ, laudo de qualidade e documentos de origem para desembaraço aduaneiro.',
+    a5t:'Conformidade com Sanções', a5d:'Operamos exclusivamente com destinos e contrapartes não sancionados. Conformidade total com o direito comercial internacional.',
+    a6t:'Parceria de Longo Prazo', a6d:'7+ anos construindo relações com formuladores, traders e distribuidores em 5 continentes.',
+    geo_tag:'Cobertura', geo_h:'5 continentes.<br><em>Um parceiro.</em>',
+    geo_p:'Da nossa base nos EAU, atendemos produtores, formuladores e traders de lubrificantes na Europa, Ásia, Oriente Médio, Índia e América Latina.',
+    r1:'Europa', r2:'China e Ásia', r3:'Índia', r4:'Oriente Médio', r5:'América Latina', r6:'África',
+    con_tag:'Contato', con_h:'Vamos falar de <em>fornecimento.</em>',
+    cd1l:'Empresa', cd2l:'E-mail', cd3l:'Tempo de resposta', cd3v:'Em até 24 horas',
+    fl1:'Empresa / Nome', fp1:'Sua empresa', fl2:'E-mail', fl3:'Produto', fl4:'Mensagem', fp4:'Volume, especificações, porto de destino...',
+    fo1:'Óleos Base Minerais (Grupo I–III)', fo2:'PAO – Sintético (Grupo IV)', fo3:'Ésteres (Grupo V)', fo4:'Lubrificantes Acabados', fo5:'Aditivos', fo6:'Parafina / Cera',
+    fsub:'Enviar Consulta',
+    fcopy:'© 2026 · Todos os direitos reservados · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'Catálogo',
+    cat_tag:'Catálogo', cat_h:'Especificações <em>técnicas</em>',
+    cat_p:'Gama completa de lubrificantes acabados com especificações detalhadas — óleos diesel, óleos para automóveis, hidráulicos, fluidos de transmissão, produtos industriais e de mineração.',
+    cat_t1:'Transporte Pesado', cat_t2:'Automóveis', cat_t3:'Industrial', cat_t4:'Mineração',
+    cg_diesel:'Óleos para Motor Diesel', cg_trans:'Óleos de Transmissão e Tração',
+    cg_hyd_mob:'Óleos Hidráulicos — Equipamento Móvel', cg_grease:'Graxas',
+    cg_pc_eu:'Totalmente Sintético — Padrões Europeus',
+    cg_pc_asia:'Totalmente Sintético — Veículos Asiáticos e Americanos',
+    cg_pc_gen:'Semissintético e Mineral',
+    cg_pc_tran:'Fluidos de Transmissão — Automóveis',
+    cg_ind_hyd:'Óleos Hidráulicos Industriais', cg_gear:'Óleos para Redutores Industriais',
+    cg_comp:'Óleos para Compressores', cg_turb:'Óleos para Turbinas',
+    cg_slide:'Óleos para Guias', cg_gas_eng:'Óleos para Motores a Gás',
+    cg_rolling:'Óleos para Laminação',
+    cg_mining_motor:'Óleos de Motor — Equipamento de Mineração',
+    cg_to4:'Óleos Universais de Tração — TO-4 / UTTO / STOU',
+    th_prod:'Produto', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'Atende Requisitos',
+    cat_t5:'PAO', cat_t6:'Óleos Base',
+    cg_pao:'PAO — Óleo de Base Polialfaolefínico', cg_g1:'Grupo I — Óleos Base Minerais (Refinados por Solvente)',
+    cg_g23:'Grupo II / Grupo III — Óleos Base Hidrotratados e Hidrocraqueados',
+    th_param:'Parâmetro', th_unit:'Unidade', th_method:'Método de Ensaio',
+    th_norm:'Especificação', th_actual:'Valor Real',
+    a7t:'Qualidade Preservada — Direto da Planta',
+    a7d:'Os lubrificantes acabados saem diretamente da unidade de fabricação. Sem armazenamento intermediário, sem variação de mistura — o produto recebido corresponde exatamente ao certificado.',
+    a8t:'Melhor Economia do que Misturar Internamente',
+    a8d:'Em um mercado de commodities volátil, comprar lubrificantes prontos conosco pode ser mais barato do que fabricar o produto você mesmo — eliminando oscilações de preço de óleo base, aquisição de aditivos, custos de mistura e overhead de QC. Basta envasar e vender.',
+    cc_title:'Lubrificantes Acabados — Produzir vs. Comprar',
+    cc_diy_h:'Misturar Internamente', cc_exc_h:'Comprar da Excondo',
+    cc_i1:'Óleo base — preço volátil no mercado', cc_i2:'Pacote de aditivos',
+    cc_i3:'Custos de mistura, filtração e QC', cc_i4:'Estoque e logística',
+    cc_i5:'Risco de qualidade, retrabalho, perda',
+    cc_total_diy:'Total: alto e imprevisível',
+    cc_e1:'Um preço transparente e competitivo',
+    cc_e2:'Qualidade certificada — direto da planta',
+    cc_e3:'Sem exposição ao preço de matéria-prima',
+    cc_e4:'Envasar e vender imediatamente',
+    cc_e5:'Em mercados voláteis, muitas vezes mais barato',
+    cc_total_exc:'Total: competitivo e previsível'
+  },
+
+  zh: {
+    dir:'ltr',
+    nav_about:'关于我们', nav_products:'产品', nav_adv:'优势', nav_geo:'覆盖地区', nav_contact:'联系我们',
+    hero_label:'基础油 · PAO · 成品润滑油',
+    hero_h1:'全球供应，<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC 提供基础油、PAO及润滑油散装供应——直接从炼厂到您的工厂。注册于阿联酋。7年以上经验。50+市场。',
+    hero_btn1:'查看产品', hero_btn2:'申请报价 →',
+    s1:'市场经验（年）', s2:'覆盖市场', s3:'API分组',
+    about_tag:'关于我们',
+    about_h:'您值得信赖的<br><em>油品贸易</em>合作伙伴',
+    about_p1:'Excondo Global Logistics FZC注册于阿联酋，在基础油（I至IV组，含PAO）及成品润滑油国际贸易领域拥有超过7年的丰富经验。',
+    about_p2:'我们专注于集装箱散装运输，将产品直接送达终端用户，降低中间成本，确保运输质量。',
+    b1:'所有产品均附安全数据表（SDS）及质量证书',
+    b2:'灵活批量——从1个20英尺集装箱到整船',
+    b3:'支持多币种结算及融资安排',
+    b4:'严格遵守国际制裁法规和贸易规定',
+    prod_tag:'产品', prod_h:'我们的<em>供应品类</em>',
+    prod_p:'涵盖所有API分组的基础油全系列及成品润滑油，以集装箱散装形式供货。',
+    p1t:'矿物基础油', p1d:'溶剂精制及加氢处理矿物基础油，广泛用于汽车及工业润滑油调配。',
+    p2t:'PAO合成基础油', p2d:'聚α-烯烃，适用于极端温度场合。低蒸发损失，换油周期长，性能卓越。',
+    p3t:'成品润滑油', p3d:'直接从生产厂发货——无中间仓储，无质量损失。IBС桶及柔性罐散装供应，让您可以灌装、调配并贴自有品牌，扩大产能而无需新建设施。',
+    p5t:'添加剂', p5d:'粘度指数改进剂、抗氧剂、清净剂、分散剂、抗磨及防腐蚀剂，满足调配需求。',
+    p6t:'石蜡与蜡', p6d:'石蜡和微晶蜡，适用于蜡烛生产、涂层、橡胶及包装。',
+    adv_tag:'为何选择Excondo', adv_h:'我们的<br><em>工作方式</em>',
+    adv_p:'物流专业能力、财务灵活性与炼厂直供关系三位一体，为您的业务创造最大价值。',
+    a1t:'炼厂直供', a1d:'从炼厂大门到您仓库的集装箱运输，无中转，无质量损耗，无隐性利润。',
+    a2t:'灵活批量', a2d:'定期小批量采购，降低价格风险，释放流动资金，避免滞期费。',
+    a3t:'金融解决方案', a3d:'支持多种货币。符合条件的买家可享受延期付款及贸易融资工具。',
+    a4t:'完整文件', a4d:'每批货物附SDS、质量检验报告及原产地证明，便于顺畅清关。',
+    a5t:'制裁合规', a5d:'仅与非制裁目的地和交易对手开展业务，严格遵守国际贸易法律法规。',
+    a6t:'长期合作伙伴', a6d:'7年以上在五大洲与调油商、贸易商和分销商建立的可靠合作关系。',
+    geo_tag:'覆盖地区', geo_h:'五大洲，<br><em>一个合作伙伴。</em>',
+    geo_p:'以阿联酋为基地，我们服务于欧洲、亚洲、中东、印度和拉丁美洲的润滑油生产商、调配商及贸易商。',
+    r1:'欧洲', r2:'中国及亚洲', r3:'印度', r4:'中东', r5:'拉丁美洲', r6:'非洲',
+    con_tag:'联系我们', con_h:'谈谈<em>合作供货。</em>',
+    cd1l:'公司', cd2l:'邮箱', cd3l:'响应时间', cd3v:'24小时内',
+    fl1:'公司/姓名', fp1:'贵公司名称', fl2:'邮箱', fl3:'产品', fl4:'留言', fp4:'数量、规格、目的港……',
+    fo1:'矿物基础油（I–III组）', fo2:'PAO合成基础油（IV组）', fo3:'酯类基础油（V组）', fo4:'成品润滑油', fo5:'添加剂', fo6:'石蜡/蜡',
+    fsub:'发送询盘',
+    fcopy:'© 2026 · 保留所有权利 · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'产品目录',
+    cat_tag:'产品目录', cat_h:'技术<em>规格参数</em>',
+    cat_p:'完整成品润滑油系列的全套规格参数——柴油发动机油、乘用车油、液压油、传动液、工业及矿山产品。',
+    cat_t1:'重型运输', cat_t2:'乘用车', cat_t3:'工业', cat_t4:'矿山',
+    cg_diesel:'柴油发动机油', cg_trans:'变速箱及传动系统油',
+    cg_hyd_mob:'液压油——移动设备', cg_grease:'润滑脂',
+    cg_pc_eu:'全合成——欧洲标准',
+    cg_pc_asia:'全合成——亚洲及美洲车型',
+    cg_pc_gen:'半合成及矿物机油',
+    cg_pc_tran:'变速箱油——乘用车',
+    cg_ind_hyd:'工业液压油', cg_gear:'工业减速机油',
+    cg_comp:'压缩机油', cg_turb:'汽轮机油',
+    cg_slide:'导轨油', cg_gas_eng:'燃气发动机油',
+    cg_rolling:'轧机油',
+    cg_mining_motor:'发动机油——矿山及采石设备',
+    cg_to4:'通用传动油——TO-4 / UTTO / STOU',
+    th_prod:'产品', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'满足规格要求',
+    cat_t5:'PAO', cat_t6:'基础油',
+    cg_pao:'PAO — 聚α-烯烃基础油', cg_g1:'I组 — 溶剂精制矿物基础油',
+    cg_g23:'II组 / III组 — 加氢精制及加氢裂化基础油',
+    th_param:'参数', th_unit:'单位', th_method:'测试方法',
+    th_norm:'规格要求', th_actual:'实测值',
+    a7t:'品质有保障——直接来自生产厂',
+    a7d:'成品润滑油直接从制造工厂发货，无中间仓储，无调配变数——您收到的产品与认证完全一致。',
+    a8t:'比自行调配更经济划算',
+    a8d:'在大宗商品价格波动的市场上，从我们这里购买现成润滑油往往比自行生产更便宜——避免基础油价格波动、采购添加剂、调配成本和质检开销。直接灌装销售即可。',
+    cc_title:'成品润滑油——自产 vs. 购买',
+    cc_diy_h:'自行调配', cc_exc_h:'从Excondo购买',
+    cc_i1:'基础油——市场价格波动', cc_i2:'添加剂包',
+    cc_i3:'调配、过滤和质检成本', cc_i4:'库存持有和物流',
+    cc_i5:'质量风险、返工、不合格损失',
+    cc_total_diy:'总计：高且不可预测',
+    cc_e1:'一个透明、具竞争力的价格',
+    cc_e2:'认证质量——直接来自制造工厂',
+    cc_e3:'无原材料价格风险',
+    cc_e4:'立即灌装销售——零调配开销',
+    cc_e5:'市场波动时，往往比自行调配更便宜',
+    cc_total_exc:'总计：具竞争力且可预测'
+  },
+
+  hi: {
+    dir:'ltr',
+    nav_about:'परिचय', nav_products:'उत्पाद', nav_adv:'लाभ', nav_geo:'क्षेत्र', nav_contact:'संपर्क',
+    hero_label:'बेस ऑयल · PAO · तैयार लुब्रिकेंट्स',
+    hero_h1:'वैश्विक आपूर्ति,<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC बेस ऑयल, PAO और लुब्रिकेंट्स बल्क में प्रदान करता है — रिफाइनरी से सीधे आपकी सुविधा तक। UAE में स्थित। 7+ वर्ष। 50+ बाजार।',
+    hero_btn1:'उत्पाद देखें', hero_btn2:'कोटेशन मांगें →',
+    s1:'बाजार में वर्ष', s2:'आपूर्ति बाजार', s3:'API समूह',
+    about_tag:'परिचय',
+    about_h:'आपका विश्वसनीय<br><em>तेल उत्पाद</em> भागीदार',
+    about_p1:'Excondo Global Logistics FZC UAE में पंजीकृत है और बेस ऑयल (Group I से IV, PAO सहित) तथा तैयार लुब्रिकेंट्स के अंतरराष्ट्रीय व्यापार में 7+ वर्षों का अनुभव रखती है।',
+    about_p2:'हम कंटेनरीकृत बल्क शिपमेंट में विशेषज्ञ हैं — रिफाइनरी से सीधे अंतिम उपयोगकर्ता तक, मध्यस्थ लागत घटाते हुए गुणवत्ता बनाए रखते हैं।',
+    b1:'सभी उत्पादों के साथ SDS और गुणवत्ता प्रमाण पत्र',
+    b2:'लचीले लॉट — 1 कंटेनर से पूरे जहाज तक',
+    b3:'कई मुद्राओं में भुगतान और वित्तपोषण विकल्प',
+    b4:'अंतरराष्ट्रीय प्रतिबंधों और व्यापार नियमों का पूर्ण पालन',
+    prod_tag:'उत्पाद', prod_h:'हम क्या <em>आपूर्ति</em> करते हैं',
+    prod_p:'सभी API समूहों में बेस ऑयल और तैयार लुब्रिकेंट्स — बल्क कंटेनर में।',
+    p1t:'मिनरल बेस ऑयल', p1d:'सॉल्वेंट-रिफाइंड और हाइड्रोप्रोसेस्ड बेस स्टॉक, लुब्रिकेंट ब्लेंडिंग के लिए।',
+    p2t:'PAO सिंथेटिक बेस ऑयल', p2d:'अत्यधिक तापमान में उपयोग के लिए PAO। कम वाष्पीकरण, लंबा ड्रेन अंतराल।',
+    p3t:'तैयार लुब्रिकेंट्स', p3d:'उत्पादन संयंत्र से सीधे डिलीवरी — कोई मध्यवर्ती भंडारण नहीं, कोई गुणवत्ता हानि नहीं। IBC और फ्लेक्सीटैंक में बल्क सप्लाई आपको अपनी ब्रांड के तहत बॉटलिंग, ब्लेंडिंग और प्राइवेट लेबलिंग करने देती है — नई क्षमता निर्माण के बिना।',
+    p5t:'एडिटिव्स', p5d:'VI इम्प्रूवर, एंटीऑक्सीडेंट, डिटर्जेंट, एंटी-वेयर और संक्षारण अवरोधक।',
+    p6t:'पैराफिन और वैक्स', p6d:'मोमबत्ती, कोटिंग्स, रबर और पैकेजिंग के लिए पैराफिन और वैक्स।',
+    adv_tag:'Excondo क्यों', adv_h:'हमारा<br><em>काम करने का तरीका</em>',
+    adv_p:'लॉजिस्टिक्स विशेषज्ञता, वित्तीय लचीलापन और रिफाइनरी से सीधे संबंध — आपके व्यवसाय को मूल्य देने के लिए।',
+    a1t:'रिफाइनरी से सीधे', a1d:'रिफाइनरी से आपके गोदाम तक कंटेनर शिपमेंट। कोई ट्रांसशिपमेंट नहीं, कोई गुणवत्ता हानि नहीं।',
+    a2t:'लचीले लॉट', a2d:'नियमित छोटे ऑर्डर — मूल्य जोखिम कम, पूंजी मुक्त, डेमरेज नहीं।',
+    a3t:'वित्तीय समाधान', a3d:'कई मुद्राएं स्वीकार। योग्य खरीदारों के लिए डेफर्ड पेमेंट उपलब्ध।',
+    a4t:'पूर्ण दस्तावेज', a4d:'हर शिपमेंट के साथ SDS, CoA और मूल देश प्रमाण पत्र।',
+    a5t:'प्रतिबंध अनुपालन', a5d:'केवल गैर-प्रतिबंधित गंतव्यों के साथ व्यापार। अंतरराष्ट्रीय कानून का पूर्ण पालन।',
+    a6t:'दीर्घकालिक साझेदारी', a6d:'7+ वर्षों में 5 महाद्वीपों पर ब्लेंडर, ट्रेडर और वितरकों के साथ विश्वसनीय संबंध।',
+    geo_tag:'क्षेत्र', geo_h:'5 महाद्वीप,<br><em>एक भागीदार।</em>',
+    geo_p:'UAE से हम यूरोप, एशिया, मध्य पूर्व, भारत और लैटिन अमेरिका में सेवा देते हैं।',
+    r1:'यूरोप', r2:'चीन और एशिया', r3:'भारत', r4:'मध्य पूर्व', r5:'लैटिन अमेरिका', r6:'अफ्रीका',
+    con_tag:'संपर्क', con_h:'<em>आपूर्ति</em> पर बात करें।',
+    cd1l:'कंपनी', cd2l:'ईमेल', cd3l:'प्रतिक्रिया समय', cd3v:'24 घंटे के भीतर',
+    fl1:'कंपनी / नाम', fp1:'आपकी कंपनी', fl2:'ईमेल', fl3:'उत्पाद', fl4:'संदेश', fp4:'मात्रा, विशेषताएं, बंदरगाह...',
+    fo1:'मिनरल बेस ऑयल (ग्रुप I–III)', fo2:'PAO सिंथेटिक (ग्रुप IV)', fo3:'एस्टर (ग्रुप V)', fo4:'तैयार लुब्रिकेंट्स', fo5:'एडिटिव्स', fo6:'पैराफिन / वैक्स',
+    fsub:'जानकारी भेजें',
+    fcopy:'© 2026 · सर्वाधिकार सुरक्षित · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'कैटलॉग',
+    cat_tag:'कैटलॉग', cat_h:'तकनीकी <em>विशिष्टताएं</em>',
+    cat_p:'पूरी श्रेणी के तैयार लुब्रिकेंट्स की विस्तृत विशिष्टताएं — डीज़ल इंजन ऑयल, पैसेंजर कार ऑयल, हाइड्रोलिक्स, ट्रांसमिशन फ्लूइड्स, औद्योगिक और खनन उत्पाद।',
+    cat_t1:'भारी परिवहन', cat_t2:'पैसेंजर कार', cat_t3:'औद्योगिक', cat_t4:'खनन',
+    cg_diesel:'डीज़ल इंजन ऑयल', cg_trans:'ट्रांसमिशन और ड्राइव-ट्रेन ऑयल',
+    cg_hyd_mob:'हाइड्रोलिक ऑयल — मोबाइल उपकरण', cg_grease:'ग्रीस',
+    cg_pc_eu:'पूर्ण सिंथेटिक — यूरोपीय मानक',
+    cg_pc_asia:'पूर्ण सिंथेटिक — एशियाई एवं अमेरिकी वाहन',
+    cg_pc_gen:'अर्ध-सिंथेटिक एवं मिनरल मोटर ऑयल',
+    cg_pc_tran:'ट्रांसमिशन फ्लूइड — पैसेंजर कार',
+    cg_ind_hyd:'औद्योगिक हाइड्रोलिक ऑयल', cg_gear:'औद्योगिक गियर (रिडक्टर) ऑयल',
+    cg_comp:'कंप्रेसर ऑयल', cg_turb:'टर्बाइन ऑयल',
+    cg_slide:'स्लाइडवे ऑयल', cg_gas_eng:'गैस इंजन ऑयल',
+    cg_rolling:'रोलिंग मिल ऑयल',
+    cg_mining_motor:'मोटर ऑयल — खनन एवं पत्थर उत्खनन उपकरण',
+    cg_to4:'यूनिवर्सल ड्राइव-ट्रेन ऑयल — TO-4 / UTTO / STOU',
+    th_prod:'उत्पाद', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'आवश्यकताएं पूरी करता है',
+    cat_t5:'PAO', cat_t6:'बेस ऑयल',
+    cg_pao:'PAO — पॉलीअल्फाओलेफिन बेस ऑयल', cg_g1:'ग्रुप I — सॉल्वेंट-रिफाइंड मिनरल बेस ऑयल',
+    cg_g23:'ग्रुप II / ग्रुप III — हाइड्रोट्रीटेड एवं हाइड्रोक्रैक्ड बेस ऑयल',
+    th_param:'पैरामीटर', th_unit:'इकाई', th_method:'परीक्षण विधि',
+    th_norm:'विशिष्टता', th_actual:'वास्तविक मूल्य',
+    a7t:'गुणवत्ता संरक्षित — सीधे संयंत्र से',
+    a7d:'तैयार स्नेहक सीधे उत्पादन संयंत्र से भेजे जाते हैं। कोई मध्यवर्ती भंडारण नहीं — आपको जो उत्पाद मिलता है वह प्रमाणित से बिल्कुल मेल खाता है।',
+    a8t:'घर में मिश्रण से बेहतर अर्थशास्त्र',
+    a8d:'अस्थिर बाजार में हमसे तैयार स्नेहक खरीदना स्वयं उत्पाद बनाने से सस्ता हो सकता है। बेस ऑयल उतार-चढ़ाव, एडिटिव, मिश्रण और QC लागत समाप्त। बस बोतलबंद करें और बेचें।',
+    cc_title:'तैयार स्नेहक — बनाएं या खरीदें',
+    cc_diy_h:'घर में मिश्रण', cc_exc_h:'Excondo से खरीदें',
+    cc_i1:'बेस ऑयल — अस्थिर बाजार मूल्य', cc_i2:'एडिटिव पैकेज',
+    cc_i3:'मिश्रण, निस्पंदन और QC लागत', cc_i4:'इन्वेंट्री और लॉजिस्टिक्स',
+    cc_i5:'गुणवत्ता जोखिम, पुनर्कार्य, हानि',
+    cc_total_diy:'कुल: उच्च और अनिश्चित',
+    cc_e1:'एक पारदर्शी, प्रतिस्पर्धी मूल्य',
+    cc_e2:'प्रमाणित गुणवत्ता — सीधे उत्पादन संयंत्र से',
+    cc_e3:'कच्चे माल की कीमत का कोई जोखिम नहीं',
+    cc_e4:'तुरंत बोतलबंद करें और बेचें',
+    cc_e5:'अस्थिर बाजारों में अक्सर मिश्रण से सस्ता',
+    cc_total_exc:'कुल: प्रतिस्पर्धी और अनुमानित'
+  },
+
+  fr: {
+    dir:'ltr',
+    nav_about:'À propos', nav_products:'Produits', nav_adv:'Avantages', nav_geo:'Couverture', nav_contact:'Contact',
+    hero_label:'Huiles de Base · PAO · Lubrifiants Finis',
+    hero_h1:'Approvisionnement mondial.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC livre des huiles de base, PAO et lubrifiants en vrac — directement de la raffinerie à votre site. Basé aux EAU. 7+ ans. 50+ marchés.',
+    hero_btn1:'Voir les produits', hero_btn2:'Demander un devis →',
+    s1:"Années d'expérience", s2:'Marchés approvisionnés', s3:'Groupes API',
+    about_tag:'À propos',
+    about_h:'Votre partenaire de confiance en<br><em>produits pétroliers</em>',
+    about_p1:"Excondo Global Logistics FZC est enregistrée aux Émirats Arabes Unis et dispose de plus de 7 ans d'expérience dans le négoce international d'huiles de base — des Groupes I à IV (PAO) — et de lubrifiants finis.",
+    about_p2:"Nous sommes spécialisés dans les expéditions en vrac conteneurisées — livraison directe à l'utilisateur final, réduction des coûts intermédiaires, préservation de la qualité.",
+    b1:'Tous les produits sont livrés avec FDS et certificats de qualité',
+    b2:'Volumes flexibles — d\'un conteneur 20" à un navire complet',
+    b3:'Paiements multi-devises et options de financement disponibles',
+    b4:'Conformité totale aux sanctions internationales et réglementations commerciales',
+    prod_tag:'Produits', prod_h:'Ce que nous <em>fournissons</em>',
+    prod_p:"Gamme complète d'huiles de base de tous groupes API et lubrifiants finis — en vrac conteneurisé.",
+    p1t:'Huiles de Base Minérales', p1d:'Bases minérales raffinées et hydrotraitées pour la formulation de lubrifiants automobiles et industriels.',
+    p2t:'PAO — Huile Synthétique', p2d:'Polyalphaoléfines pour applications en températures extrêmes. Faible volatilité, intervalles de vidange prolongés.',
+    p3t:'Lubrifiants Finis', p3d:"Livraison directe depuis l'usine de fabrication — sans stockage intermédiaire, sans perte de qualité. L'approvisionnement en vrac en GRV et flexitanks vous permet de conditionner et d'étiqueter sous votre propre marque, augmentant votre capacité sans nouvel investissement.",
+    p5t:'Additifs', p5d:'Améliorants de viscosité, antioxydants, détergents, dispersants, anti-usure et inhibiteurs de corrosion.',
+    p6t:'Paraffine & Cire', p6d:'Paraffines et cires microcristallines pour bougies, revêtements, caoutchouc et emballages.',
+    adv_tag:'Pourquoi Excondo', adv_h:'Notre façon de<br><em>travailler</em>',
+    adv_p:'Expertise logistique, flexibilité financière et relations directes avec les raffineries — pour créer de la valeur pour votre activité.',
+    a1t:'Direct de la Raffinerie', a1d:"Expéditions conteneurisées de la raffinerie à votre entrepôt. Sans transbordement, sans perte de qualité, sans marges cachées.",
+    a2t:'Volumes Flexibles', a2d:'Commandez régulièrement en petites quantités. Réduisez le risque prix, libérez le fonds de roulement, supprimez les surestaries.',
+    a3t:'Solutions Financières', a3d:'Multi-devises acceptées. Paiement différé et instruments de financement disponibles pour acheteurs qualifiés.',
+    a4t:'Documentation Complète', a4d:'Chaque expédition inclut FDS, certificat d\'analyse et documents d\'origine pour le dédouanement.',
+    a5t:'Conformité aux Sanctions', a5d:'Nous commercions exclusivement avec des destinations non sanctionnées. Conformité totale au droit commercial international.',
+    a6t:'Partenariat Long Terme', a6d:'7+ ans de relations fiables avec formulateurs, traders et distributeurs sur 5 continents.',
+    geo_tag:'Couverture', geo_h:'5 continents.<br><em>Un partenaire.</em>',
+    geo_p:'Depuis les EAU, nous servons des producteurs, formulateurs et traders de lubrifiants en Europe, Asie, Moyen-Orient, Inde et Amérique Latine.',
+    r1:'Europe', r2:'Chine & Asie', r3:'Inde', r4:'Moyen-Orient', r5:'Amérique Latine', r6:'Afrique',
+    con_tag:'Contact', con_h:'Parlons <em>approvisionnement.</em>',
+    cd1l:'Société', cd2l:'E-mail', cd3l:'Délai de réponse', cd3v:'Sous 24 heures',
+    fl1:'Société / Nom', fp1:'Votre société', fl2:'E-mail', fl3:'Produit', fl4:'Message', fp4:'Volume, spécifications, port de livraison...',
+    fo1:'Huiles de Base Minérales (Groupe I–III)', fo2:'PAO – Synthétique (Groupe IV)', fo3:'Esters (Groupe V)', fo4:'Lubrifiants Finis', fo5:'Additifs', fo6:'Paraffine / Cire',
+    fsub:'Envoyer la demande',
+    fcopy:'© 2026 · Tous droits réservés · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'Catalogue',
+    cat_tag:'Catalogue', cat_h:'Spécifications <em>techniques</em>',
+    cat_p:'Gamme complète de lubrifiants finis avec spécifications détaillées — huiles diesel, huiles pour voitures, hydrauliques, fluides de transmission, produits industriels et miniers.',
+    cat_t1:'Transport Lourd', cat_t2:'Voitures Particulières', cat_t3:'Industriel', cat_t4:'Mines',
+    cg_diesel:'Huiles Moteur Diesel', cg_trans:'Huiles de Transmission',
+    cg_hyd_mob:'Huiles Hydrauliques — Équipements Mobiles', cg_grease:'Graisses',
+    cg_pc_eu:'Synthèse Totale — Normes Européennes',
+    cg_pc_asia:'Synthèse Totale — Véhicules Asiatiques et Américains',
+    cg_pc_gen:'Semi-synthétique et Minéral',
+    cg_pc_tran:'Fluides de Transmission — Voitures Particulières',
+    cg_ind_hyd:'Huiles Hydrauliques Industrielles', cg_gear:'Huiles pour Réducteurs',
+    cg_comp:'Huiles pour Compresseurs', cg_turb:'Huiles pour Turbines',
+    cg_slide:'Huiles pour Glissières', cg_gas_eng:'Huiles pour Moteurs à Gaz',
+    cg_rolling:'Huiles pour Laminoirs',
+    cg_mining_motor:'Huiles Moteur — Équipements Miniers',
+    cg_to4:'Huiles de Transmission Universelles — TO-4 / UTTO / STOU',
+    th_prod:'Produit', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'Satisfait aux exigences',
+    cat_t5:'PAO', cat_t6:'Huiles de Base',
+    cg_pao:'PAO — Huile de Base Polyalphaoléfine', cg_g1:'Groupe I — Huiles de Base Minérales (Raffinage par Solvant)',
+    cg_g23:'Groupe II / Groupe III — Huiles de Base Hydrotraitées et Hydrocraquées',
+    th_param:'Paramètre', th_unit:'Unité', th_method:'Méthode d\'Essai',
+    th_norm:'Spécification', th_actual:'Valeur Réelle',
+    a7t:'Qualité préservée — directement de l\'usine',
+    a7d:'Les lubrifiants finis partent directement de l\'usine de fabrication. Pas de stockage intermédiaire, pas de variation de mélange — le produit reçu correspond exactement à ce qui a été certifié.',
+    a8t:'Meilleure économie que le mélange en interne',
+    a8d:'Sur un marché des matières premières volatil, acheter des lubrifiants finis chez nous peut être moins cher que de fabriquer le produit soi-même — en éliminant les fluctuations des prix des huiles de base, les achats d\'additifs, les coûts de mélange et les frais de contrôle qualité. Mettez simplement en bouteille et vendez.',
+    cc_title:'Lubrifiants finis — Fabriquer vs. Acheter',
+    cc_diy_h:'Mélanger en interne', cc_exc_h:'Acheter chez Excondo',
+    cc_i1:'Huile de base — prix volatil sur le marché', cc_i2:'Package d\'additifs',
+    cc_i3:'Coûts de mélange, filtration et contrôle qualité', cc_i4:'Stock et logistique',
+    cc_i5:'Risque qualité, retouches, pertes',
+    cc_total_diy:'Total : élevé et imprévisible',
+    cc_e1:'Un prix transparent et compétitif',
+    cc_e2:'Qualité certifiée — directement de l\'usine',
+    cc_e3:'Aucune exposition au prix des matières premières',
+    cc_e4:'Mettre en bouteille et vendre immédiatement',
+    cc_e5:'Sur les marchés volatils, souvent moins cher',
+    cc_total_exc:'Total : compétitif et prévisible'
+  },
+
+  ar: {
+    dir:'rtl',
+    nav_about:'من نحن', nav_products:'المنتجات', nav_adv:'مزاياتنا', nav_geo:'التغطية', nav_contact:'تواصل',
+    hero_label:'زيوت أساسية · PAO · مواد تشحيم جاهزة',
+    hero_h1:'توريد عالمي.<br><em>Fueling forward.</em>',
+    hero_sub:'تقدم Excondo Global Logistics FZC الزيوت الأساسية وPAO ومواد التشحيم بالجملة — مباشرةً من المصفاة إلى منشأتك. مقرنا الإمارات. أكثر من 7 سنوات. أكثر من 50 سوقاً.',
+    hero_btn1:'عرض المنتجات', hero_btn2:'طلب عرض سعر ←',
+    s1:'سنوات في السوق', s2:'أسواق نخدمها', s3:'مجموعات API',
+    about_tag:'من نحن',
+    about_h:'شريكك الموثوق في<br><em>تجارة المنتجات النفطية</em>',
+    about_p1:'Excondo Global Logistics FZC مسجلة في الإمارات وتمتلك أكثر من 7 سنوات من الخبرة في التجارة الدولية للزيوت الأساسية — من المجموعة I إلى المجموعة IV (PAO) — ومواد التشحيم الجاهزة.',
+    about_p2:'نتخصص في شحنات الجملة بالحاويات — تسليم مباشر للمستخدم النهائي، تخفيض تكاليف الوساطة، والحفاظ على الجودة أثناء النقل.',
+    b1:'جميع المنتجات مزودة بصحائف بيانات السلامة وشهادات الجودة',
+    b2:'أحجام مرنة — من حاوية 20 قدمًا إلى سفينة كاملة',
+    b3:'تسديد بعملات متعددة وخيارات تمويلية',
+    b4:'امتثال تام للعقوبات الدولية وأنظمة التجارة',
+    prod_tag:'المنتجات', prod_h:'ما نقوم<br>بتوريده',
+    prod_p:'مجموعة كاملة من الزيوت الأساسية لجميع مجموعات API ومواد التشحيم الجاهزة — في دفعات سائبة بالحاويات.',
+    p1t:'الزيوت الأساسية المعدنية', p1d:'زيوت أساسية معالجة بالمذيبات وهيدروجينيًا لمزج مواد التشحيم.',
+    p2t:'PAO — الزيوت الاصطناعية', p2d:'PAO لتطبيقات درجات الحرارة القصوى. تطاير منخفض وأداء متفوق.',
+    p3t:'مواد التشحيم الجاهزة', p3d:'توريد مباشر من المصنع — دون تخزين وسيط، دون فقدان في الجودة. الإمداد بالجملة في حاويات IBC وخزانات مرنة يتيح التعبئة والتوسيم بعلامتك التجارية لتوسيع طاقتك الإنتاجية دون استثمار في بنية تحتية جديدة.',
+    p5t:'المضافات', p5d:'محسّنات مؤشر اللزوجة ومضادات أكسدة ومنظفات ومفرقات ومثبطات تآكل.',
+    p6t:'البارافين والشمع', p6d:'أشمعة بارافين ومايكروكريستالية للشموع والطلاءات والمطاط والتغليف.',
+    adv_tag:'لماذا Excondo', adv_h:'طريقة<br><em>عملنا</em>',
+    adv_p:'خبرة لوجستية، ومرونة مالية، وعلاقات مباشرة مع المصافي — لتحقيق القيمة المثلى لعملك.',
+    a1t:'مباشرة من المصفاة', a1d:'شحنات بالحاويات من بوابة المصفاة إلى مستودعك. بلا إعادة شحن، بلا فقدان جودة.',
+    a2t:'دفعات مرنة', a2d:'اطلب بانتظام بكميات صغيرة. قلّل مخاطر الأسعار وحرّر رأس المال.',
+    a3t:'حلول تمويلية', a3d:'نقبل عدة عملات. السداد الآجل ومنتجات التمويل التجاري متاحة للمشترين المؤهلين.',
+    a4t:'وثائق كاملة', a4d:'كل شحنة تتضمن SDS وشهادة تحليل ووثائق المنشأ للتخليص الجمركي.',
+    a5t:'الامتثال للعقوبات', a5d:'نتاجر حصرًا مع وجهات غير مشمولة بالعقوبات. امتثال كامل للقانون التجاري الدولي.',
+    a6t:'شراكة طويلة الأمد', a6d:'أكثر من 7 سنوات من العلاقات الموثوقة مع الممزوجين والتجار والموزعين في 5 قارات.',
+    geo_tag:'التغطية', geo_h:'5 قارات.<br><em>شريك واحد.</em>',
+    geo_p:'من قاعدتنا في الإمارات نخدم منتجي ومازجي وتجار مواد التشحيم في أوروبا وآسيا والشرق الأوسط والهند وأمريكا اللاتينية.',
+    r1:'أوروبا', r2:'الصين وآسيا', r3:'الهند', r4:'الشرق الأوسط', r5:'أمريكا اللاتينية', r6:'أفريقيا',
+    con_tag:'تواصل', con_h:'تحدث معنا عن<br><em>التوريد.</em>',
+    cd1l:'الشركة', cd2l:'البريد الإلكتروني', cd3l:'وقت الرد', cd3v:'خلال 24 ساعة',
+    fl1:'الشركة / الاسم', fp1:'شركتك', fl2:'البريد الإلكتروني', fl3:'المنتج', fl4:'رسالة', fp4:'الكمية، المواصفات، ميناء التسليم...',
+    fo1:'زيوت أساسية معدنية (المجموعة I–III)', fo2:'PAO اصطناعي (المجموعة IV)', fo3:'إسترات (المجموعة V)', fo4:'مواد تشحيم جاهزة', fo5:'مضافات', fo6:'بارافين / شمع',
+    fsub:'إرسال الاستفسار',
+    fcopy:'© 2026 · جميع الحقوق محفوظة · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'الكتالوج',
+    cat_tag:'الكتالوج', cat_h:'المواصفات <em>التقنية</em>',
+    cat_p:'المجموعة الكاملة من مواد التشحيم الجاهزة مع المواصفات التفصيلية — زيوت محركات الديزل، زيوت السيارات، الزيوت الهيدروليكية، سوائل ناقل الحركة، المنتجات الصناعية والتعدينية.',
+    cat_t1:'النقل الثقيل', cat_t2:'السيارات الخاصة', cat_t3:'صناعي', cat_t4:'التعدين',
+    cg_diesel:'زيوت محركات الديزل', cg_trans:'زيوت ناقل الحركة',
+    cg_hyd_mob:'الزيوت الهيدروليكية — المعدات المتنقلة', cg_grease:'الشحوم',
+    cg_pc_eu:'اصطناعي كامل — المعايير الأوروبية',
+    cg_pc_asia:'اصطناعي كامل — السيارات الآسيوية والأمريكية',
+    cg_pc_gen:'شبه اصطناعي وزيوت معدنية',
+    cg_pc_tran:'سوائل ناقل الحركة — السيارات الخاصة',
+    cg_ind_hyd:'الزيوت الهيدروليكية الصناعية', cg_gear:'زيوت التروس الصناعية',
+    cg_comp:'زيوت الضاغط', cg_turb:'زيوت التوربين',
+    cg_slide:'زيوت المسارات', cg_gas_eng:'زيوت محركات الغاز',
+    cg_rolling:'زيوت مطاحن الدرفلة',
+    cg_mining_motor:'زيوت المحرك — معدات التعدين',
+    cg_to4:'زيوت نقل الحركة العالمية — TO-4 / UTTO / STOU',
+    th_prod:'المنتج', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'يستوفي المتطلبات',
+    cat_t5:'PAO', cat_t6:'زيوت أساسية',
+    cg_pao:'PAO — زيوت البولي ألفا أوليفين الأساسية', cg_g1:'المجموعة I — زيوت أساسية معدنية (مكررة بالمذيبات)',
+    cg_g23:'المجموعة II / III — زيوت أساسية مهدرجة وهيدروكراكية',
+    th_param:'المؤشر', th_unit:'الوحدة', th_method:'طريقة الاختبار',
+    th_norm:'المواصفة', th_actual:'القيمة الفعلية',
+    a7t:'الجودة محفوظة — مباشرة من المصنع',
+    a7d:'تُشحن المنتجات النهائية مباشرة من مصنع التصنيع. لا تخزين وسيط — المنتج الذي تتلقاه يطابق تماماً ما تم اعتماده.',
+    a8t:'اقتصاديات أفضل من الخلط الداخلي',
+    a8d:'في سوق السلع المتقلب، قد يكون شراء مواد التشحيم الجاهزة منا أرخص من تصنيعها بنفسك — مما يلغي تقلبات أسعار الزيوت الأساسية، وشراء المضافات، وتكاليف الخلط، ونفقات ضبط الجودة. فقط عبئ وبع.',
+    cc_title:'مواد تشحيم جاهزة — التصنيع مقابل الشراء',
+    cc_diy_h:'الخلط الداخلي', cc_exc_h:'الشراء من Excondo',
+    cc_i1:'زيت أساسي — السعر متقلب في السوق', cc_i2:'حزمة المضافات',
+    cc_i3:'تكاليف الخلط والترشيح وضبط الجودة', cc_i4:'المخزون والخدمات اللوجستية',
+    cc_i5:'مخاطر الجودة والإعادة والخسائر',
+    cc_total_diy:'الإجمالي: مرتفع وغير متوقع',
+    cc_e1:'سعر واحد شفاف وتنافسي',
+    cc_e2:'جودة معتمدة — مباشرة من مصنع الإنتاج',
+    cc_e3:'لا تعرض لمخاطر أسعار المواد الخام',
+    cc_e4:'عبئ وبع فوراً — صفر تكاليف خلط',
+    cc_e5:'في الأسواق المتقلبة، غالباً أرخص من الخلط',
+    cc_total_exc:'الإجمالي: تنافسي وقابل للتنبؤ'
+  },
+
+  he: {
+    dir:'rtl',
+    nav_about:'אודות', nav_products:'מוצרים', nav_adv:'יתרונות', nav_geo:'כיסוי', nav_contact:'צור קשר',
+    hero_label:'שמנים בסיסיים · PAO · חומרי סיכה מוגמרים',
+    hero_h1:'אספקה גלובלית.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC מספקת שמנים בסיסיים, PAO וחומרי סיכה בתפזורת — ישירות מהמזקקה אל מתקנך. מאיחוד האמירויות. 7+ שנות ניסיון. 50+ שווקים.',
+    hero_btn1:'לצפות במוצרים', hero_btn2:'לבקשת הצעת מחיר ←',
+    s1:'שנות ניסיון', s2:'שווקים שמסופקים', s3:'קבוצות API',
+    about_tag:'אודות',
+    about_h:'השותף המהימן שלך ב<br><em>סחר מוצרי נפט</em>',
+    about_p1:'Excondo Global Logistics FZC רשומה באיחוד האמירויות ובעלת ניסיון של למעלה מ-7 שנים בסחר בינלאומי בשמנים בסיסיים — מקבוצה I עד קבוצה IV (PAO) — ובחומרי סיכה מוגמרים.',
+    about_p2:'אנו מתמחים במשלוחי מכולות בתפזורת — אספקה ישירה ללקוח הסופי, הפחתת עלויות ביניים ושמירה על איכות המוצר.',
+    b1:'כל המוצרים מגיעים עם גיליוני בטיחות ותעודות איכות',
+    b2:'כמויות גמישות — ממכולה אחת ועד ספינה מלאה',
+    b3:'תשלום במטבעות מרובים ואפשרויות מימון',
+    b4:'עמידה מלאה בסנקציות בינלאומיות ותקנות סחר',
+    prod_tag:'מוצרים', prod_h:'מה אנו<br><em>מספקים</em>',
+    prod_p:'מגוון מלא של שמנים בסיסיים בכל קבוצות API וחומרי סיכה מוגמרים — בתפזורת במכולות.',
+    p1t:'שמנים בסיסיים מינרליים', p1d:'שמני בסיס מעובדים בממיס ובהידרוגן לבלנד חומרי סיכה.',
+    p2t:'PAO — שמן סינתטי', p2d:'PAO לטמפרטורות קיצוניות. אידוי נמוך, מרווחי החלפה ארוכים, ביצועים מעולים.',
+    p3t:'חומרי סיכה מוגמרים', p3d:'אספקה ישירה מהמפעל — ללא אחסון ביניים, ללא ירידה באיכות. אספקה בתפזורת ב-IBC ו-flexitank מאפשרת בקבוקים, מיזוג ותיוג פרטי תחת המותג שלך, להרחבת הקיבולת ללא השקעה בתשתית חדשה.',
+    p5t:'תוספים', p5d:'משפרי מדד צמיגות, נוגדי חמצון, חומרי ניקוי, מפזרים ומעכבי קורוזיה.',
+    p6t:'פרפין ושעווה', p6d:'פרפין ושעווה מיקרו-קריסטלינית לנרות, ציפויים, גומי ואריזות.',
+    adv_tag:'למה Excondo', adv_h:'הדרך שבה<br><em>אנחנו עובדים</em>',
+    adv_p:'מומחיות לוגיסטית, גמישות פיננסית וקשרים ישירים עם מזקקות — ליצירת ערך לעסק שלך.',
+    a1t:'ישירות מהמזקקה', a1d:'משלוחי מכולות ממזקקה עד מחסנך. ללא העברות ביניים, ללא פגיעה באיכות.',
+    a2t:'כמויות גמישות', a2d:'הזמן בכמויות קטנות. הפחת סיכוני מחיר, שחרר הון חוזר, בטל חשיפה לעינויים.',
+    a3t:'פתרונות פיננסיים', a3d:'מטבעות מרובים. תשלום נדחה ומסמכי מימון סחר לקונים מוסמכים.',
+    a4t:'תיעוד מלא', a4d:'כל משלוח כולל SDS, תעודת אנליזה ומסמכי מקור לצורכי מכס.',
+    a5t:'ציות לסנקציות', a5d:'אנו פועלים אך ורק עם יעדים שאינם תחת סנקציות. ציות מלא לדיני הסחר הבינלאומי.',
+    a6t:'שותפות לטווח ארוך', a6d:'למעלה מ-7 שנים של קשרים אמינים עם מבלנדים, סוחרים ומפיצים ב-5 יבשות.',
+    geo_tag:'כיסוי', geo_h:'5 יבשות.<br><em>שותף אחד.</em>',
+    geo_p:'ממקור הפעילות שלנו באיחוד האמירויות אנו משרתים יצרני, מבלנדי וסוחרי חומרי סיכה באירופה, אסיה, המזרח התיכון, הודו ואמריקה הלטינית.',
+    r1:'אירופה', r2:'סין ואסיה', r3:'הודו', r4:'המזרח התיכון', r5:'אמריקה הלטינית', r6:'אפריקה',
+    con_tag:'צור קשר', con_h:'בואו נדבר על<br><em>אספקה.</em>',
+    cd1l:'חברה', cd2l:'אימייל', cd3l:'זמן תגובה', cd3v:'תוך 24 שעות',
+    fl1:'חברה / שם', fp1:'שם חברתך', fl2:'אימייל', fl3:'מוצר', fl4:'הודעה', fp4:'כמות, מפרטים, נמל יעד...',
+    fo1:'שמנים בסיסיים מינרליים (קבוצה I–III)', fo2:'PAO סינתטי (קבוצה IV)', fo3:'אסתרים (קבוצה V)', fo4:'חומרי סיכה מוגמרים', fo5:'תוספים', fo6:'פרפין / שעווה',
+    fsub:'שלח בקשה',
+    fcopy:'© 2026 · כל הזכויות שמורות · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'קטלוג',
+    cat_tag:'קטלוג', cat_h:'מפרטים <em>טכניים</em>',
+    cat_p:'מגוון מלא של חומרי סיכה מוגמרים עם מפרטים מלאים — שמני מנוע דיזל, שמני רכב נוסעים, הידראוליקה, נוזלי הילוכים, מוצרים תעשייתיים ולכרייה.',
+    cat_t1:'הובלה כבדה', cat_t2:'רכב נוסעים', cat_t3:'תעשייתי', cat_t4:'כרייה',
+    cg_diesel:'שמני מנוע דיזל', cg_trans:'שמני תיבת הילוכים ומערכת הנעה',
+    cg_hyd_mob:'שמני הידראוליקה — ציוד נייד', cg_grease:'שמנים סמיכים',
+    cg_pc_eu:'סינתטי מלא — תקנים אירופיים',
+    cg_pc_asia:'סינתטי מלא — רכבים אסיאתיים ואמריקאיים',
+    cg_pc_gen:'חצי סינתטי ומינרלי',
+    cg_pc_tran:'נוזלי הילוכים — רכב נוסעים',
+    cg_ind_hyd:'שמני הידראוליקה תעשייתיים', cg_gear:'שמני גיר תעשייתיים',
+    cg_comp:'שמני קומפרסור', cg_turb:'שמני טורבינה',
+    cg_slide:'שמני מסילות גלישה', cg_gas_eng:'שמני מנוע גז',
+    cg_rolling:'שמני מפרסות גלגול',
+    cg_mining_motor:'שמני מנוע — ציוד כרייה ומחצבות',
+    cg_to4:'שמני הנעה אוניברסליים — TO-4 / UTTO / STOU',
+    th_prod:'מוצר', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'עומד בדרישות',
+    cat_t5:'PAO', cat_t6:'שמנים בסיסיים',
+    cg_pao:'PAO — שמן בסיסי פולי-אלפה-אולפין', cg_g1:'קבוצה I — שמנים בסיסיים מינרליים (זיקוק בממיסים)',
+    cg_g23:'קבוצה II / III — שמנים בסיסיים מוהידרוגנים ומהידרוקרקים',
+    th_param:'פרמטר', th_unit:'יחידה', th_method:'שיטת בדיקה',
+    th_norm:'מפרט', th_actual:'ערך בפועל',
+    a7t:'איכות שמורה — ישירות מהמפעל',
+    a7d:'חומרי סיכה מוכנים נשלחים ישירות ממפעל הייצור. ללא אחסנת ביניים — המוצר שאתה מקבל תואם בדיוק למה שאושר.',
+    a8t:'כלכלה עדיפה על פני ערבול עצמי',
+    a8d:'בשוק סחורות תנודתי, קניית חומרי סיכה מוכנים מאיתנו יכולה להיות זולה יותר מיצור עצמי — ביטול תנודות מחיר שמן בסיס, רכש תוספים, עלויות ערבול ותקורת בקרת איכות. פשוט בקבק ומכור.',
+    cc_title:'חומרי סיכה מוכנים — ייצור מול קנייה',
+    cc_diy_h:'ערבול עצמי', cc_exc_h:'רכישה מ-Excondo',
+    cc_i1:'שמן בסיס — מחיר תנודתי בשוק', cc_i2:'חבילת תוספים',
+    cc_i3:'עלויות ערבול, סינון ובקרת איכות', cc_i4:'החזקת מלאי ולוגיסטיקה',
+    cc_i5:'סיכון איכות, עיבוד מחדש, הפסדים',
+    cc_total_diy:'סה"כ: גבוה ובלתי צפוי',
+    cc_e1:'מחיר שקוף ותחרותי',
+    cc_e2:'איכות מאושרת — ישירות ממפעל הייצור',
+    cc_e3:'ללא חשיפה למחיר חומרי גלם',
+    cc_e4:'בקבק ומכור מיידית — אפס תקורת ערבול',
+    cc_e5:'בשוקות תנודתיים, לעתים קרובות זול יותר מערבול',
+    cc_total_exc:'סה"כ: תחרותי וצפוי'
+  },
+
+  el: {
+    dir:'ltr',
+    nav_about:'Σχετικά', nav_products:'Προϊόντα', nav_adv:'Πλεονεκτήματα', nav_geo:'Γεωγραφία', nav_contact:'Επικοινωνία',
+    hero_label:'Βασικά Έλαια · PAO · Έτοιμα Λιπαντικά',
+    hero_h1:'Παγκόσμια προμήθεια.<br><em>Fueling forward.</em>',
+    hero_sub:'Η Excondo Global Logistics FZC προμηθεύει βασικά έλαια, PAO και λιπαντικά χύμα — απευθείας από διυλιστήριο στις εγκαταστάσεις σας. Έδρα στα ΗΑΕ. 7+ χρόνια. 50+ αγορές.',
+    hero_btn1:'Δείτε Προϊόντα', hero_btn2:'Αίτηση τιμής →',
+    s1:'Χρόνια στην αγορά', s2:'Αγορές που εξυπηρετούμε', s3:'Ομάδες API',
+    about_tag:'Σχετικά',
+    about_h:'Ο αξιόπιστος συνεργάτης σας<br>στο <em>εμπόριο πετρελαϊκών προϊόντων</em>',
+    about_p1:'Η Excondo Global Logistics FZC είναι εγγεγραμμένη στα ΗΑΕ με πάνω από 7 χρόνια εμπειρίας στο διεθνές εμπόριο βασικών ελαίων — Ομάδα I έως IV (PAO) — και έτοιμων λιπαντικών.',
+    about_p2:'Εξειδικευόμαστε σε χύμα αποστολές με εμπορευματοκιβώτια — παράδοση απευθείας στον τελικό χρήστη, μείωση ενδιάμεσων κοστολογίων και διατήρηση ποιότητας κατά τη μεταφορά.',
+    b1:'Όλα τα προϊόντα συνοδεύονται από Δελτία Ασφαλείας και πιστοποιητικά ποιότητας',
+    b2:'Ευέλικτες ποσότητες — από ένα κοντέινερ 20ft έως πλήρες πλοίο',
+    b3:'Πληρωμές σε πολλαπλά νομίσματα και χρηματοδοτικές επιλογές',
+    b4:'Πλήρης συμμόρφωση με διεθνείς κυρώσεις και κανονισμούς εμπορίου',
+    prod_tag:'Προϊόντα', prod_h:'Τι <em>προμηθεύουμε</em>',
+    prod_p:'Πλήρης γκάμα βασικών ελαίων σε όλες τις ομάδες API και έτοιμα λιπαντικά — χύμα σε εμπορευματοκιβώτια.',
+    p1t:'Ορυκτά Βασικά Έλαια', p1d:'Βάσεις εκχύλισης με διαλύτη και υδρεπεξεργασίας για παρασκευή αυτοκινητιστικών και βιομηχανικών λιπαντικών.',
+    p2t:'PAO — Συνθετικό Βασικό Έλαιο', p2d:'Πολυαλφαολεφίνες για εξαιρετικές θερμοκρασίες. Χαμηλή πτητικότητα, παρατεταμένα διαστήματα αλλαγής, ανώτερη απόδοση.',
+    p3t:'Έτοιμα Λιπαντικά', p3d:'Απευθείας παράδοση από το εργοστάσιο — χωρίς ενδιάμεση αποθήκευση, χωρίς απώλεια ποιότητας. Χύμα προμήθεια σε IBC και flexitanks για εμφιάλωση, ανάμειξη και ιδιωτική επισήμανση υπό το δικό σας brand, επεκτείνοντας την παραγωγή χωρίς νέα επένδυση.',
+    p5t:'Πρόσθετα', p5d:'Βελτιωτικά ιξώδους, αντιοξειδωτικά, απορρυπαντικά, διασπορείς και αναστολείς διάβρωσης για εγκαταστάσεις ανάμειξης.',
+    p6t:'Παραφίνη & Κερί', p6d:'Παραφίνες και μικροκρυσταλλικά κεριά για κεριά, επικαλύψεις, καουτσούκ και συσκευασία.',
+    adv_tag:'Γιατί Excondo', adv_h:'Ο τρόπος που<br><em>δουλεύουμε</em>',
+    adv_p:'Εμπειρία στην εφοδιαστική, χρηματοοικονομική ευελιξία και άμεσες σχέσεις με διυλιστήρια — για δημιουργία αξίας στην επιχείρησή σας.',
+    a1t:'Απευθείας από το Διυλιστήριο', a1d:'Αποστολές από τη διυλιστήριο στην αποθήκη σας. Χωρίς μεταφόρτωση, χωρίς απώλεια ποιότητας, χωρίς κρυφές επιβαρύνσεις.',
+    a2t:'Ευέλικτες Παρτίδες', a2d:'Παραγγείλτε τακτικά σε μικρές ποσότητες. Μειώστε τον κίνδυνο τιμής, ελευθερώστε κεφάλαιο κίνησης και αποφύγετε έκθεση σε υπερημερία.',
+    a3t:'Χρηματοδοτικές Λύσεις', a3d:'Αποδεκτά πολλαπλά νομίσματα. Αναβαλλόμενη πληρωμή και εμπορικά χρηματοδοτικά μέσα για εγκεκριμένους αγοραστές.',
+    a4t:'Πλήρης Τεκμηρίωση', a4d:'Κάθε αποστολή συνοδεύεται από SDS, Πιστοποιητικό Ανάλυσης και έγγραφα καταγωγής για απρόσκοπτη εκτελωνισμό.',
+    a5t:'Συμμόρφωση Κυρώσεων', a5d:'Συναλλασσόμαστε αποκλειστικά με μη κυρωμένους προορισμούς και αντισυμβαλλόμενους. Πλήρης συμμόρφωση με διεθνές εμπορικό δίκαιο.',
+    a6t:'Μακροπρόθεσμη Συνεργασία', a6d:'7+ χρόνια οικοδόμησης σχέσεων με εταιρείες ανάμειξης, εμπόρους και διανομείς σε 5 ηπείρους. Σκεφτόμαστε σε δεκαετίες.',
+    geo_tag:'Γεωγραφία', geo_h:'5 ήπειροι.<br><em>Ένας συνεργάτης.</em>',
+    geo_p:'Από τη βάση μας στα ΗΑΕ εξυπηρετούμε παραγωγούς, εταιρείες ανάμειξης και εμπόρους λιπαντικών σε Ευρώπη, Ασία, Μέση Ανατολή, Ινδία και Λατινική Αμερική.',
+    r1:'Ευρώπη', r2:'Κίνα & Ασία', r3:'Ινδία', r4:'Μέση Ανατολή', r5:'Λατινική Αμερική', r6:'Αφρική',
+    con_tag:'Επικοινωνία', con_h:'Ας μιλήσουμε για<br><em>προμήθεια.</em>',
+    cd1l:'Εταιρεία', cd2l:'Email', cd3l:'Χρόνος απόκρισης', cd3v:'Εντός 24 ωρών',
+    fl1:'Εταιρεία / Όνομα', fp1:'Η εταιρεία σας', fl2:'Email', fl3:'Προϊόν', fl4:'Μήνυμα', fp4:'Ποσότητα, προδιαγραφές, λιμάνι παράδοσης...',
+    fo1:'Ορυκτά Βασικά Έλαια (Ομάδα I–III)', fo2:'PAO – Συνθετικό (Ομάδα IV)', fo3:'Έστερ (Ομάδα V)', fo4:'Έτοιμα Λιπαντικά', fo5:'Πρόσθετα', fo6:'Παραφίνη / Κερί',
+    fsub:'Αποστολή Αιτήματος',
+    fcopy:'© 2026 · Όλα τα δικαιώματα διατηρούνται · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'Κατάλογος',
+    cat_tag:'Κατάλογος', cat_h:'Τεχνικές <em>προδιαγραφές</em>',
+    cat_p:'Πλήρης γκάμα έτοιμων λιπαντικών με αναλυτικές προδιαγραφές — έλαια κινητήρα ντίζελ, επιβατικών, υδραυλικά, υγρά μετάδοσης, βιομηχανικά και εξορυκτικά προϊόντα.',
+    cat_t1:'Βαρέα Οχήματα', cat_t2:'Επιβατικό', cat_t3:'Βιομηχανικά', cat_t4:'Εξόρυξη',
+    cg_diesel:'Έλαια Κινητήρα Ντίζελ', cg_trans:'Έλαια Κιβωτίου Ταχυτήτων &amp; Μετάδοσης',
+    cg_hyd_mob:'Υδραυλικά Έλαια — Κινητός Εξοπλισμός', cg_grease:'Γράσα',
+    cg_pc_eu:'Πλήρως Συνθετικά — Ευρωπαϊκά Πρότυπα',
+    cg_pc_asia:'Πλήρως Συνθετικά — Ασιατικά &amp; Αμερικανικά Οχήματα',
+    cg_pc_gen:'Ημισυνθετικά &amp; Ορυκτά Λιπαντικά',
+    cg_pc_tran:'Υγρά Μετάδοσης — Επιβατικά',
+    cg_ind_hyd:'Βιομηχανικά Υδραυλικά Έλαια', cg_gear:'Βιομηχανικά Έλαια Γραναζιών',
+    cg_comp:'Έλαια Συμπιεστή', cg_turb:'Έλαια Στροβίλου',
+    cg_slide:'Έλαια Ολίσθησης', cg_gas_eng:'Έλαια Κινητήρα Αερίου',
+    cg_rolling:'Έλαια Έλασης',
+    cg_mining_motor:'Έλαια Κινητήρα — Εξορυκτικός Εξοπλισμός',
+    cg_to4:'Παγκόσμια Έλαια Μετάδοσης — TO-4 / UTTO / STOU',
+    th_prod:'Προϊόν', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'Πληροί τις απαιτήσεις',
+    cat_t5:'PAO', cat_t6:'Βασικά Έλαια',
+    cg_pao:'PAO — Πολυαλφαολεφινικό Βασικό Έλαιο', cg_g1:'Ομάδα I — Ορυκτά Βασικά Έλαια (Εκχύλιση με Διαλύτη)',
+    cg_g23:'Ομάδα II / III — Υδρογονωμένα &amp; Υδροδιασπασμένα Βασικά Έλαια',
+    th_param:'Παράμετρος', th_unit:'Μονάδα', th_method:'Μέθοδος Δοκιμής',
+    th_norm:'Προδιαγραφή', th_actual:'Πραγματική Τιμή',
+    a7t:'Ποιότητα διατηρημένη — απευθείας από το εργοστάσιο',
+    a7d:'Τα έτοιμα λιπαντικά αποστέλλονται απευθείας από την παραγωγική μονάδα. Χωρίς ενδιάμεση αποθήκευση — το προϊόν που λαμβάνετε ταιριάζει ακριβώς με αυτό που πιστοποιήθηκε.',
+    a8t:'Καλύτερη οικονομία από την εσωτερική ανάμειξη',
+    a8d:'Σε ασταθή αγορά εμπορευμάτων, η αγορά έτοιμων λιπαντικών από εμάς μπορεί να είναι φθηνότερη από την κατασκευή εσωτερικά — εξαλείφοντας διακυμάνσεις τιμών βασικών ελαίων, προμήθεια πρόσθετων, κόστη ανάμειξης και γενικά έξοδα QC. Απλά εμφιαλώστε και πουλήστε.',
+    cc_title:'Έτοιμα λιπαντικά — Παραγωγή ή Αγορά',
+    cc_diy_h:'Εσωτερική ανάμειξη', cc_exc_h:'Αγορά από Excondo',
+    cc_i1:'Βασικό λάδι — τιμή ασταθής στην αγορά', cc_i2:'Πακέτο πρόσθετων',
+    cc_i3:'Κόστη ανάμειξης, φιλτραρίσματος και QC', cc_i4:'Διατήρηση αποθεμάτων και logistics',
+    cc_i5:'Κίνδυνος ποιότητας, επανεπεξεργασία, απώλειες',
+    cc_total_diy:'Σύνολο: υψηλό και απρόβλεπτο',
+    cc_e1:'Μία διαφανής, ανταγωνιστική τιμή',
+    cc_e2:'Πιστοποιημένη ποιότητα — απευθείας από εργοστάσιο',
+    cc_e3:'Χωρίς έκθεση σε τιμές πρώτων υλών',
+    cc_e4:'Εμφιαλώστε και πουλήστε αμέσως',
+    cc_e5:'Σε ασταθείς αγορές, συχνά φθηνότερα από ανάμειξη',
+    cc_total_exc:'Σύνολο: ανταγωνιστικό και προβλέψιμο'
+  },
+
+  es: {
+    dir:'ltr',
+    nav_about:'Acerca de', nav_products:'Productos', nav_adv:'Ventajas', nav_geo:'Geografía', nav_contact:'Contacto',
+    hero_label:'Aceites Base · PAO · Lubricantes Terminados',
+    hero_h1:'Suministro global.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC suministra aceites base, PAO y lubricantes a granel — directamente de la refinería a sus instalaciones. Con sede en EAU. 7+ años. 50+ mercados.',
+    hero_btn1:'Ver Productos', hero_btn2:'Solicitar cotización →',
+    s1:'Años en el mercado', s2:'Mercados atendidos', s3:'Grupos API',
+    about_tag:'Acerca de',
+    about_h:'Su socio de confianza<br>en el <em>comercio de productos petrolíferos</em>',
+    about_p1:'Excondo Global Logistics FZC está registrada en los EAU con más de 7 años de experiencia en el comercio internacional de aceites base — Grupo I al IV (PAO) — y lubricantes terminados.',
+    about_p2:'Nos especializamos en envíos a granel en contenedores — entregando el producto directamente al usuario final, reduciendo costos intermediarios y preservando la calidad en tránsito.',
+    b1:'Todos los productos incluyen Fichas de Seguridad y certificados de calidad',
+    b2:'Lotes flexibles — desde un contenedor de 20 pies hasta un buque completo',
+    b3:'Pagos en múltiples monedas y opciones de financiamiento disponibles',
+    b4:'Pleno cumplimiento con sanciones internacionales y regulaciones comerciales',
+    prod_tag:'Productos', prod_h:'Lo que <em>suministramos</em>',
+    prod_p:'Gama completa de aceites base en todos los grupos API y lubricantes terminados — en lotes a granel en contenedores.',
+    p1t:'Aceites Base Minerales', p1d:'Bases refinadas por disolvente e hidroprocessadas para formulación de lubricantes automotrices e industriales.',
+    p2t:'PAO — Aceite Base Sintético', p2d:'Polialfaolefinas para aplicaciones de temperatura extrema. Baja volatilidad, intervalos de cambio prolongados, rendimiento superior.',
+    p3t:'Lubricantes Terminados', p3d:'Entrega directa desde la planta de fabricación — sin almacenamiento intermediario, sin pérdida de calidad. El suministro a granel en IBC y flexitanks le permite envasar, mezclar y etiquetar bajo su propia marca, ampliando la producción sin nueva inversión.',
+    p5t:'Aditivos', p5d:'Mejoradores de viscosidad, antioxidantes, detergentes, dispersantes e inhibidores de corrosión para su planta de mezcla.',
+    p6t:'Parafina y Cera', p6d:'Parafinas y ceras microcristalinas para velas, recubrimientos, caucho y embalaje.',
+    adv_tag:'Por qué Excondo', adv_h:'La forma en que<br><em>trabajamos</em>',
+    adv_p:'Experiencia logística, flexibilidad financiera y relaciones directas con refinerías — para generar valor a su negocio.',
+    a1t:'Directo desde la Refinería', a1d:'Envíos en contenedor desde la puerta de la refinería hasta su almacén. Sin transbordo, sin pérdida de calidad, sin márgenes ocultos.',
+    a2t:'Tamaños de Lote Flexibles', a2d:'Pida regularmente en pequeñas cantidades. Mitigue el riesgo de precios y libere capital de trabajo.',
+    a3t:'Soluciones Financieras', a3d:'Múltiples monedas aceptadas. Pago diferido e instrumentos de financiamiento comercial para compradores calificados.',
+    a4t:'Documentación Completa', a4d:'Cada envío incluye SDS, Certificado de Análisis y documentación de origen para un despacho aduanero sin complicaciones.',
+    a5t:'Cumplimiento de Sanciones', a5d:'Operamos exclusivamente con destinos y contrapartes no sancionados. Pleno cumplimiento del derecho mercantil internacional.',
+    a6t:'Asociación a Largo Plazo', a6d:'Más de 7 años construyendo relaciones con mezcladores, comerciantes y distribuidores en 5 continentes. Pensamos en décadas.',
+    geo_tag:'Geografía', geo_h:'5 continentes.<br><em>Un socio.</em>',
+    geo_p:'Desde nuestra base en los EAU servimos a productores, mezcladores y comerciantes de lubricantes en Europa, Asia, Oriente Medio, India y América Latina.',
+    r1:'Europa', r2:'China y Asia', r3:'India', r4:'Oriente Medio', r5:'América Latina', r6:'África',
+    con_tag:'Contacto', con_h:'Hablemos de<br><em>suministro.</em>',
+    cd1l:'Empresa', cd2l:'Email', cd3l:'Tiempo de respuesta', cd3v:'En 24 horas',
+    fl1:'Empresa / Nombre', fp1:'Su empresa', fl2:'Email', fl3:'Producto', fl4:'Mensaje', fp4:'Volumen, especificaciones, puerto de entrega...',
+    fo1:'Aceites Base Minerales (Grupo I–III)', fo2:'PAO – Sintético (Grupo IV)', fo3:'Ésteres (Grupo V)', fo4:'Lubricantes Terminados', fo5:'Aditivos', fo6:'Parafina / Cera',
+    fsub:'Enviar Consulta',
+    fcopy:'© 2026 · Todos los derechos reservados · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'Catálogo',
+    cat_tag:'Catálogo', cat_h:'Especificaciones <em>técnicas</em>',
+    cat_p:'Gama completa de lubricantes terminados con especificaciones completas — aceites diésel, automóvil, hidráulicos, fluidos de transmisión, productos industriales y mineros.',
+    cat_t1:'Vehículos Pesados', cat_t2:'Automóvil', cat_t3:'Industrial', cat_t4:'Minería',
+    cg_diesel:'Aceites para Motor Diésel', cg_trans:'Aceites de Transmisión y Tren de Tracción',
+    cg_hyd_mob:'Aceites Hidráulicos — Equipo Móvil', cg_grease:'Grasas',
+    cg_pc_eu:'Totalmente Sintético — Normas Europeas',
+    cg_pc_asia:'Totalmente Sintético — Vehículos Asiáticos y Americanos',
+    cg_pc_gen:'Semisintético y Mineral',
+    cg_pc_tran:'Fluidos de Transmisión — Automóvil',
+    cg_ind_hyd:'Aceites Hidráulicos Industriales', cg_gear:'Aceites para Engranajes Industriales',
+    cg_comp:'Aceites para Compresor', cg_turb:'Aceites para Turbina',
+    cg_slide:'Aceites para Guías', cg_gas_eng:'Aceites para Motor de Gas',
+    cg_rolling:'Aceites de Laminación',
+    cg_mining_motor:'Aceites para Motor — Equipos de Minería',
+    cg_to4:'Aceites de Transmisión Universales — TO-4 / UTTO / STOU',
+    th_prod:'Producto', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'Cumple requisitos',
+    cat_t5:'PAO', cat_t6:'Aceites Base',
+    cg_pao:'PAO — Aceite Base Polialfaolefínico', cg_g1:'Grupo I — Aceites Base Minerales (Refinados por Disolvente)',
+    cg_g23:'Grupo II / III — Aceites Base Hidrotratados e Hidrocrakeados',
+    th_param:'Parámetro', th_unit:'Unidad', th_method:'Método de Prueba',
+    th_norm:'Especificación', th_actual:'Valor Real',
+    a7t:'Calidad preservada — directo de la planta',
+    a7d:'Los lubricantes terminados se envían directamente desde la planta de fabricación. Sin almacenamiento intermedio — el producto que recibe coincide exactamente con lo certificado.',
+    a8t:'Mejor economía que mezclar internamente',
+    a8d:'En un mercado de materias primas volátil, comprar lubricantes listos a nosotros puede ser más barato que fabricar el producto usted mismo — eliminando fluctuaciones de precio del aceite base, compra de aditivos, costos de mezcla y gastos de QC. Solo embotelle y venda.',
+    cc_title:'Lubricantes terminados — Fabricar vs. Comprar',
+    cc_diy_h:'Mezclar internamente', cc_exc_h:'Comprar a Excondo',
+    cc_i1:'Aceite base — precio volátil en el mercado', cc_i2:'Paquete de aditivos',
+    cc_i3:'Costos de mezcla, filtración y QC', cc_i4:'Inventario y logística',
+    cc_i5:'Riesgo de calidad, retrabajo, pérdidas',
+    cc_total_diy:'Total: alto e impredecible',
+    cc_e1:'Un precio transparente y competitivo',
+    cc_e2:'Calidad certificada — directa de planta',
+    cc_e3:'Sin exposición al precio de materias primas',
+    cc_e4:'Embotelle y venda inmediatamente',
+    cc_e5:'En mercados volátiles, a menudo más barato',
+    cc_total_exc:'Total: competitivo y predecible'
+  },
+
+  tr: {
+    dir:'ltr',
+    nav_about:'Hakkında', nav_products:'Ürünler', nav_adv:'Avantajlar', nav_geo:'Coğrafya', nav_contact:'İletişim',
+    hero_label:'Baz Yağlar · PAO · Hazır Madeni Yağlar',
+    hero_h1:'Küresel tedarik.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC, baz yağlar, PAO ve madeni yağları dökme olarak — rafineriden doğrudan tesislerinize — tedarik eder. BAE merkezli. 7+ yıl. 50+ pazar.',
+    hero_btn1:'Ürünleri Görüntüle', hero_btn2:'Teklif İste →',
+    s1:'Yıllık pazar deneyimi', s2:'Hizmet verilen pazar', s3:'API grupları',
+    about_tag:'Hakkında',
+    about_h:'Petrol ürünleri ticaretinde<br><em>güvenilir ortağınız</em>',
+    about_p1:'Excondo Global Logistics FZC, BAE\'de kayıtlıdır ve baz yağlar — Grup I\'den IV\'e (PAO) — ve hazır madeni yağların uluslararası ticaretinde 7 yılı aşkın deneyime sahiptir.',
+    about_p2:'Konteynerli dökme sevkiyatlar konusunda uzmanlaşmış durumdayız — ürünü doğrudan son kullanıcıya teslim ederek aracı maliyetleri azaltıyor ve transit kaliteyi koruyoruz.',
+    b1:'Tüm ürünler SDS ve kalite sertifikalarıyla birlikte gelir',
+    b2:'Esnek partiler — tek 20 fit konteynerden tam gemiye kadar',
+    b3:'Çoklu para birimi ödemeleri ve finansman seçenekleri mevcuttur',
+    b4:'Uluslararası yaptırımlar ve ticaret mevzuatına tam uyum',
+    prod_tag:'Ürünler', prod_h:'Ne <em>tedarik ediyoruz</em>',
+    prod_p:'Tüm API gruplarında eksiksiz baz yağ yelpazesi ve hazır madeni yağlar — konteynerli dökme partiler halinde.',
+    p1t:'Mineral Baz Yağlar', p1d:'Otomotiv ve endüstriyel madeni yağ formülasyonu için çözücü rafinasyonu ve hidroişlenmiş baz stoklar.',
+    p2t:'PAO — Sentetik Baz Yağ', p2d:'Aşırı sıcaklık uygulamaları için polialfaolefinler. Düşük uçuculuk, uzun değişim aralıkları, üstün performans.',
+    p3t:'Hazır Madeni Yağlar', p3d:'Doğrudan üretim tesisinden teslim — ara depolama yok, kalite kaybı yok. IBC ve flexitanklardaki dökme tedarik, kendi markanız altında dolum, harmanlama ve özel etiketleme yapmanızı sağlar; yeni yatırım gerektirmeden üretim kapasitenizi artırırsınız.',
+    p5t:'Katkı Maddeleri', p5d:'Viskozite iyileştiriciler, antioksidanlar, deterjanlar, dispersantlar ve aşınma önleyici inhibitörler.',
+    p6t:'Parafin ve Mum', p6d:'Mum üretimi, kaplamalar, kauçuk ve ambalaj için parafin ve mikrokristal mumlar.',
+    adv_tag:'Neden Excondo', adv_h:'Çalışma<br><em>şeklimiz</em>',
+    adv_p:'Lojistik uzmanlığı, finansal esneklik ve rafinerilerle doğrudan ilişkiler — işletmenize değer katmak için.',
+    a1t:'Doğrudan Rafineriden', a1d:'Refinery kapısından deponuza konteyner sevkiyatı. Aktarma yok, kalite kaybı yok, gizli marj yok.',
+    a2t:'Esnek Parti Boyutları', a2d:'Küçük miktarlarda düzenli sipariş verin. Fiyat riskini azaltın, işletme sermayesini serbest bırakın.',
+    a3t:'Finansal Çözümler', a3d:'Çoklu para birimi kabul edilir. Nitelikli alıcılar için ertelenmiş ödeme ve ticaret finansmanı araçları mevcuttur.',
+    a4t:'Eksiksiz Dokümantasyon', a4d:'Her sevkiyat SDS, Analiz Sertifikası ve kesintisiz gümrükleme için menşe belgelerini içerir.',
+    a5t:'Yaptırım Uyumu', a5d:'Yalnızca yaptırım uygulanmayan varış noktaları ve karşı taraflarla ticaret yapıyoruz.',
+    a6t:'Uzun Vadeli Ortaklık', a6d:'5 kıtada harmancılar, tüccarlar ve distribütörlerle 7+ yıllık ilişki inşası. Onlarca yıl düşünüyoruz.',
+    geo_tag:'Coğrafya', geo_h:'5 kıta.<br><em>Bir ortak.</em>',
+    geo_p:'BAE merkezimizden Avrupa, Asya, Orta Doğu, Hindistan ve Latin Amerika\'daki madeni yağ üreticilerine, harmancılara ve tüccarlara hizmet veriyoruz.',
+    r1:'Avrupa', r2:'Çin ve Asya', r3:'Hindistan', r4:'Orta Doğu', r5:'Latin Amerika', r6:'Afrika',
+    con_tag:'İletişim', con_h:'Tedarik hakkında<br><em>konuşalım.</em>',
+    cd1l:'Şirket', cd2l:'E-posta', cd3l:'Yanıt süresi', cd3v:'24 saat içinde',
+    fl1:'Şirket / Ad', fp1:'Şirketiniz', fl2:'E-posta', fl3:'Ürün', fl4:'Mesaj', fp4:'Hacim, özellikler, teslimat limanı...',
+    fo1:'Mineral Baz Yağlar (Grup I–III)', fo2:'PAO – Sentetik (Grup IV)', fo3:'Ester (Grup V)', fo4:'Hazır Madeni Yağlar', fo5:'Katkı Maddeleri', fo6:'Parafin / Mum',
+    fsub:'Talep Gönder',
+    fcopy:'© 2026 · Tüm hakları saklıdır · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'Katalog',
+    cat_tag:'Katalog', cat_h:'Teknik <em>özellikler</em>',
+    cat_p:'Tam özelliklerle eksiksiz hazır madeni yağ yelpazesi — dizel motor yağları, binek araç, hidrolik, transmisyon akışkanları, endüstriyel ve madencilik ürünleri.',
+    cat_t1:'Ağır Vasıta', cat_t2:'Binek Araç', cat_t3:'Endüstriyel', cat_t4:'Madencilik',
+    cg_diesel:'Dizel Motor Yağları', cg_trans:'Transmisyon ve Aktarma Organı Yağları',
+    cg_hyd_mob:'Hidrolik Yağlar — Mobil Ekipman', cg_grease:'Gresler',
+    cg_pc_eu:'Tam Sentetik — Avrupa Standartları',
+    cg_pc_asia:'Tam Sentetik — Asya ve Amerika Araçları',
+    cg_pc_gen:'Yarı Sentetik ve Mineral',
+    cg_pc_tran:'Transmisyon Akışkanları — Binek Araç',
+    cg_ind_hyd:'Endüstriyel Hidrolik Yağlar', cg_gear:'Endüstriyel Dişli Yağları',
+    cg_comp:'Kompresör Yağları', cg_turb:'Türbin Yağları',
+    cg_slide:'Kızak Yağları', cg_gas_eng:'Gaz Motor Yağları',
+    cg_rolling:'Hadde Yağları',
+    cg_mining_motor:'Motor Yağları — Madencilik Ekipmanları',
+    cg_to4:'Evrensel Aktarma Organı Yağları — TO-4 / UTTO / STOU',
+    th_prod:'Ürün', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'Gereksinimleri Karşılar',
+    cat_t5:'PAO', cat_t6:'Baz Yağlar',
+    cg_pao:'PAO — Polialfaolefin Baz Yağ', cg_g1:'Grup I — Mineral Baz Yağlar (Çözücü Rafinasyonu)',
+    cg_g23:'Grup II / III — Hidrotreated ve Hydrocracked Baz Yağlar',
+    th_param:'Parametre', th_unit:'Birim', th_method:'Test Yöntemi',
+    th_norm:'Özellik', th_actual:'Gerçek Değer',
+    a7t:'Kalite Korunmuş — Doğrudan Fabrikadan',
+    a7d:'Hazır madeni yağlar doğrudan üretim tesisinden sevk edilir. Ara depolama yok — aldığınız ürün sertifikalandırılanla tam olarak eşleşir.',
+    a8t:'Şirket İçi Harmanlamadan Daha İyi Ekonomi',
+    a8d:'Volatil bir emtia piyasasında, bizden hazır madeni yağ satın almak ürünü kendiniz üretmekten daha ucuz olabilir — baz yağ fiyat dalgalanmalarını, katkı maddeleri alımını, harmanlama maliyetlerini ve KY genel giderlerini ortadan kaldırır. Sadece şişeleri doldurun ve satın.',
+    cc_title:'Hazır Madeni Yağlar — Üret veya Satın Al',
+    cc_diy_h:'Şirket İçi Harmanlama', cc_exc_h:"Excondo'dan Satın Al",
+    cc_i1:'Baz yağ — piyasada volatil fiyat', cc_i2:'Katkı maddesi paketi',
+    cc_i3:'Harmanlama, filtrasyon ve KY maliyetleri', cc_i4:'Stok tutma ve lojistik',
+    cc_i5:'Kalite riski, yeniden işleme, kayıplar',
+    cc_total_diy:'Toplam: yüksek ve öngörülemeyen',
+    cc_e1:'Bir şeffaf, rekabetçi fiyat',
+    cc_e2:'Sertifikalı kalite — doğrudan üretim tesisinden',
+    cc_e3:'Ham madde fiyatına maruziyet yok',
+    cc_e4:'Hemen şişele ve sat — sıfır harmanlama',
+    cc_e5:'Volatil piyasalarda çoğunlukla harmanlamadan ucuz',
+    cc_total_exc:'Toplam: rekabetçi ve öngörülebilir'
+  },
+
+  id: {
+    dir:'ltr',
+    nav_about:'Tentang', nav_products:'Produk', nav_adv:'Keunggulan', nav_geo:'Geografi', nav_contact:'Kontak',
+    hero_label:'Base Oil · PAO · Pelumas Jadi',
+    hero_h1:'Pasokan global.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC menyuplai base oil, PAO dan pelumas dalam jumlah besar — langsung dari kilang ke fasilitas Anda. Berbasis di UAE. 7+ tahun. 50+ pasar.',
+    hero_btn1:'Lihat Produk', hero_btn2:'Minta Penawaran →',
+    s1:'Tahun di pasar', s2:'Pasar yang dilayani', s3:'Kelompok API',
+    about_tag:'Tentang',
+    about_h:'Mitra terpercaya Anda<br>dalam <em>perdagangan produk minyak</em>',
+    about_p1:'Excondo Global Logistics FZC terdaftar di UAE dan memiliki pengalaman lebih dari 7 tahun dalam perdagangan internasional base oil — Kelompok I hingga IV (PAO) — dan pelumas jadi.',
+    about_p2:'Kami mengkhususkan diri dalam pengiriman curah berkontainer — mengantarkan produk langsung ke pengguna akhir, memangkas biaya perantara dan menjaga kualitas selama pengiriman.',
+    b1:'Semua produk disertai Lembar Data Keselamatan dan sertifikat kualitas',
+    b2:'Lot fleksibel — dari satu kontainer 20 kaki hingga kapal penuh',
+    b3:'Pembayaran multi-mata uang dan opsi pembiayaan tersedia',
+    b4:'Kepatuhan penuh terhadap sanksi internasional dan peraturan perdagangan',
+    prod_tag:'Produk', prod_h:'Yang kami <em>suplai</em>',
+    prod_p:'Rangkaian lengkap base oil di semua kelompok API dan pelumas jadi — dalam lot curah berkontainer.',
+    p1t:'Base Oil Mineral', p1d:'Bahan dasar hasil proses pelarut dan hidroproses untuk formulasi pelumas otomotif dan industri.',
+    p2t:'PAO — Base Oil Sintetis', p2d:'Polyalphaolefin untuk aplikasi suhu ekstrem. Volatilitas rendah, interval penggantian diperpanjang, performa superior.',
+    p3t:'Pelumas Jadi', p3d:'Dikirim langsung dari pabrik — tanpa penyimpanan perantara, tanpa kehilangan kualitas. Pasokan curah dalam IBC dan flexitank memungkinkan Anda mengemas, memadukan dan memberi label merek sendiri, memperluas produksi tanpa investasi baru.',
+    p5t:'Aditif', p5d:'Pengubah viskositas, antioksidan, detergen, dispersan dan inhibitor anti-aus untuk pabrik pencampuran Anda.',
+    p6t:'Parafin dan Lilin', p6d:'Parafin dan lilin mikrokristal untuk lilin, lapisan, karet dan kemasan.',
+    adv_tag:'Mengapa Excondo', adv_h:'Cara kami<br><em>bekerja</em>',
+    adv_p:'Keahlian logistik, fleksibilitas keuangan dan hubungan langsung dengan kilang — untuk menciptakan nilai bagi bisnis Anda.',
+    a1t:'Langsung dari Kilang', a1d:'Pengiriman kontainer dari gerbang kilang ke gudang Anda. Tanpa transshipment, tanpa kehilangan kualitas, tanpa margin tersembunyi.',
+    a2t:'Ukuran Lot Fleksibel', a2d:'Pesan secara rutin dalam jumlah kecil. Mitigasi risiko harga, bebaskan modal kerja.',
+    a3t:'Solusi Keuangan', a3d:'Berbagai mata uang diterima. Pembayaran ditangguhkan dan instrumen pembiayaan perdagangan untuk pembeli yang memenuhi syarat.',
+    a4t:'Dokumentasi Lengkap', a4d:'Setiap pengiriman menyertakan SDS, Sertifikat Analisis dan dokumentasi asal untuk clearance bea cukai yang lancar.',
+    a5t:'Kepatuhan Sanksi', a5d:'Kami hanya berdagang dengan tujuan dan pihak yang tidak dikenai sanksi.',
+    a6t:'Kemitraan Jangka Panjang', a6d:'7+ tahun membangun hubungan dengan blender, pedagang dan distributor di 5 benua. Kami berpikir dalam dekade.',
+    geo_tag:'Geografi', geo_h:'5 benua.<br><em>Satu mitra.</em>',
+    geo_p:'Dari basis UAE kami melayani produsen, blender dan pedagang pelumas di Eropa, Asia, Timur Tengah, India dan Amerika Latin.',
+    r1:'Eropa', r2:'China dan Asia', r3:'India', r4:'Timur Tengah', r5:'Amerika Latin', r6:'Afrika',
+    con_tag:'Kontak', con_h:'Mari bicara<br><em>pasokan.</em>',
+    cd1l:'Perusahaan', cd2l:'Email', cd3l:'Waktu respons', cd3v:'Dalam 24 jam',
+    fl1:'Perusahaan / Nama', fp1:'Perusahaan Anda', fl2:'Email', fl3:'Produk', fl4:'Pesan', fp4:'Volume, spesifikasi, pelabuhan pengiriman...',
+    fo1:'Base Oil Mineral (Kelompok I–III)', fo2:'PAO – Sintetis (Kelompok IV)', fo3:'Ester (Kelompok V)', fo4:'Pelumas Jadi', fo5:'Aditif', fo6:'Parafin / Lilin',
+    fsub:'Kirim Pertanyaan',
+    fcopy:'© 2026 · Hak cipta dilindungi · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'Katalog',
+    cat_tag:'Katalog', cat_h:'Spesifikasi <em>teknis</em>',
+    cat_p:'Rangkaian pelumas jadi lengkap dengan spesifikasi penuh — oli mesin diesel, kendaraan penumpang, hidrolik, fluida transmisi, produk industri dan pertambangan.',
+    cat_t1:'Kendaraan Berat', cat_t2:'Kendaraan Penumpang', cat_t3:'Industri', cat_t4:'Pertambangan',
+    cg_diesel:'Oli Mesin Diesel', cg_trans:'Oli Transmisi dan Drivetrain',
+    cg_hyd_mob:'Oli Hidrolik — Peralatan Bergerak', cg_grease:'Gemuk',
+    cg_pc_eu:'Full Sintetis — Standar Eropa',
+    cg_pc_asia:'Full Sintetis — Kendaraan Asia dan Amerika',
+    cg_pc_gen:'Semi-Sintetis dan Mineral',
+    cg_pc_tran:'Fluida Transmisi — Penumpang',
+    cg_ind_hyd:'Oli Hidrolik Industri', cg_gear:'Oli Gir Industri',
+    cg_comp:'Oli Kompresor', cg_turb:'Oli Turbin',
+    cg_slide:'Oli Slideway', cg_gas_eng:'Oli Mesin Gas',
+    cg_rolling:'Oli Rolling Mill',
+    cg_mining_motor:'Oli Mesin — Peralatan Tambang',
+    cg_to4:'Oli Drivetrain Universal — TO-4 / UTTO / STOU',
+    th_prod:'Produk', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'Memenuhi Persyaratan',
+    cat_t5:'PAO', cat_t6:'Base Oil',
+    cg_pao:'PAO — Base Oil Polyalphaolefin', cg_g1:'Kelompok I — Base Oil Mineral (Proses Pelarut)',
+    cg_g23:'Kelompok II / III — Base Oil Hydrotreated &amp; Hydrocracked',
+    th_param:'Parameter', th_unit:'Satuan', th_method:'Metode Uji',
+    th_norm:'Spesifikasi', th_actual:'Nilai Aktual',
+    a7t:'Kualitas Terjaga — Langsung dari Pabrik',
+    a7d:'Pelumas jadi dikirim langsung dari fasilitas manufaktur. Tanpa penyimpanan perantara — produk yang Anda terima sesuai persis dengan yang telah disertifikasi.',
+    a8t:'Ekonomi Lebih Baik daripada Blending Sendiri',
+    a8d:'Di pasar komoditas yang volatil, membeli pelumas jadi dari kami bisa lebih murah daripada membuat produk sendiri — menghilangkan fluktuasi harga base oil, pembelian aditif, biaya blending, dan overhead QC. Tinggal mengemas dan menjual.',
+    cc_title:'Pelumas Jadi — Buat atau Beli',
+    cc_diy_h:'Blending Sendiri', cc_exc_h:'Beli dari Excondo',
+    cc_i1:'Base oil — harga volatil di pasar', cc_i2:'Paket aditif',
+    cc_i3:'Biaya blending, filtrasi dan QC', cc_i4:'Persediaan dan logistik',
+    cc_i5:'Risiko kualitas, pengerjaan ulang, kerugian',
+    cc_total_diy:'Total: tinggi dan tidak terduga',
+    cc_e1:'Satu harga transparan dan kompetitif',
+    cc_e2:'Kualitas bersertifikat — langsung dari pabrik',
+    cc_e3:'Tanpa paparan harga bahan baku',
+    cc_e4:'Langsung kemas dan jual',
+    cc_e5:'Di pasar volatil, sering lebih murah dari blending',
+    cc_total_exc:'Total: kompetitif dan dapat diprediksi'
+  },
+
+  th: {
+    dir:'ltr',
+    nav_about:'เกี่ยวกับ', nav_products:'ผลิตภัณฑ์', nav_adv:'ข้อดี', nav_geo:'ภูมิภาค', nav_contact:'ติดต่อ',
+    hero_label:'น้ำมันพื้นฐาน · PAO · น้ำมันหล่อลื่นสำเร็จรูป',
+    hero_h1:'จัดหาทั่วโลก<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC จัดส่งน้ำมันพื้นฐาน PAO และน้ำมันหล่อลื่นแบบบัลก์ — ตรงจากโรงกลั่นถึงโรงงานของท่าน ตั้งอยู่ใน UAE 7+ ปี 50+ ตลาด',
+    hero_btn1:'ดูผลิตภัณฑ์', hero_btn2:'ขอใบเสนอราคา →',
+    s1:'ปีในตลาด', s2:'ตลาดที่ให้บริการ', s3:'กลุ่ม API',
+    about_tag:'เกี่ยวกับเรา',
+    about_h:'พันธมิตรที่เชื่อถือได้<br>ใน<em>การค้าน้ำมันหล่อลื่น</em>',
+    about_p1:'Excondo Global Logistics FZC จดทะเบียนใน UAE และมีประสบการณ์กว่า 7 ปีในการค้าน้ำมันพื้นฐานระหว่างประเทศ — กลุ่ม I ถึง IV (PAO) — และน้ำมันหล่อลื่นสำเร็จรูป',
+    about_p2:'เราเชี่ยวชาญในการจัดส่งแบบบัลก์ในตู้คอนเทนเนอร์ — ส่งตรงถึงผู้ใช้ปลายทาง ลดต้นทุนตัวกลาง และรักษาคุณภาพระหว่างการขนส่ง',
+    b1:'ผลิตภัณฑ์ทุกชนิดมาพร้อม SDS และใบรับรองคุณภาพ',
+    b2:'ล็อตที่ยืดหยุ่น — ตั้งแต่ตู้คอนเทนเนอร์ 20 ฟุตหนึ่งตู้ถึงเรือเต็มลำ',
+    b3:'รับชำระเงินหลายสกุลเงินและมีตัวเลือกการเงิน',
+    b4:'ปฏิบัติตามมาตรการคว่ำบาตรและกฎระเบียบการค้าระหว่างประเทศอย่างครบถ้วน',
+    prod_tag:'ผลิตภัณฑ์', prod_h:'สิ่งที่เรา<em>จัดหา</em>',
+    prod_p:'น้ำมันพื้นฐานครบทุกกลุ่ม API และน้ำมันหล่อลื่นสำเร็จรูป — แบบบัลก์ในตู้คอนเทนเนอร์',
+    p1t:'น้ำมันพื้นฐานแร่ธาตุ', p1d:'น้ำมันพื้นฐานจากกระบวนการสกัดด้วยตัวทำละลายและไฮโดรโปรเซสสำหรับการผลิตน้ำมันหล่อลื่น',
+    p2t:'PAO — น้ำมันพื้นฐานสังเคราะห์', p2d:'โพลีอัลฟาโอเลฟินสำหรับอุณหภูมิสุดขั้ว ความระเหยต่ำ ช่วงเปลี่ยนถ่ายที่ยาวนาน ประสิทธิภาพสูงสุด',
+    p3t:'น้ำมันหล่อลื่นสำเร็จรูป', p3d:'จัดส่งตรงจากโรงงานผลิต — ไม่มีการจัดเก็บตัวกลาง ไม่มีการสูญเสียคุณภาพ การจัดหาแบบบัลก์ใน IBC และ flexitanks ช่วยให้คุณบรรจุขวด ผสม และติดฉลากแบรนด์ของคุณเอง ขยายกำลังการผลิตโดยไม่ต้องลงทุนใหม่',
+    p5t:'สารเติมแต่ง', p5d:'สารปรับปรุงความหนืด สารต้านอนุมูลอิสระ สารซักฟอก และสารยับยั้งการกัดกร่อน',
+    p6t:'พาราฟิน และขี้ผึ้ง', p6d:'พาราฟินและไมโครคริสตัลไลน์แว็กซ์สำหรับเทียน สี ยาง และบรรจุภัณฑ์',
+    adv_tag:'ทำไมต้อง Excondo', adv_h:'วิธีที่เรา<br><em>ทำงาน</em>',
+    adv_p:'ความเชี่ยวชาญด้านโลจิสติกส์ ความยืดหยุ่นทางการเงิน และความสัมพันธ์โดยตรงกับโรงกลั่น — เพื่อสร้างคุณค่าให้กับธุรกิจของคุณ',
+    a1t:'ตรงจากโรงกลั่น', a1d:'การจัดส่งตู้คอนเทนเนอร์จากประตูโรงกลั่นถึงคลังสินค้าของคุณ ไม่มีการขนถ่าย ไม่มีการสูญเสียคุณภาพ ไม่มีค่าใช้จ่ายซ่อนเร้น',
+    a2t:'ขนาดล็อตที่ยืดหยุ่น', a2d:'สั่งซื้อสม่ำเสมอในปริมาณน้อย ลดความเสี่ยงด้านราคา ปลดปล่อยเงินทุนหมุนเวียน',
+    a3t:'โซลูชันทางการเงิน', a3d:'รับหลายสกุลเงิน การชำระเงินแบบเลื่อนและตราสารการเงินสำหรับผู้ซื้อที่มีคุณสมบัติ',
+    a4t:'เอกสารครบถ้วน', a4d:'ทุกการจัดส่งมาพร้อม SDS ใบรับรองการวิเคราะห์ และเอกสารแหล่งกำเนิดสำหรับการผ่านพิธีการศุลกากรที่ราบรื่น',
+    a5t:'การปฏิบัติตามมาตรการคว่ำบาตร', a5d:'เราดำเนินการกับปลายทางและคู่ค้าที่ไม่ถูกคว่ำบาตรเท่านั้น',
+    a6t:'ความร่วมมือระยะยาว', a6d:'7+ ปีในการสร้างความสัมพันธ์กับผู้ผสม ผู้ค้า และผู้จัดจำหน่ายใน 5 ทวีป',
+    geo_tag:'ภูมิภาค', geo_h:'5 ทวีป<br><em>พันธมิตรหนึ่งเดียว</em>',
+    geo_p:'จากฐานใน UAE เราให้บริการผู้ผลิต ผู้ผสม และผู้ค้าน้ำมันหล่อลื่นในยุโรป เอเชีย ตะวันออกกลาง อินเดีย และอเมริกาลาติน',
+    r1:'ยุโรป', r2:'จีนและเอเชีย', r3:'อินเดีย', r4:'ตะวันออกกลาง', r5:'อเมริกาลาติน', r6:'แอฟริกา',
+    con_tag:'ติดต่อ', con_h:'มาคุยเรื่อง<br><em>การจัดหา</em>',
+    cd1l:'บริษัท', cd2l:'อีเมล', cd3l:'เวลาตอบสนอง', cd3v:'ภายใน 24 ชั่วโมง',
+    fl1:'บริษัท / ชื่อ', fp1:'บริษัทของคุณ', fl2:'อีเมล', fl3:'ผลิตภัณฑ์', fl4:'ข้อความ', fp4:'ปริมาณ ข้อกำหนด ท่าเรือส่งมอบ...',
+    fo1:'น้ำมันพื้นฐานแร่ธาตุ (กลุ่ม I–III)', fo2:'PAO – สังเคราะห์ (กลุ่ม IV)', fo3:'เอสเทอร์ (กลุ่ม V)', fo4:'น้ำมันหล่อลื่นสำเร็จรูป', fo5:'สารเติมแต่ง', fo6:'พาราฟิน / ขี้ผึ้ง',
+    fsub:'ส่งคำถาม',
+    fcopy:'© 2026 · สงวนลิขสิทธิ์ · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'แคตตาล็อก',
+    cat_tag:'แคตตาล็อก', cat_h:'ข้อมูล<em>ทางเทคนิค</em>',
+    cat_p:'น้ำมันหล่อลื่นสำเร็จรูปครบกลุ่มพร้อมข้อกำหนดเต็มรูปแบบ — น้ำมันเครื่องดีเซล รถยนต์นั่ง ไฮดรอลิก น้ำมันเกียร์ ผลิตภัณฑ์อุตสาหกรรมและเหมืองแร่',
+    cat_t1:'ยานพาหนะหนัก', cat_t2:'รถยนต์นั่ง', cat_t3:'อุตสาหกรรม', cat_t4:'เหมืองแร่',
+    cg_diesel:'น้ำมันเครื่องดีเซล', cg_trans:'น้ำมันเกียร์และระบบส่งกำลัง',
+    cg_hyd_mob:'น้ำมันไฮดรอลิก — เครื่องจักรเคลื่อนที่', cg_grease:'จารบี',
+    cg_pc_eu:'ฟูลสังเคราะห์ — มาตรฐานยุโรป',
+    cg_pc_asia:'ฟูลสังเคราะห์ — ยานพาหนะเอเชียและอเมริกา',
+    cg_pc_gen:'กึ่งสังเคราะห์และแร่ธาตุ',
+    cg_pc_tran:'น้ำมันเกียร์ — รถยนต์นั่ง',
+    cg_ind_hyd:'น้ำมันไฮดรอลิกอุตสาหกรรม', cg_gear:'น้ำมันเกียร์อุตสาหกรรม',
+    cg_comp:'น้ำมันคอมเพรสเซอร์', cg_turb:'น้ำมันกังหัน',
+    cg_slide:'น้ำมันสไลด์เวย์', cg_gas_eng:'น้ำมันเครื่องยนต์ก๊าซ',
+    cg_rolling:'น้ำมันรีดขึ้นรูป',
+    cg_mining_motor:'น้ำมันเครื่อง — อุปกรณ์เหมืองแร่',
+    cg_to4:'น้ำมันระบบส่งกำลังสากล — TO-4 / UTTO / STOU',
+    th_prod:'ผลิตภัณฑ์', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'ตรงตามมาตรฐาน',
+    cat_t5:'PAO', cat_t6:'น้ำมันพื้นฐาน',
+    cg_pao:'PAO — น้ำมันพื้นฐานโพลีอัลฟาโอเลฟิน', cg_g1:'กลุ่ม I — น้ำมันพื้นฐานแร่ธาตุ (สกัดด้วยตัวทำละลาย)',
+    cg_g23:'กลุ่ม II / III — น้ำมันพื้นฐานไฮโดรทรีตเตดและไฮโดรแครก',
+    th_param:'พารามิเตอร์', th_unit:'หน่วย', th_method:'วิธีการทดสอบ',
+    th_norm:'ข้อกำหนด', th_actual:'ค่าจริง',
+    a7t:'คุณภาพคงเดิม — ตรงจากโรงงาน',
+    a7d:'น้ำมันหล่อลื่นสำเร็จรูปส่งตรงจากโรงงานผลิต ไม่มีการจัดเก็บตัวกลาง — ผลิตภัณฑ์ที่คุณได้รับตรงกับสิ่งที่ได้รับการรับรองอย่างแน่นอน',
+    a8t:'ประหยัดกว่าการผสมเอง',
+    a8d:'ในตลาดสินค้าโภคภัณฑ์ที่มีความผันผวน การซื้อน้ำมันหล่อลื่นสำเร็จรูปจากเราอาจถูกกว่าการผลิตเอง — ขจัดความผันผวนของราคาน้ำมันพื้นฐาน ต้นทุนสารเติมแต่ง ต้นทุนการผสม และค่าใช้จ่าย QC เพียงแค่บรรจุและขาย',
+    cc_title:'น้ำมันหล่อลื่นสำเร็จรูป — ผลิตเองหรือซื้อ',
+    cc_diy_h:'ผสมเอง', cc_exc_h:'ซื้อจาก Excondo',
+    cc_i1:'น้ำมันพื้นฐาน — ราคาผันผวนในตลาด', cc_i2:'ชุดสารเติมแต่ง',
+    cc_i3:'ต้นทุนการผสม การกรอง และ QC', cc_i4:'การเก็บสต็อกและโลจิสติกส์',
+    cc_i5:'ความเสี่ยงด้านคุณภาพ งานแก้ไข การสูญเสีย',
+    cc_total_diy:'รวม: สูงและคาดเดาไม่ได้',
+    cc_e1:'ราคาเดียวที่โปร่งใสและแข่งขันได้',
+    cc_e2:'คุณภาพที่ได้รับการรับรอง — ตรงจากโรงงาน',
+    cc_e3:'ไม่มีความเสี่ยงด้านราคาวัตถุดิบ',
+    cc_e4:'บรรจุและขายทันที',
+    cc_e5:'ในตลาดที่ผันผวน มักถูกกว่าการผสมเอง',
+    cc_total_exc:'รวม: แข่งขันได้และคาดเดาได้'
+  },
+
+  af: {
+    dir:'ltr',
+    nav_about:'Oor Ons', nav_products:'Produkte', nav_adv:'Voordele', nav_geo:'Geografie', nav_contact:'Kontak',
+    hero_label:'Basisolies · PAO · Klaargemaakte Smeermiddels',
+    hero_h1:'Globale voorsiening.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC lewer basisolies, PAO en smeermiddels in grootmaat — direk van die raffinadery na u fasiliteit. UAE-gebaseer. 7+ jaar. 50+ markte.',
+    hero_btn1:'Bekyk Produkte', hero_btn2:'Versoek \'n kwotasie →',
+    s1:'Jaar in die mark', s2:'Markte bedien', s3:'API-groepe',
+    about_tag:'Oor Ons',
+    about_h:'U betroubare vennoot<br>in die <em>handel van petroleumprodukte</em>',
+    about_p1:'Excondo Global Logistics FZC is geregistreer in die VAE en het meer as 7 jaar ondervinding in die internasionale handel van basisolies — Groep I tot IV (PAO) — en klaargemaakte smeermiddels.',
+    about_p2:'Ons spesialiseer in grootmaat-skeepsvrag in houers — lewer produkte direk aan die eindgebruiker, sny tussengangerkoste en bewaar kwaliteit tydens vervoer.',
+    b1:'Alle produkte kom met veiligheidsdata-blaaie en kwaliteitssertifikate',
+    b2:'Buigsame partye — van een 20-voet houer tot volle skip',
+    b3:'Betalings in veelvuldige geldeenhede en finansieringsopsies beskikbaar',
+    b4:'Volle nakoming van internasionale sanksies en handelsregulasies',
+    prod_tag:'Produkte', prod_h:'Wat ons <em>lewer</em>',
+    prod_p:'Volledige reeks basisolies in alle API-groepe en klaargemaakte smeermiddels — in grootmaat houervragte.',
+    p1t:'Minerale Basisolies', p1d:'Oplosmiddel-geraffineerde en hidroverwerkte basisolies vir outomotiewe en industriële smeermiddelvermenging.',
+    p2t:'PAO — Sintetiese Basisolie', p2d:'Polialfaolefiene vir ekstreemtemperatuur-toepassings. Lae vlugtigheid, verlengde dreinasie-intervalle, uitstekende prestasie.',
+    p3t:'Klaargemaakte Smeermiddels', p3d:'Direk gelewer van die vervaardigingsaanleg — geen tussengangeropberging nie, geen kwaliteitsverlies nie. Grootmaatvoorsiening in IBCs en flexitanks laat u toe om te botteel, te meng en onder u eie handelsmerk te etiketteer, en sodoende produksie uit te brei sonder nuwe belegging.',
+    p5t:'Bymiddels', p5d:'Viskositeitverbeteraars, antioksidante, detergente, dispersante en korrosiebeskermers vir u mengaanleg.',
+    p6t:'Paraffien en Was', p6d:'Paraffien en mikrokristallyne waste vir kerse, bedekkings, rubber en verpakking.',
+    adv_tag:'Hoekom Excondo', adv_h:'Die manier waarop ons<br><em>werk</em>',
+    adv_p:'Logistieke kundigheid, finansiële buigsaamheid en direkte verhoudings met raffinaderyë — om waarde vir u besigheid te skep.',
+    a1t:'Direk van die Raffinadery', a1d:'Houervragte van die raffinadery se hekke tot u pakhuis. Geen oordrag nie, geen kwaliteitsverlies nie, geen verborge marges nie.',
+    a2t:'Buigsame Partygroottes', a2d:'Bestel gereeld in klein hoeveelhede. Beperk prysrisiko, stel bedryfskapitaal vry.',
+    a3t:'Finansiële Oplossings', a3d:'Veelvuldige geldeenhede aanvaar. Uitgestelde betaling en handelfinansieringsinstrumente vir gekwalifiseerde kopers.',
+    a4t:'Volledige Dokumentasie', a4d:'Elke skeepsvrag sluit SDS, Ontledingsertifikaat en herkoms-dokumentasie in vir naatlose doeaneklarering.',
+    a5t:'Sanksienakoming', a5d:'Ons handel uitsluitlik met nie-gesanksioneerde bestemmings en teenpartye.',
+    a6t:'Langtermynvennootskap', a6d:'7+ jaar bou van verhoudings met mengelondernemings, handelaars en verspreiders oor 5 kontinente.',
+    geo_tag:'Geografie', geo_h:'5 kontinente.<br><em>Een vennoot.</em>',
+    geo_p:'Vanuit ons VAE-basis bedien ons smeermiddelvervaardigers, mengondernemings en handelaars in Europa, Asië, die Midde-Ooste, Indië en Latyns-Amerika.',
+    r1:'Europa', r2:'China en Asië', r3:'Indië', r4:'Midde-Ooste', r5:'Latyns-Amerika', r6:'Afrika',
+    con_tag:'Kontak', con_h:'Kom ons praat<br><em>voorsiening.</em>',
+    cd1l:'Maatskappy', cd2l:'E-pos', cd3l:'Responstyd', cd3v:'Binne 24 uur',
+    fl1:'Maatskappy / Naam', fp1:'U maatskappy', fl2:'E-pos', fl3:'Produk', fl4:'Boodskap', fp4:'Volume, spesifikasies, afleweringshaven...',
+    fo1:'Minerale Basisolies (Groep I–III)', fo2:'PAO – Sinteties (Groep IV)', fo3:'Esters (Groep V)', fo4:'Klaargemaakte Smeermiddels', fo5:'Bymiddels', fo6:'Paraffien / Was',
+    fsub:'Stuur Navraag',
+    fcopy:'© 2026 · Alle regte voorbehou · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'Katalogus',
+    cat_tag:'Katalogus', cat_h:'Tegniese <em>spesifikasies</em>',
+    cat_p:'Volledige reeks klaargemaakte smeermiddels met volledige spesifikasies — dieselmotorolies, passasiersvoertuig, hidrouliese, transmissievloeistowwe, industriële en mynbouprodukte.',
+    cat_t1:'Swaar Voertuie', cat_t2:'Passasiersvoertuig', cat_t3:'Industrieel', cat_t4:'Mynbou',
+    cg_diesel:'Dieselmotorolies', cg_trans:'Transmissie- en Aandryflynolies',
+    cg_hyd_mob:'Hidrouliese Olies — Mobiele Toerusting', cg_grease:'Ghries',
+    cg_pc_eu:'Volsinteties — Europese Standaarde',
+    cg_pc_asia:'Volsinteties — Asiatiese en Amerikaanse Voertuie',
+    cg_pc_gen:'Semi-Sinteties en Mineraal',
+    cg_pc_tran:'Transmissievloeistowwe — Passasiersvoertuig',
+    cg_ind_hyd:'Industriële Hidrouliese Olies', cg_gear:'Industriële Ratasolies',
+    cg_comp:'Kompressorolies', cg_turb:'Turbine-olies',
+    cg_slide:'Glybaanolies', cg_gas_eng:'Gasmotorolies',
+    cg_rolling:'Walseryolies',
+    cg_mining_motor:'Motorolies — Mynboutoerusting',
+    cg_to4:'Universele Aandryflynolies — TO-4 / UTTO / STOU',
+    th_prod:'Produk', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'Voldoen aan Vereistes',
+    cat_t5:'PAO', cat_t6:'Basisolies',
+    cg_pao:'PAO — Polialfaolefien Basisolie', cg_g1:'Groep I — Minerale Basisolies (Oplosmiddel-geraffineer)',
+    cg_g23:'Groep II / III — Hidrobehandeld &amp; Hidrogekraakde Basisolies',
+    th_param:'Parameter', th_unit:'Eenheid', th_method:'Toetsmetode',
+    th_norm:'Spesifikasie', th_actual:'Werklike Waarde',
+    a7t:'Kwaliteit Bewaar — Direk van die Aanleg',
+    a7d:'Klaargemaakte smeermiddels word direk van die vervaardigingsaanleg verskeep. Geen tussengangeropberging nie — die produk wat u ontvang stem presies ooreen met wat gesertifiseer is.',
+    a8t:'Beter Ekonomie as Interne Vermenging',
+    a8d:"In 'n wisselvallige grondstofmark kan die koop van klaargemaakte smeermiddels by ons goedkoper wees as om die produk self te vervaardig — met die uitskakeling van basisoliepryswisselinge, aankoop van bymiddels, vermengingskoste en KK-oorhoofse koste. Bottel eenvoudig en verkoop.",
+    cc_title:'Klaargemaakte Smeermiddels — Vervaardig of Koop',
+    cc_diy_h:'Interne Vermenging', cc_exc_h:'Koop by Excondo',
+    cc_i1:'Basisolie — prys wisselvallig op die mark', cc_i2:'Bymiddelspakket',
+    cc_i3:'Vermengings-, filtrasie- en KK-koste', cc_i4:'Voorraadhouding en logistiek',
+    cc_i5:'Kwaliteitsrisiko, herwerk, verliese',
+    cc_total_diy:'Totaal: hoog en onvoorspelbaar',
+    cc_e1:'Een deursigtige, mededingende prys',
+    cc_e2:'Gesertifiseerde kwaliteit — direk van vervaardigingsaanleg',
+    cc_e3:'Geen blootstelling aan grondstofprys nie',
+    cc_e4:'Botteer en verkoop onmiddellik',
+    cc_e5:'In wisselvallige markte, dikwels goedkoper as vermenging',
+    cc_total_exc:'Totaal: mededingend en voorspelbaar'
+  },
+
+  sw: {
+    dir:'ltr',
+    nav_about:'Kuhusu', nav_products:'Bidhaa', nav_adv:'Faida', nav_geo:'Jiografia', nav_contact:'Mawasiliano',
+    hero_label:'Mafuta ya Msingi · PAO · Vilainishi Vilivyomalizika',
+    hero_h1:'Usambazaji wa kimataifa.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC inasambaza mafuta ya msingi, PAO na vilainishi kwa wingi — moja kwa moja kutoka kiwandani hadi kwenye mtambo wako. UAE. Miaka 7+. Masoko 50+.',
+    hero_btn1:'Tazama Bidhaa', hero_btn2:'Omba Bei →',
+    s1:'Miaka sokoni', s2:'Masoko yanayohudumiwa', s3:'Makundi ya API',
+    about_tag:'Kuhusu',
+    about_h:'Mshirika wako wa kuaminika<br>katika <em>biashara ya mafuta</em>',
+    about_p1:'Excondo Global Logistics FZC imesajiliwa nchini UAE na ina uzoefu wa zaidi ya miaka 7 katika biashara ya kimataifa ya mafuta ya msingi — Kundi I hadi IV (PAO) — na vilainishi vilivyomalizika.',
+    about_p2:'Tunabobea katika usafirishaji wa jumla katika kontena — kuwasilisha bidhaa moja kwa moja kwa mtumiaji wa mwisho, kupunguza gharama za kati na kuhifadhi ubora.',
+    b1:'Bidhaa zote zinakuja na SDS na vyeti vya ubora',
+    b2:'Mizigo inayoweza kubadilika — kutoka kontena moja la futi 20 hadi meli nzima',
+    b3:'Malipo kwa sarafu nyingi na chaguo za fedha zinapatikana',
+    b4:'Kufuata kikamilifu vikwazo vya kimataifa na kanuni za biashara',
+    prod_tag:'Bidhaa', prod_h:'Tunachosambaza <em>sisi</em>',
+    prod_p:'Aina kamili ya mafuta ya msingi katika makundi yote ya API na vilainishi vilivyomalizika — kwa wingi katika kontena.',
+    p1t:'Mafuta ya Msingi ya Madini', p1d:'Msingi uliosafishwa kwa vimumunyisho na kutibiwa kwa hidrojeni kwa ajili ya uchanganyaji wa vilainishi.',
+    p2t:'PAO — Mafuta ya Msingi ya Sintetiki', p2d:'Polyalphaolefins kwa hali ya joto ya nje. Uvukizi mdogo, vipindi virefu vya kubadilisha, utendaji bora.',
+    p3t:'Vilainishi Vilivyomalizika', p3d:'Wasilishwa moja kwa moja kutoka kiwandani — bila uhifadhi wa kati, bila kupoteza ubora. Ugavi wa jumla katika IBC na flexitanks hukuruhusu kujaza chupa, kuchanganya na kuweka lebo yako mwenyewe, kupanua uzalishaji bila uwekezaji mpya.',
+    p5t:'Viongezeo', p5d:'Viharibifu vya msongo, vya kuzuia oksidi, sabuni, na vizuia kutu kwa mmea wako wa kuchanganya.',
+    p6t:'Paraffin na Nta', p6d:'Paraffin na nta za microkristalini kwa mishumaa, mipako, mpira na mfungashio.',
+    adv_tag:'Kwa nini Excondo', adv_h:'Jinsi tunavyo<br><em>fanya kazi</em>',
+    adv_p:'Uzoefu wa logistiki, unyumbufu wa kifedha na uhusiano wa moja kwa moja na viwanda vya kusafisha mafuta — ili kuunda thamani kwa biashara yako.',
+    a1t:'Moja kwa Moja kutoka Kiwandani', a1d:'Usafirishaji wa kontena kutoka kiwandani hadi ghalani mwako. Bila mabadiliko, bila kupoteza ubora, bila tozo zilizofichwa.',
+    a2t:'Ukubwa wa Mzigo Unaobadilika', a2d:'Agiza mara kwa mara kwa kiasi kidogo. Punguza hatari ya bei, furahia mtaji wa kufanya kazi.',
+    a3t:'Suluhu za Fedha', a3d:'Sarafu nyingi zinakubaliwa. Malipo yaliyoahirishwa na vyombo vya fedha vya biashara kwa wanunuzi wanaostahili.',
+    a4t:'Nyaraka Kamili', a4d:'Kila usafirishaji unajumuisha SDS, Cheti cha Uchambuzi na nyaraka za nchi ya asili kwa uingizaji wa forodha usio na matatizo.',
+    a5t:'Kufuata Vikwazo', a5d:'Tunafanya biashara tu na maeneo na washirika ambao hawako chini ya vikwazo.',
+    a6t:'Ushirikiano wa Muda Mrefu', a6d:'Zaidi ya miaka 7 ya kujenga mahusiano na wachanganyaji, wafanyabiashara na wasambazaji katika mabara 5.',
+    geo_tag:'Jiografia', geo_h:'Mabara 5.<br><em>Mshirika mmoja.</em>',
+    geo_p:'Kutoka makao yetu UAE tunahudumia wazalishaji, wachanganyaji na wafanyabiashara wa vilainishi barani Ulaya, Asia, Mashariki ya Kati, India na Amerika ya Kusini.',
+    r1:'Ulaya', r2:'China na Asia', r3:'India', r4:'Mashariki ya Kati', r5:'Amerika ya Kusini', r6:'Afrika',
+    con_tag:'Mawasiliano', con_h:'Hebu tuzungumze<br><em>ugavi.</em>',
+    cd1l:'Kampuni', cd2l:'Barua pepe', cd3l:'Muda wa kujibu', cd3v:'Ndani ya masaa 24',
+    fl1:'Kampuni / Jina', fp1:'Kampuni yako', fl2:'Barua pepe', fl3:'Bidhaa', fl4:'Ujumbe', fp4:'Kiasi, maelezo, bandari ya kuwasilisha...',
+    fo1:'Mafuta ya Msingi ya Madini (Kundi I–III)', fo2:'PAO – Sintetiki (Kundi IV)', fo3:'Esters (Kundi V)', fo4:'Vilainishi Vilivyomalizika', fo5:'Viongezeo', fo6:'Paraffin / Nta',
+    fsub:'Tuma Ombi',
+    fcopy:'© 2026 · Haki zote zimehifadhiwa · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'Katalogi',
+    cat_tag:'Katalogi', cat_h:'Maelezo ya <em>kiufundi</em>',
+    cat_p:'Aina kamili ya vilainishi vilivyomalizika na maelezo kamili — mafuta ya injini ya dizeli, magari ya abiria, majimaji, mafuta ya usambazaji, bidhaa za viwandani na migodi.',
+    cat_t1:'Magari Mazito', cat_t2:'Gari la Abiria', cat_t3:'Viwanda', cat_t4:'Migodi',
+    cg_diesel:'Mafuta ya Injini ya Dizeli', cg_trans:'Mafuta ya Gearbox na Mfumo wa Uendeshaji',
+    cg_hyd_mob:'Mafuta ya Majimaji — Vifaa vya Kusogea', cg_grease:'Greasi',
+    cg_pc_eu:'Sintetiki Kamili — Viwango vya Ulaya',
+    cg_pc_asia:'Sintetiki Kamili — Magari ya Asia na Amerika',
+    cg_pc_gen:'Nusu-Sintetiki na Madini',
+    cg_pc_tran:'Mafuta ya Gearbox — Gari la Abiria',
+    cg_ind_hyd:'Mafuta ya Majimaji ya Viwandani', cg_gear:'Mafuta ya Gia ya Viwandani',
+    cg_comp:'Mafuta ya Kompresa', cg_turb:'Mafuta ya Turbine',
+    cg_slide:'Mafuta ya Slideway', cg_gas_eng:'Mafuta ya Injini ya Gesi',
+    cg_rolling:'Mafuta ya Rolling Mill',
+    cg_mining_motor:'Mafuta ya Injini — Vifaa vya Migodi',
+    cg_to4:'Mafuta ya Uendeshaji ya Ulimwenguni — TO-4 / UTTO / STOU',
+    th_prod:'Bidhaa', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'Inakidhi Mahitaji',
+    cat_t5:'PAO', cat_t6:'Mafuta ya Msingi',
+    cg_pao:'PAO — Mafuta ya Msingi ya Polyalphaolefin', cg_g1:'Kundi I — Mafuta ya Msingi ya Madini (Kusafishwa kwa Vimumunyisho)',
+    cg_g23:'Kundi II / III — Mafuta ya Msingi Yaliyotibiwa na Hidrojeni',
+    th_param:'Kigezo', th_unit:'Kitengo', th_method:'Njia ya Kupima',
+    th_norm:'Maelezo', th_actual:'Thamani Halisi',
+    a7t:'Ubora Umehifadhiwa — Moja kwa Moja kutoka Kiwandani',
+    a7d:'Vilainishi vilivyomalizika vinasafirishwa moja kwa moja kutoka kituo cha uzalishaji. Bila uhifadhi wa kati — bidhaa unayopokea inafanana kabisa na iliyoidhinishwa.',
+    a8t:'Uchumi Bora Kuliko Kuchanganya Ndani ya Kampuni',
+    a8d:'Katika soko la bidhaa lenye mabadiliko makubwa, kununua vilainishi vilivyokamilika kwetu kunaweza kuwa bei nafuu kuliko kutengeneza bidhaa mwenyewe — kuondoa mabadiliko ya bei ya mafuta ya msingi, ununuzi wa viongezeo, gharama za uchanganyaji na matumizi ya QC. Jaza tu na uuze.',
+    cc_title:'Vilainishi Vilivyomalizika — Tengeneza au Nunua',
+    cc_diy_h:'Uchanganyaji wa Ndani', cc_exc_h:'Nunua kutoka Excondo',
+    cc_i1:'Mafuta ya msingi — bei inabadilika sokoni', cc_i2:'Kifurushi cha viongezeo',
+    cc_i3:'Gharama za uchanganyaji, uchujaji na QC', cc_i4:'Uhifadhi wa bidhaa na usafirishaji',
+    cc_i5:'Hatari ya ubora, utengenezaji upya, hasara',
+    cc_total_diy:'Jumla: juu na haiwezekani kutabiri',
+    cc_e1:'Bei moja ya uwazi na ushindani',
+    cc_e2:'Ubora uliothibitishwa — moja kwa moja kutoka kiwandani',
+    cc_e3:'Hakuna hatari ya bei ya malighafi',
+    cc_e4:'Jaza na uuze mara moja',
+    cc_e5:'Katika masoko yanayobadilika, mara nyingi bei nafuu',
+    cc_total_exc:'Jumla: ushindani na inayoweza kutabiriwa'
+  },
+
+  ha: {
+    dir:'ltr',
+    nav_about:'Game da', nav_products:'Kayayyaki', nav_adv:'Fa\'idodi', nav_geo:'Yanki', nav_contact:'Tuntuɓa',
+    hero_label:'Man Tushe · PAO · Man Siga',
+    hero_h1:'Wadatarwa ta duniya.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC na samar da man tushe, PAO da mai da yawa — kai tsaye daga masana\'antar zuwa wurin ku. Tushe a UAE. Shekaru 7+. Kasuwanni 50+.',
+    hero_btn1:'Duba Kayayyaki', hero_btn2:'Nemi Farashin →',
+    s1:'Shekaru a kasuwa', s2:'Kasuwanni da ake sabis', s3:'Ƙungiyoyin API',
+    about_tag:'Game da',
+    about_h:'Abokin hulda ku na aminci<br>a <em>kasuwancin kayan mai</em>',
+    about_p1:'Excondo Global Logistics FZC an yi rajistarsa a UAE kuma yana da ƙwarewa sama da shekaru 7 a kasuwancin duniya na man tushe — Ƙungiya I zuwa IV (PAO) — da man siga.',
+    about_p2:'Muna ƙwarewa a jigilar kaya mai yawa a cikin kwantena — isar da kayan kai tsaye ga mai amfani na ƙarshe, rage kuɗin masu shiga tsakani da kiyaye inganci.',
+    b1:'Duk kayayyaki suna zuwa da SDS da takardar shedar inganci',
+    b2:'Ɗimbin kaya mai sassauci — daga kwantena 20ft ɗaya zuwa jirgi gaba ɗaya',
+    b3:'Biyan kuɗi ta hanyoyi daban-daban da zaɓin kuɗaɗe',
+    b4:'Cikakken bin hukuncin duniya da ƙa\'idojin kasuwanci',
+    prod_tag:'Kayayyaki', prod_h:'Abin da muke <em>samarwa</em>',
+    prod_p:'Cikakken jerin man tushe a duk ƙungiyoyin API da man siga — a cikin kwantena mai yawa.',
+    p1t:'Man Tushe na Ma\'adinai', p1d:'Tushe da aka tsarkake ta hanyar mai narkewa da hydroprocessed don kera man shafawa.',
+    p2t:'PAO — Man Tushe na Roba', p2d:'Polyalphaolefins don yanayin zafi mai tsanani. Ƙarancin tururin, ƙarin lokaci na canzawa, ingancin ƙima.',
+    p3t:'Man Siga', p3d:'An isar kai tsaye daga masana\'antar — babu ajiyar tsakani, babu rasa inganci. Wadatarwa mai yawa a IBC da flexitanks yana ba ka damar cika kwalabe, haɗawa da sanya lakabi ɗinku, ƙara samarwa ba tare da sababbin jari ba.',
+    p5t:'Ƙari', p5d:'Masu inganta ƙarfin mai, masu hana ƙona, da masu yaƙi da corrosion don masana\'antar gauraye.',
+    p6t:'Paraffin / Kakin zuma', p6d:'Paraffin da microkristalline wax don kyandir, rufi, roba da kuma marufi.',
+    adv_tag:'Me ya sa Excondo', adv_h:'Yadda muke<br><em>aiki</em>',
+    adv_p:'Ƙwarewa a jigilar kaya, sassaucin kuɗaɗe da alaƙa kai tsaye da masana\'antu — don ƙirƙirar ƙima ga kasuwancin ku.',
+    a1t:'Kai Tsaye Daga Masana\'antar', a1d:'Jigilar kwantena daga kofa masana\'antar zuwa gidajen ajiya ku. Babu canja wuri, babu asarar inganci, babu ɓoyayyun riba.',
+    a2t:'Girman Kaya Mai Sassauci', a2d:'Yi oda akai-akai a ƙaramin adadi. Rage haɗarin farashin, saki jarin aiki.',
+    a3t:'Hanyoyin Kuɗaɗe', a3d:'Ana karɓar ire-iren kuɗaɗe da dama. Jinkirtatten biya da kayan aikin kuɗaɗen kasuwanci don masu siya masu cancanta.',
+    a4t:'Cikakken Takardu', a4d:'Kowane jigilar kaya ya haɗa da SDS, Takardar Bincike da takardu na asali don saukin kula da kwastam.',
+    a5t:'Bin Hukunci', a5d:'Muna kasuwanci kawai tare da wurare da abokan hulɗa da ba a hana su ba.',
+    a6t:'Haɗin Gwiwa Mai Dorewa', a6d:'Shekaru 7+ na gina alaƙa da masu haɗawa, \'yan kasuwa da masu rarraba a ƙasashe 5.',
+    geo_tag:'Yanki', geo_h:'Ƙasashe 5.<br><em>Abokin hulɗa ɗaya.</em>',
+    geo_p:'Daga tushenmu na UAE muna sabis da masu kera, masu haɗawa da masu kasuwancin man shafawa a Turai, Asiya, Gabas ta Tsakiya, Indiya da Amurka ta Kudanci.',
+    r1:'Turai', r2:'China da Asiya', r3:'Indiya', r4:'Gabas ta Tsakiya', r5:'Amurka ta Kudanci', r6:'Afirka',
+    con_tag:'Tuntuɓa', con_h:'Bari mu yi magana<br><em>samar da kaya.</em>',
+    cd1l:'Kamfani', cd2l:'Imel', cd3l:'Lokacin amsa', cd3v:'A cikin awanni 24',
+    fl1:'Kamfani / Suna', fp1:'Kamfanin ku', fl2:'Imel', fl3:'Kaya', fl4:'Saƙo', fp4:'Adadi, halaye, tashar jigilar kaya...',
+    fo1:'Man Tushe na Ma\'adinai (Ƙungiya I–III)', fo2:'PAO – Roba (Ƙungiya IV)', fo3:'Esters (Ƙungiya V)', fo4:'Man Siga', fo5:'Ƙari', fo6:'Paraffin / Kakin zuma',
+    fsub:'Aika Bukatu',
+    fcopy:'© 2026 · Duk haƙƙoƙi an kiyaye su · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'Jerin',
+    cat_tag:'Jerin', cat_h:'Bayanan <em>fasaha</em>',
+    cat_p:'Cikakken jerin man siga tare da cikakken bayani — man injin diesel, motoci na fasinja, hydraulic, ruwan canja, kayan masana\'antu da ma\'adinai.',
+    cat_t1:'Motoci Masu Nauyi', cat_t2:'Mota ta Fasinja', cat_t3:'Masana\'antu', cat_t4:'Ma\'adinai',
+    cg_diesel:'Man Injin Diesel', cg_trans:'Man Canja da Gudanar da Motsi',
+    cg_hyd_mob:'Man Hydraulic — Kayan Aiki Mai Motsi', cg_grease:'Grease',
+    cg_pc_eu:'Cikakken Roba — Ka\'idojin Turai',
+    cg_pc_asia:'Cikakken Roba — Motoci na Asiya da Amurka',
+    cg_pc_gen:'Rabin Roba da Ma\'adinai',
+    cg_pc_tran:'Ruwan Canja — Mota ta Fasinja',
+    cg_ind_hyd:'Man Hydraulic na Masana\'antu', cg_gear:'Man Gear na Masana\'antu',
+    cg_comp:'Man Compressor', cg_turb:'Man Turbine',
+    cg_slide:'Man Slideway', cg_gas_eng:'Man Injin Gas',
+    cg_rolling:'Man Rolling Mill',
+    cg_mining_motor:'Man Injin — Kayan Ma\'adinai',
+    cg_to4:'Man Gudanar da Motsi na Duniya — TO-4 / UTTO / STOU',
+    th_prod:'Kaya', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'Cike Bukatun',
+    cat_t5:'PAO', cat_t6:'Man Tushe',
+    cg_pao:'PAO — Man Tushe na Polyalphaolefin', cg_g1:'Ƙungiya I — Man Tushe na Ma\'adinai (Tsarkakewa da Mai Narkewa)',
+    cg_g23:'Ƙungiya II / III — Man Tushe da aka Gyara da Hydrogen',
+    th_param:'Ma\'auni', th_unit:'Naúrar', th_method:'Hanyar Gwaji',
+    th_norm:'Ƙayyadaddun Bayani', th_actual:'Ƙimar Ainihi',
+    a7t:"Inganci An Kiyaye — Kai Tsaye Daga Masana'antar",
+    a7d:"An aika man siga kai tsaye daga wurin kera. Babu ajiyar tsakani — kayan da kake karba yayi daidai da wanda aka tabbatar.",
+    a8t:'Tattalin Arziki Mafi Kyau Fiye da Gaurayawa',
+    a8d:"A kasuwar kayan masarufi mai canzawa, siyan man da aka gama daga gare mu na iya zama arha fiye da kera shi — ya kawar da canjin farashin mai na asali, sayan kari, kudin gauraye da kuma kashe kudin sarrafa inganci. Cika kwalba ka sayar.",
+    cc_title:'Man Siga Gama — Kera ko Saya',
+    cc_diy_h:'Gaurayawa a Gida', cc_exc_h:'Saya daga Excondo',
+    cc_i1:'Man tushe — farashin mai canzawa a kasuwa', cc_i2:'Fakitin kari',
+    cc_i3:'Kudin gauraye, tace da sarrafa inganci', cc_i4:'Adana kayan aiki da sufuri',
+    cc_i5:'Haɗarin inganci, sake aiki, hasara',
+    cc_total_diy:'Jimillar: mai yawa ba tare da tabbaci ba',
+    cc_e1:'Farashin guda ɗaya mai gaskiya da gasar',
+    cc_e2:"Inganci da aka tabbatar — kai tsaye daga masana'antar",
+    cc_e3:'Babu haɗarin farashin albarkatun ƙasa',
+    cc_e4:'Cika kwalba ka sayar nan da nan',
+    cc_e5:'A kasuwanni masu canzawa, galibi arha fiye da gauraye',
+    cc_total_exc:'Jimillar: gasar da tabbaci'
+  },
+
+  arc: {
+    dir:'rtl',
+    nav_about:'ܥܠܝܢ', nav_products:'ܡܢܦܩ̈ܬܐ', nav_adv:'ܝܘܬܪ̈ܢܐ', nav_geo:'ܐܬܪ̈ܘܬܐ', nav_contact:'ܩܒܘܠܬܐ',
+    hero_label:'ܡܫܚ̈ܐ ܕܫܘܪܝܐ · PAO · ܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ',
+    hero_h1:'ܡܘܒܠܢܘܬܐ ܥܠܡܝܬܐ.<br><em>Fueling forward.</em>',
+    hero_sub:'Excondo Global Logistics FZC ܡܘܒܠܐ ܡܫܚ̈ܐ ܕܫܘܪܝܐ ܘ PAO ܘܡܫܚ̈ܐ ܒܟܡܝܬܐ — ܡܢ ܒܝܬ ܟܘܒܫܐ ܥܕܡܐ ܠܒܝܬܟܘܢ. ܐܡܝܪ̈ܘܬܐ. 7+ ܫܢ̈ܐ. 50+ ܫܘܩ̈ܐ.',
+    hero_btn1:'ܚܙܝ ܡܢܦܩ̈ܬܐ', hero_btn2:'ܒܥܝ ܬܡܢܐ →',
+    s1:'ܫܢ̈ܐ ܒܫܘܩܐ', s2:'ܫܘܩ̈ܐ', s3:'ܓܘܫ̈ܡܐ ܕ API',
+    about_tag:'ܥܠܝܢ',
+    about_h:'ܫܘܬܦܟܘܢ ܡܗܝܡܢܐ<br>ܒ<em>ܬܓܪܘܬ ܡܫܚ̈ܐ</em>',
+    about_p1:'Excondo Global Logistics FZC ܡܣܝܡ ܒܐܡܝܪ̈ܘܬܐ ܘܐܝܬ ܠܗ ܝܬܝܪ ܡܢ 7 ܫܢ̈ܐ ܕܬܓܪܘܬܐ ܒܡܫܚ̈ܐ ܕܫܘܪܝܐ — ܓܘܫܡܐ I ܥܕܡܐ IV (PAO) — ܘܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ.',
+    about_p2:'ܡܗܝܪܝܢܢ ܒܡܘܒܠܢܘܬܐ ܒܓܘ ܩܘܦ̈ܣܐ — ܡܘܒܠܝܢܢ ܡܢܦܩ̈ܬܐ ܠܓܡܪܐ ܥܕܡܐ ܠܗܘ ܕܡܬܩܒܠ ܒܗ.',
+    b1:'ܟܠ ܡܢܦܩ̈ܬܐ ܐܝܬ ܠܗܘܢ SDS ܘܣܗ̈ܕܘܬܐ ܕܛܝܒܘܬܐ',
+    b2:'ܡܫܚ̈ܬܐ ܦܫܝ̈ܛܬܐ — ܡܢ ܚܕ ܩܘܦܣܐ ܥܕܡܐ ܠܐܠܦܐ ܪܒܐ',
+    b3:'ܫܠ̈ܡܐ ܒܙܘ̈ܙܐ ܡܫܚ̈ܠܦܐ ܘܫܟ̈ܢܐ ܕܡܛܠܝܬܐ',
+    b4:'ܗܘܦܟܐ ܡܠܝܐ ܒܣܘܟ̈ܡܐ ܥܠܡ̈ܝܐ ܘܢܡܘ̈ܣܐ ܕܬܓܪܘܬܐ',
+    prod_tag:'ܡܢܦܩ̈ܬܐ', prod_h:'ܡܢ <em>ܡܘܒܠܝܢܢ</em>',
+    prod_p:'ܓܪ̈ܕܐ ܕܡܫܚ̈ܐ ܕܫܘܪܝܐ ܒܟܠ ܓܘܫ̈ܡܐ ܕ API ܘܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ.',
+    p1t:'ܡܫܚ̈ܐ ܕܫܘܪܝܐ ܡܥܕ̈ܢܝܐ', p1d:'ܡܫܚ̈ܐ ܕܫܘܪܝܐ ܡܙܝܓ̈ܐ ܘܡܕܝ̈ܢܐ ܠܡܙܝܓܘܬ ܡܫܚ̈ܐ.',
+    p2t:'PAO — ܡܫܚܐ ܕܫܘܪܝܐ ܣܘܢܬ̈ܛܝܩܝ', p2d:'PAO ܠܫܘ̈ܚܠܦܐ ܕܚܘܡܐ ܩܫܝܐ. ܦܘܪܝܬܐ ܙܥܘܪܬܐ ܘܝܘܬܪ̈ܢܐ ܪ̈ܒܐ.',
+    p3t:'ܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ', p3d:'ܡܘܒܠܝܢ ܡܢ ܒܝܬ ܣܘܝܥܐ ܠܓܡܪܐ — ܠܐ ܡܛܪܐ ܒܝܢܬܢ ܘܠܐ ܦܣܕܘܬ ܛܝܒܘܬܐ. ܡܘܒܠܢܘܬܐ ܒܟܡܝܬܐ ܒ IBC ܘ flexitanks ܫܒܩܐ ܠܟܘܢ ܕܬܡܠܘܢ ܘܬܕܡܙܘܢ ܒܫܡܟܘܢ.',
+    p5t:'ܡܘ̈ܣܦܢܐ', p5d:'ܡܚܝ̈ܠܢܐ ܕܥܒܝܘܬܐ ܘܣܘ̈ܡܐ ܡܫܚ̈ܠܦܐ ܠܒܝܬ ܡܙܝܓܘܬܐ.',
+    p6t:'ܦܪܦܝܢܐ ܘܫܡ̈ܥܐ', p6d:'ܦܪܦܝܢܐ ܘܫܡ̈ܥܐ ܡܝ̈ܩܪܐ ܠܗܢ̈ܐ ܘܕܐܒ̈ܕܐ.',
+    adv_tag:'ܡܛܠ ܡܢ Excondo', adv_h:'ܐܘܪܚܐ ܕ<em>ܦܠ̈ܚܝܢܢ</em>',
+    adv_p:'ܗܘܦ̈ܟܐ ܕܡܘܒܠܢܘܬܐ ܘܫܘ̈ܬܦܘܬܐ ܠܘܬ ܒ̈ܬܐ ܕܟܘܒܫܐ — ܠܡܬܠ ܝܘܬܪ̈ܢܐ ܠܬܓܪܘܬܟܘܢ.',
+    a1t:'ܡܢ ܒܝܬ ܟܘܒܫܐ ܠܓܡܪܐ', a1d:'ܡܘܒܠ̈ܢܝܬܐ ܒܩܘܦ̈ܣܐ ܡܢ ܬܪܥܐ ܕܒܝܬ ܟܘܒܫܐ. ܠܐ ܫܘܢܝ̈ܐ ܘܠܐ ܦܣܕܘܬ ܛܝܒܘܬܐ.',
+    a2t:'ܡܫܚ̈ܬܐ ܦܫ̈ܝܛܬܐ', a2d:'ܦܩܘܕ ܒܟܡܝ̈ܬܐ ܙܥܘܪ̈ܝܬܐ. ܦܫܝ̈ܬܐ ܕܬܡ̈ܢܐ ܘܚܐܪܘܬ ܡܛܠ ܕܡ̈ܐ.',
+    a3t:'ܦܘܢ̈ܝܐ ܡܛܠ̈ܝܬܐ', a3d:'ܙܘ̈ܙܐ ܡܫܚ̈ܠܦܐ. ܫܠ̈ܡܐ ܡܬܘ̈ܚܐ ܘܝܘ̈ܡܐ ܕܬܓܪܘܬܐ.',
+    a4t:'ܟ̈ܬܒܐ ܡܫܠܡ̈ܢܐ', a4d:'ܟܠ ܡܘܒܠܢܘܬܐ ܥܡ SDS ܘܣܗ̈ܕܘܬܐ ܕܟ̈ܘܒܐ ܘܟ̈ܬܒܐ ܕܐܬܪܐ ܕܫܪܫܐ.',
+    a7t:'ܛܝܒܘܬܐ ܢܛܝܪܬܐ — ܡܢ ܒܝܬ ܣܘܝܥܐ', a7d:'ܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ ܡܘܒܠܝܢ ܡܢ ܒܝܬ ܣܘܝܥܐ ܠܓܡܪܐ. ܠܐ ܡܛܪܐ ܒܝܢܬܢ ܘܠܐ ܫܘܚܠܦ ܒܡܙܝܓܘܬܐ — ܡܢܦܩܬܐ ܕܡܬܩܒܠܐ ܒܕܡܘܬ ܕܟܬܒ̈ܢ ܒܣܗܕܘܬܐ.',
+    a8t:'ܬܓܪܘܬܐ ܛܒܬܐ ܡܢ ܡܙܝܓܘܬܐ ܒܒܝܬ', a8d:'ܒܫܘܩܐ ܡܙܥܙܥܢܐ, ܙܒܢ ܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ ܡܢ ܠܘܬܢ ܡܫܟܚ ܕܢܗܘܐ ܙܠ ܝܬܝܪ ܡܢ ܡܣܝܡܢܘܬ ܡܢܦܩܬܐ ܒܢܦܫܟܘܢ — ܒܠܐ ܙܝ̈ܥܐ ܕܬܡ̈ܢܐ ܘܒܠܐ ܦܣ̈ܗ ܕܡܙܝܓܘܬܐ ܘܕ QC. ܡܠܐ ܩܘܦ̈ܣܐ ܘܙܒܢ.',
+    a6t:'ܫܘܬܦܘܬܐ ܠܙܒܢ ܐܪ̈ܝܟܐ', a6d:'7+ ܫܢ̈ܐ ܕܒܢܝܢ ܩ̈ܝܡܐ ܥܡ ܡ̈ܙܝܓܢܐ ܘܬܓ̈ܪ̈ܐ ܒ 5 ܝܒ̈ܫܬܐ.',
+    geo_tag:'ܐܬܪ̈ܘܬܐ', geo_h:'5 ܝܒ̈ܫܬܐ.<br><em>ܚܕ ܫܘܬܦܐ.</em>',
+    geo_p:'ܡܢ ܐܡܝܪ̈ܘܬܐ ܡܫܡܫܝܢܢ ܠܡ̈ܙܝܓܢܐ ܘܬܓ̈ܪ̈ܐ ܕܡܫܚ̈ܐ ܒܐܘܪܘܦܐ ܘܐܣܝܐ ܘܡܕܢܚܐ ܡܨܥܝܬܐ ܘܗܢܕܘ ܘܐܡܝܪܩܐ.',
+    r1:'ܐܘܪܘܦܐ', r2:'ܨܝܢ ܘܐܣܝܐ', r3:'ܗܢܕܘ', r4:'ܡܕܢܚܐ ܡܨܥܝܬܐ', r5:'ܐܡܝܪܩܐ', r6:'ܐܦܪܝܩܐ',
+    con_tag:'ܩܒܘܠܬܐ', con_h:'ܡܠܠ ܥܡܢ<br><em>ܥܠ ܡܘܒܠܢܘܬܐ.</em>',
+    cd1l:'ܩܡ̈ܦܢܝܐ', cd2l:'ܐܝܡܝܠ', cd3l:'ܙܒܢ ܦܘܢܝܐ', cd3v:'ܒ 24 ܫ̈ܥܐ',
+    fl1:'ܩܡ̈ܦܢܝܐ / ܫܡܐ', fp1:'ܩܡ̈ܦܢܝܐ ܕܝܠܟܘܢ', fl2:'ܐܝܡܝܠ', fl3:'ܡܢܦܩܬܐ', fl4:'ܗܒܪܬܐ', fp4:'ܟܡܝܬܐ ܘܦܘ̈ܩܕܢܐ...',
+    fo1:'ܡܫܚ̈ܐ ܕܫܘܪܝܐ ܡܥܕ̈ܢܝܐ', fo2:'PAO', fo3:'ܐܣ̈ܛܪ̈ܐ', fo4:'ܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ', fo5:'ܡܘ̈ܣܦܢܐ', fo6:'ܦܪܦܝܢܐ',
+    fsub:'ܫܕܪ ܒܥܬܐ',
+    fcopy:'© 2026 · ܟܠ ܙܕ̈ܩܐ ܢܛܝ̈ܪܐ · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a>',
+    nav_catalog:'ܩܛܠܘܓ',
+    cat_tag:'ܩܛܠܘܓ', cat_h:'ܦܘ̈ܩܕܢܐ <em>ܕܗ̈ܢܕܣܝܐ</em>',
+    cat_p:'ܓܪ̈ܕܐ ܕܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ ܒܦܘ̈ܩܕܢܐ ܡܫܠ̈ܡܢܐ.',
+    cat_t1:'ܪ̈ܟܒܐ ܝܩ̈ܝܪܐ', cat_t2:'ܪ̈ܟܒܐ', cat_t3:'ܬܘܩ̈ܢܐ', cat_t4:'ܡܟܒ̈ܫܐ',
+    cg_diesel:'ܡܫܚ̈ܐ ܕܡܟܝܢ̈ܐ ܕܕܝ̈ܙܠ', cg_trans:'ܡܫܚ̈ܐ ܕܓܠܓ̈ܠܐ',
+    cg_hyd_mob:'ܡܫܚ̈ܐ ܗܘܕܪ̈ܘܠܝ̈ܐ', cg_grease:'ܫܘܡܢ̈ܐ',
+    cg_pc_eu:'ܣܘܢܬ̈ܛܝܩܝ — ܐܘܪܘܦܐ', cg_pc_asia:'ܣܘܢܬ̈ܛܝܩܝ — ܐܣܝܐ',
+    cg_pc_gen:'ܚܨܝ ܣܘܢܬ̈ܛܝܩܝ', cg_pc_tran:'ܡܫܚ̈ܐ ܕܓܠ̈ܓ̈ܠܐ',
+    cg_ind_hyd:'ܡܫܚ̈ܐ ܗܘܕܪ̈ܘܠܝ̈ܐ ܬܘܩ̈ܢܝ̈ܐ', cg_gear:'ܡܫܚ̈ܐ ܕܫܢ̈ܐ',
+    cg_comp:'ܡܫܚ̈ܐ ܕܕܚ̈ܦܐ', cg_turb:'ܡܫܚ̈ܐ ܕܕܘܪ̈ܐ',
+    cg_slide:'ܡܫܚ̈ܐ ܕܡܕ̈ܠܩܐ', cg_gas_eng:'ܡܫܚ̈ܐ ܕܡܟܝܢ̈ܐ ܕܓܙܐ',
+    cg_rolling:'ܡܫܚ̈ܐ ܕܓܠ̈ܝ̈ܠܐ',
+    cg_mining_motor:'ܡܫܚ̈ܐ ܕܡܟܒ̈ܫܐ',
+    cg_to4:'ܡܫܚ̈ܐ ܥܠܡ̈ܝܐ TO-4',
+    th_prod:'ܡܢܦܩܬܐ', th_sae:'SAE', th_spec:'API / ACEA', th_oem:'ܡܫܠܡ ܒܣܘܟ̈ܠܐ',
+    cat_t5:'PAO', cat_t6:'ܡܫܚ̈ܐ ܕܫܘܪܝܐ',
+    cg_pao:'PAO — ܡܫܚ̈ܐ ܕܫܘܪܝܐ ܣܘܢܬ̈ܛܝܩܝ',
+    cg_g1:'ܓܘܫܡܐ I — ܡܫܚ̈ܐ ܕܫܘܪܝܐ ܡܥܕ̈ܢܝ̈ܐ',
+    cg_g23:'ܓܘܫܡ̈ܐ II / III — ܡܫܚ̈ܐ ܡܝ̈ܢܐ',
+    th_param:'ܦܘ̈ܩܕܢܐ', th_unit:'ܚܕܐ', th_method:'ܐܘܪܚܐ ܕܒܘܚܪܢܐ',
+    th_norm:'ܣܘܟ̈ܠܐ', th_actual:'ܫܪܝܪ̈ܐ',
+    a7t:'ܛܝܒܘܬܐ ܢܛܝܪܬܐ — ܡܢ ܒܝܬ ܣܘܝܥܐ',
+    a7d:'ܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ ܡܘܒܠܝܢ ܡܢ ܒܝܬ ܣܘܝܥܐ ܠܓܡܪܐ. ܠܐ ܡܛܪܐ ܒܝܢܬܢ ܘܠܐ ܫܘܚܠܦ — ܡܢܦܩܬܐ ܕܡܬܩܒܠܐ ܒܕܡܘܬ ܣܗܕܘܬܐ.',
+    a8t:'ܬܓܪܘܬܐ ܛܒܬܐ ܡܢ ܡܙܝܓܘܬܐ ܒܒܝܬ',
+    a8d:'ܒܫܘܩܐ ܡܙܥܙܥܢܐ, ܙܒܢ ܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ ܡܢ ܠܘܬܢ ܙܠ ܝܬܝܪ ܡܢ ܡܣܝܡܢܘܬ ܒܢܦܫܟܘܢ — ܒܠܐ ܙܝ̈ܥܐ ܕܬܡ̈ܢܐ ܘܒܠܐ ܦܣ̈ܗ ܕܡܙܝܓܘܬܐ. ܡܠܐ ܩܘܦ̈ܣܐ ܘܙܒܢ.',
+    cc_title:'ܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ — ܡܣܝܡ ܐܘ ܙܒܢ',
+    cc_diy_h:'ܡܙܝܓܘܬܐ ܒܒܝܬ', cc_exc_h:'ܙܒܢ ܡܢ Excondo',
+    cc_i1:'ܡܫܚܐ ܕܫܘܪܝܐ — ܬܡ̈ܢܐ ܡܙܥܙ̈ܥܐ', cc_i2:'ܦܩ̈ܬܐ ܕܡܘ̈ܣܦܢܐ',
+    cc_i3:'ܦ̈ܣܗ ܕܡܙܝܓܘܬܐ ܘ QC', cc_i4:'ܐܘܨܪ̈ܘܬܐ ܘܡܘܒܠܢܘܬܐ',
+    cc_i5:'ܚܛܝܬ ܕܛܝܒܘܬܐ ܘܦܣܕܘܬ ܕܡ̈ܐ',
+    cc_total_diy:'ܟܠܗ: ܪܒ ܘܠܐ ܝܕܝܥ',
+    cc_e1:'ܚܕ ܬܡܢܐ ܓܠܝܐ ܘܬܚܪܘܬܢܝܐ',
+    cc_e2:'ܛܝܒܘܬܐ ܡܣܗܕܬܐ — ܡܢ ܒܝܬ ܣܘܝܥܐ',
+    cc_e3:'ܠܐ ܚܛܝܬ ܕܬܡ̈ܢܐ ܕܡܢܦܩ̈ܬܐ',
+    cc_e4:'ܡܠܐ ܩܘܦ̈ܣܐ ܘܙܒܢ ܡܚܕܐ',
+    cc_e5:'ܒܫܘܩ̈ܐ ܡܙܥ̈ܙܥܐ, ܡܙܝܕ ܙܠ ܡܢ ܡܙܝܓܘܬܐ',
+    cc_total_exc:'ܟܠܗ: ܬܚܪܘܬܢܝܐ ܘܝܕܝܥܐ'
+  }
+};
+
+function setLang(lang) {
+  const t = T[lang];
+  if (!t) return;
+
+  document.documentElement.setAttribute('dir', t.dir);
+  document.documentElement.setAttribute('lang', lang);
+
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  const ab = document.getElementById('btn-' + lang);
+  if (ab) ab.classList.add('active');
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (t[k] !== undefined) el.innerHTML = t[k];
+  });
+
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const k = el.getAttribute('data-i18n-ph');
+    if (t[k] !== undefined) el.setAttribute('placeholder', t[k]);
+  });
+
+  // Select options
+  const sel = document.querySelector('select');
+  if (sel) {
+    sel.querySelectorAll('option').forEach((opt, i) => {
+      const k = 'fo' + (i + 1);
+      if (t[k]) opt.textContent = t[k];
+    });
+  }
+
+  // RTL: flip hero stats side
+  const hs = document.querySelector('.hero-stats');
+  if (hs) {
+    if (t.dir === 'rtl') { hs.style.right = 'auto'; hs.style.left = '48px'; }
+    else { hs.style.right = '48px'; hs.style.left = 'auto'; }
+  }
+}
+
+// Catalog tabs
+function activateCatalogPanel(panelId) {
+  document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.cat-panel').forEach(p => p.classList.remove('active'));
+  const tab = document.querySelector('.cat-tab[data-panel="' + panelId + '"]');
+  const panel = document.getElementById('panel-' + panelId);
+  if (tab) tab.classList.add('active');
+  if (panel) panel.classList.add('active');
+}
+
+document.querySelectorAll('.cat-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    activateCatalogPanel(tab.getAttribute('data-panel'));
+  });
+});
+
+document.querySelectorAll('.product-card[data-catalog]').forEach(card => {
+  card.addEventListener('click', () => {
+    const panelId = card.getAttribute('data-catalog');
+    activateCatalogPanel(panelId);
+    document.getElementById('catalog').scrollIntoView({behavior: 'smooth', block: 'start'});
+  });
+});
+
+setLang('en');
+</script>
+</body>
+</html>
