@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Excondo Global Logistics FZC — Base Oils & Lubricants</title>
+<title>Excondo Global Logistics — Base Oils & Lubricants</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -781,7 +781,7 @@
   <div class="nav-inner">
     <a href="#" class="logo">
       <span class="logo-name">Excondo</span>
-      <span class="logo-tagline">Global Logistics FZC · UAE</span>
+      <span class="logo-tagline">Global Logistics · UAE</span>
     </a>
     <ul class="nav-links">
       <li><a href="#about" data-i18n="nav_about">About</a></li>
@@ -799,7 +799,7 @@
 <section class="hero">
   <div class="hero-label" data-i18n="hero_label">Base Oils · PAO · Finished Lubricants</div>
   <h1 data-i18n="hero_h1">Global supply.<br><em>Fueling forward.</em></h1>
-  <p class="hero-sub" data-i18n="hero_sub">Excondo Global Logistics FZC delivers base oils, PAO and lubricants in bulk — straight from refinery to your facility. UAE-based. 7+ years. 50+ markets.</p>
+  <p class="hero-sub" data-i18n="hero_sub">Excondo Global Logistics delivers base oils, PAO and lubricants in bulk — straight from refinery to your facility. UAE-based. 7+ years. 50+ markets.</p>
   <div class="hero-actions">
     <a href="#products" class="btn-dark" data-i18n="hero_btn1">View Products</a>
     <a href="#contact" class="btn-ghost" data-i18n="hero_btn2">Request a quote →</a>
@@ -829,7 +829,7 @@
     <span class="strip-item">Finished Lubricants <span>·</span></span>
     <span class="strip-item">Bulk Container <span>·</span></span>
     <span class="strip-item">Direct from Plant <span>·</span></span>
-    <span class="strip-item">UAE — FZC <span>·</span></span>
+    <span class="strip-item">UAE <span>·</span></span>
     <span class="strip-item">7+ Years <span>·</span></span>
     <span class="strip-item">50+ Markets <span>·</span></span>
     <span class="strip-item">Base Oils <span>·</span></span>
@@ -837,7 +837,7 @@
     <span class="strip-item">Finished Lubricants <span>·</span></span>
     <span class="strip-item">Bulk Container <span>·</span></span>
     <span class="strip-item">Direct from Plant <span>·</span></span>
-    <span class="strip-item">UAE — FZC <span>·</span></span>
+    <span class="strip-item">UAE <span>·</span></span>
     <span class="strip-item">7+ Years <span>·</span></span>
     <span class="strip-item">50+ Markets <span>·</span></span>
   </div>
@@ -853,7 +853,7 @@
       <div class="about-text">
         <div class="eyebrow" data-i18n="about_tag">About</div>
         <h2 class="section-h" data-i18n="about_h">Your trustworthy partner<br>in <em>oil products trade</em></h2>
-        <p class="section-p" data-i18n="about_p1">Excondo Global Logistics FZC is registered in the UAE and has over 7 years of experience in international trading of base oils — Group I through Group IV (PAO) — and finished lubricants.</p>
+        <p class="section-p" data-i18n="about_p1">Excondo Global Logistics is registered in the UAE and has over 7 years of experience in international trading of base oils — Group I through Group IV (PAO) — and finished lubricants.</p>
         <p class="section-p" data-i18n="about_p2">We specialise in containerised bulk shipments — delivering product directly to the end user, cutting intermediary costs and preserving quality in transit.</p>
         <div class="bullets">
           <div class="bullet-item"><span class="bdot"></span><span data-i18n="b1">All products carry Safety Data Sheets and quality certificates</span></div>
@@ -1495,7 +1495,7 @@
       <div class="contact-details">
         <div>
           <div class="cd-label" data-i18n="cd1l">Company</div>
-          <div class="cd-val">Excondo Global Logistics FZC<br>Sharjah Free Zone, UAE</div>
+          <div class="cd-val">Excondo Global Logistics<br>UAE</div>
         </div>
         <div>
           <div class="cd-label" data-i18n="cd2l">Email</div>
@@ -1506,18 +1506,20 @@
           <div class="cd-val" data-i18n="cd3v">Within 24 hours</div>
         </div>
       </div>
-      <div class="contact-form-wrap">
+      <form class="contact-form-wrap" id="inquiry-form" action="https://formsubmit.co/ajax/deriabina.kseni@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New inquiry from Excondo website">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="fg">
           <label data-i18n="fl1">Company / Name</label>
-          <input type="text" data-i18n-ph="fp1" placeholder="Your company">
+          <input type="text" name="name" data-i18n-ph="fp1" placeholder="Your company" required>
         </div>
         <div class="fg">
           <label data-i18n="fl2">Email</label>
-          <input type="email" placeholder="your@email.com">
+          <input type="email" name="email" placeholder="your@email.com" required>
         </div>
         <div class="fg">
           <label data-i18n="fl3">Product</label>
-          <select>
+          <select name="product">
             <option data-i18n="fo1">Mineral Base Oils (Group I–III)</option>
             <option data-i18n="fo2">PAO – Synthetic Base Oil (Group IV)</option>
             <option data-i18n="fo3">Ester Base Oils (Group V)</option>
@@ -1526,17 +1528,18 @@
         </div>
         <div class="fg">
           <label data-i18n="fl4">Message</label>
-          <textarea data-i18n-ph="fp4" placeholder="Volume, specifications, delivery port..."></textarea>
+          <textarea name="message" data-i18n-ph="fp4" placeholder="Volume, specifications, delivery port..."></textarea>
         </div>
-        <button class="form-btn" data-i18n="fsub">Send Inquiry</button>
-      </div>
+        <button class="form-btn" type="submit" data-i18n="fsub">Send Inquiry</button>
+        <div id="form-msg" style="margin-top:14px;font-size:13px;display:none"></div>
+      </form>
     </div>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">EXCONDO Global Logistics FZC</div>
+  <div class="footer-left">EXCONDO Global Logistics</div>
   <div class="footer-right" data-i18n="fcopy">© 2026 · All rights reserved · <a href="mailto:sales@excondo.ae" style="color:inherit">sales@excondo.ae</a></div>
 </footer>
 
@@ -1547,12 +1550,12 @@ const T = {
     nav_about:'About', nav_products:'Products', nav_adv:'Advantages', nav_geo:'Geography', nav_contact:'Contact',
     hero_label:'Base Oils · PAO · Finished Lubricants',
     hero_h1:'Global supply.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC delivers base oils, PAO and lubricants in bulk — straight from refinery to your facility. UAE-based. 7+ years. 50+ markets.',
+    hero_sub:'Excondo Global Logistics delivers base oils, PAO and lubricants in bulk — straight from refinery to your facility. UAE-based. 7+ years. 50+ markets.',
     hero_btn1:'View Products', hero_btn2:'Request a quote →',
     s1:'Years in market', s2:'Markets supplied', s3:'API groups',
     about_tag:'About',
     about_h:'Your trustworthy partner<br>in <em>oil products trade</em>',
-    about_p1:'Excondo Global Logistics FZC is registered in the UAE and has over 7 years of experience in international trading of base oils — Group I through Group IV (PAO) — and finished lubricants.',
+    about_p1:'Excondo Global Logistics is registered in the UAE and has over 7 years of experience in international trading of base oils — Group I through Group IV (PAO) — and finished lubricants.',
     about_p2:'We specialise in containerised bulk shipments — delivering product directly to the end user, cutting intermediary costs and preserving quality in transit.',
     b1:'All products carry Safety Data Sheets and quality certificates',
     b2:'Flexible lots — from one 20ft container to full vessel',
@@ -1626,12 +1629,12 @@ const T = {
     nav_about:'Sobre', nav_products:'Produtos', nav_adv:'Vantagens', nav_geo:'Cobertura', nav_contact:'Contato',
     hero_label:'Óleos Base · PAO · Lubrificantes Acabados',
     hero_h1:'Fornecimento global.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC fornece óleos base, PAO e lubrificantes a granel — direto da refinaria para a sua unidade. Com sede nos EAU. 7+ anos. 50+ mercados.',
+    hero_sub:'Excondo Global Logistics fornece óleos base, PAO e lubrificantes a granel — direto da refinaria para a sua unidade. Com sede nos EAU. 7+ anos. 50+ mercados.',
     hero_btn1:'Ver Produtos', hero_btn2:'Solicitar cotação →',
     s1:'Anos no mercado', s2:'Mercados atendidos', s3:'Grupos API',
     about_tag:'Sobre',
     about_h:'Seu parceiro confiável em<br><em>produtos de petróleo</em>',
-    about_p1:'Excondo Global Logistics FZC está registrada nos Emirados Árabes Unidos e possui mais de 7 anos de experiência em comércio internacional de óleos base — dos Grupos I ao IV (PAO) — e lubrificantes acabados.',
+    about_p1:'Excondo Global Logistics está registrada nos Emirados Árabes Unidos e possui mais de 7 anos de experiência em comércio internacional de óleos base — dos Grupos I ao IV (PAO) — e lubrificantes acabados.',
     about_p2:'Especializamo-nos em embarques a granel conteinerizados — entregando o produto diretamente ao usuário final, reduzindo custos intermediários e preservando a qualidade.',
     b1:'Todos os produtos acompanham FISPQ e certificados de qualidade',
     b2:'Lotes flexíveis — de 1 contêiner 20" até navio completo',
@@ -1706,12 +1709,12 @@ const T = {
     nav_about:'关于我们', nav_products:'产品', nav_adv:'优势', nav_geo:'覆盖地区', nav_contact:'联系我们',
     hero_label:'基础油 · PAO · 成品润滑油',
     hero_h1:'全球供应，<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC 提供基础油、PAO及润滑油散装供应——直接从炼厂到您的工厂。注册于阿联酋。7年以上经验。50+市场。',
+    hero_sub:'Excondo Global Logistics 提供基础油、PAO及润滑油散装供应——直接从炼厂到您的工厂。注册于阿联酋。7年以上经验。50+市场。',
     hero_btn1:'查看产品', hero_btn2:'申请报价 →',
     s1:'市场经验（年）', s2:'覆盖市场', s3:'API分组',
     about_tag:'关于我们',
     about_h:'您值得信赖的<br><em>油品贸易</em>合作伙伴',
-    about_p1:'Excondo Global Logistics FZC注册于阿联酋，在基础油（I至IV组，含PAO）及成品润滑油国际贸易领域拥有超过7年的丰富经验。',
+    about_p1:'Excondo Global Logistics 注册于阿联酋，在基础油（I至IV组，含PAO）及成品润滑油国际贸易领域拥有超过7年的丰富经验。',
     about_p2:'我们专注于集装箱散装运输，将产品直接送达终端用户，降低中间成本，确保运输质量。',
     b1:'所有产品均附安全数据表（SDS）及质量证书',
     b2:'灵活批量——从1个20英尺集装箱到整船',
@@ -1786,12 +1789,12 @@ const T = {
     nav_about:'परिचय', nav_products:'उत्पाद', nav_adv:'लाभ', nav_geo:'क्षेत्र', nav_contact:'संपर्क',
     hero_label:'बेस ऑयल · PAO · तैयार लुब्रिकेंट्स',
     hero_h1:'वैश्विक आपूर्ति,<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC बेस ऑयल, PAO और लुब्रिकेंट्स बल्क में प्रदान करता है — रिफाइनरी से सीधे आपकी सुविधा तक। UAE में स्थित। 7+ वर्ष। 50+ बाजार।',
+    hero_sub:'Excondo Global Logistics बेस ऑयल, PAO और लुब्रिकेंट्स बल्क में प्रदान करता है — रिफाइनरी से सीधे आपकी सुविधा तक। UAE में स्थित। 7+ वर्ष। 50+ बाजार।',
     hero_btn1:'उत्पाद देखें', hero_btn2:'कोटेशन मांगें →',
     s1:'बाजार में वर्ष', s2:'आपूर्ति बाजार', s3:'API समूह',
     about_tag:'परिचय',
     about_h:'आपका विश्वसनीय<br><em>तेल उत्पाद</em> भागीदार',
-    about_p1:'Excondo Global Logistics FZC UAE में पंजीकृत है और बेस ऑयल (Group I से IV, PAO सहित) तथा तैयार लुब्रिकेंट्स के अंतरराष्ट्रीय व्यापार में 7+ वर्षों का अनुभव रखती है।',
+    about_p1:'Excondo Global Logistics UAE में पंजीकृत है और बेस ऑयल (Group I से IV, PAO सहित) तथा तैयार लुब्रिकेंट्स के अंतरराष्ट्रीय व्यापार में 7+ वर्षों का अनुभव रखती है।',
     about_p2:'हम कंटेनरीकृत बल्क शिपमेंट में विशेषज्ञ हैं — रिफाइनरी से सीधे अंतिम उपयोगकर्ता तक, मध्यस्थ लागत घटाते हुए गुणवत्ता बनाए रखते हैं।',
     b1:'सभी उत्पादों के साथ SDS और गुणवत्ता प्रमाण पत्र',
     b2:'लचीले लॉट — 1 कंटेनर से पूरे जहाज तक',
@@ -1866,12 +1869,12 @@ const T = {
     nav_about:'À propos', nav_products:'Produits', nav_adv:'Avantages', nav_geo:'Couverture', nav_contact:'Contact',
     hero_label:'Huiles de Base · PAO · Lubrifiants Finis',
     hero_h1:'Approvisionnement mondial.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC livre des huiles de base, PAO et lubrifiants en vrac — directement de la raffinerie à votre site. Basé aux EAU. 7+ ans. 50+ marchés.',
+    hero_sub:'Excondo Global Logistics livre des huiles de base, PAO et lubrifiants en vrac — directement de la raffinerie à votre site. Basé aux EAU. 7+ ans. 50+ marchés.',
     hero_btn1:'Voir les produits', hero_btn2:'Demander un devis →',
     s1:"Années d'expérience", s2:'Marchés approvisionnés', s3:'Groupes API',
     about_tag:'À propos',
     about_h:'Votre partenaire de confiance en<br><em>produits pétroliers</em>',
-    about_p1:"Excondo Global Logistics FZC est enregistrée aux Émirats Arabes Unis et dispose de plus de 7 ans d'expérience dans le négoce international d'huiles de base — des Groupes I à IV (PAO) — et de lubrifiants finis.",
+    about_p1:"Excondo Global Logistics est enregistrée aux Émirats Arabes Unis et dispose de plus de 7 ans d'expérience dans le négoce international d'huiles de base — des Groupes I à IV (PAO) — et de lubrifiants finis.",
     about_p2:"Nous sommes spécialisés dans les expéditions en vrac conteneurisées — livraison directe à l'utilisateur final, réduction des coûts intermédiaires, préservation de la qualité.",
     b1:'Tous les produits sont livrés avec FDS et certificats de qualité',
     b2:'Volumes flexibles — d\'un conteneur 20" à un navire complet',
@@ -1946,12 +1949,12 @@ const T = {
     nav_about:'من نحن', nav_products:'المنتجات', nav_adv:'مزاياتنا', nav_geo:'التغطية', nav_contact:'تواصل',
     hero_label:'زيوت أساسية · PAO · مواد تشحيم جاهزة',
     hero_h1:'توريد عالمي.<br><em>Fueling forward.</em>',
-    hero_sub:'تقدم Excondo Global Logistics FZC الزيوت الأساسية وPAO ومواد التشحيم بالجملة — مباشرةً من المصفاة إلى منشأتك. مقرنا الإمارات. أكثر من 7 سنوات. أكثر من 50 سوقاً.',
+    hero_sub:'تقدم Excondo Global Logistics الزيوت الأساسية وPAO ومواد التشحيم بالجملة — مباشرةً من المصفاة إلى منشأتك. مقرنا الإمارات. أكثر من 7 سنوات. أكثر من 50 سوقاً.',
     hero_btn1:'عرض المنتجات', hero_btn2:'طلب عرض سعر ←',
     s1:'سنوات في السوق', s2:'أسواق نخدمها', s3:'مجموعات API',
     about_tag:'من نحن',
     about_h:'شريكك الموثوق في<br><em>تجارة المنتجات النفطية</em>',
-    about_p1:'Excondo Global Logistics FZC مسجلة في الإمارات وتمتلك أكثر من 7 سنوات من الخبرة في التجارة الدولية للزيوت الأساسية — من المجموعة I إلى المجموعة IV (PAO) — ومواد التشحيم الجاهزة.',
+    about_p1:'Excondo Global Logistics مسجلة في الإمارات وتمتلك أكثر من 7 سنوات من الخبرة في التجارة الدولية للزيوت الأساسية — من المجموعة I إلى المجموعة IV (PAO) — ومواد التشحيم الجاهزة.',
     about_p2:'نتخصص في شحنات الجملة بالحاويات — تسليم مباشر للمستخدم النهائي، تخفيض تكاليف الوساطة، والحفاظ على الجودة أثناء النقل.',
     b1:'جميع المنتجات مزودة بصحائف بيانات السلامة وشهادات الجودة',
     b2:'أحجام مرنة — من حاوية 20 قدمًا إلى سفينة كاملة',
@@ -2026,12 +2029,12 @@ const T = {
     nav_about:'אודות', nav_products:'מוצרים', nav_adv:'יתרונות', nav_geo:'כיסוי', nav_contact:'צור קשר',
     hero_label:'שמנים בסיסיים · PAO · חומרי סיכה מוגמרים',
     hero_h1:'אספקה גלובלית.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC מספקת שמנים בסיסיים, PAO וחומרי סיכה בתפזורת — ישירות מהמזקקה אל מתקנך. מאיחוד האמירויות. 7+ שנות ניסיון. 50+ שווקים.',
+    hero_sub:'Excondo Global Logistics מספקת שמנים בסיסיים, PAO וחומרי סיכה בתפזורת — ישירות מהמזקקה אל מתקנך. מאיחוד האמירויות. 7+ שנות ניסיון. 50+ שווקים.',
     hero_btn1:'לצפות במוצרים', hero_btn2:'לבקשת הצעת מחיר ←',
     s1:'שנות ניסיון', s2:'שווקים שמסופקים', s3:'קבוצות API',
     about_tag:'אודות',
     about_h:'השותף המהימן שלך ב<br><em>סחר מוצרי נפט</em>',
-    about_p1:'Excondo Global Logistics FZC רשומה באיחוד האמירויות ובעלת ניסיון של למעלה מ-7 שנים בסחר בינלאומי בשמנים בסיסיים — מקבוצה I עד קבוצה IV (PAO) — ובחומרי סיכה מוגמרים.',
+    about_p1:'Excondo Global Logistics רשומה באיחוד האמירויות ובעלת ניסיון של למעלה מ-7 שנים בסחר בינלאומי בשמנים בסיסיים — מקבוצה I עד קבוצה IV (PAO) — ובחומרי סיכה מוגמרים.',
     about_p2:'אנו מתמחים במשלוחי מכולות בתפזורת — אספקה ישירה ללקוח הסופי, הפחתת עלויות ביניים ושמירה על איכות המוצר.',
     b1:'כל המוצרים מגיעים עם גיליוני בטיחות ותעודות איכות',
     b2:'כמויות גמישות — ממכולה אחת ועד ספינה מלאה',
@@ -2106,12 +2109,12 @@ const T = {
     nav_about:'Σχετικά', nav_products:'Προϊόντα', nav_adv:'Πλεονεκτήματα', nav_geo:'Γεωγραφία', nav_contact:'Επικοινωνία',
     hero_label:'Βασικά Έλαια · PAO · Έτοιμα Λιπαντικά',
     hero_h1:'Παγκόσμια προμήθεια.<br><em>Fueling forward.</em>',
-    hero_sub:'Η Excondo Global Logistics FZC προμηθεύει βασικά έλαια, PAO και λιπαντικά χύμα — απευθείας από διυλιστήριο στις εγκαταστάσεις σας. Έδρα στα ΗΑΕ. 7+ χρόνια. 50+ αγορές.',
+    hero_sub:'Η Excondo Global Logistics προμηθεύει βασικά έλαια, PAO και λιπαντικά χύμα — απευθείας από διυλιστήριο στις εγκαταστάσεις σας. Έδρα στα ΗΑΕ. 7+ χρόνια. 50+ αγορές.',
     hero_btn1:'Δείτε Προϊόντα', hero_btn2:'Αίτηση τιμής →',
     s1:'Χρόνια στην αγορά', s2:'Αγορές που εξυπηρετούμε', s3:'Ομάδες API',
     about_tag:'Σχετικά',
     about_h:'Ο αξιόπιστος συνεργάτης σας<br>στο <em>εμπόριο πετρελαϊκών προϊόντων</em>',
-    about_p1:'Η Excondo Global Logistics FZC είναι εγγεγραμμένη στα ΗΑΕ με πάνω από 7 χρόνια εμπειρίας στο διεθνές εμπόριο βασικών ελαίων — Ομάδα I έως IV (PAO) — και έτοιμων λιπαντικών.',
+    about_p1:'Η Excondo Global Logistics είναι εγγεγραμμένη στα ΗΑΕ με πάνω από 7 χρόνια εμπειρίας στο διεθνές εμπόριο βασικών ελαίων — Ομάδα I έως IV (PAO) — και έτοιμων λιπαντικών.',
     about_p2:'Εξειδικευόμαστε σε χύμα αποστολές με εμπορευματοκιβώτια — παράδοση απευθείας στον τελικό χρήστη, μείωση ενδιάμεσων κοστολογίων και διατήρηση ποιότητας κατά τη μεταφορά.',
     b1:'Όλα τα προϊόντα συνοδεύονται από Δελτία Ασφαλείας και πιστοποιητικά ποιότητας',
     b2:'Ευέλικτες ποσότητες — από ένα κοντέινερ 20ft έως πλήρες πλοίο',
@@ -2186,12 +2189,12 @@ const T = {
     nav_about:'Acerca de', nav_products:'Productos', nav_adv:'Ventajas', nav_geo:'Geografía', nav_contact:'Contacto',
     hero_label:'Aceites Base · PAO · Lubricantes Terminados',
     hero_h1:'Suministro global.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC suministra aceites base, PAO y lubricantes a granel — directamente de la refinería a sus instalaciones. Con sede en EAU. 7+ años. 50+ mercados.',
+    hero_sub:'Excondo Global Logistics suministra aceites base, PAO y lubricantes a granel — directamente de la refinería a sus instalaciones. Con sede en EAU. 7+ años. 50+ mercados.',
     hero_btn1:'Ver Productos', hero_btn2:'Solicitar cotización →',
     s1:'Años en el mercado', s2:'Mercados atendidos', s3:'Grupos API',
     about_tag:'Acerca de',
     about_h:'Su socio de confianza<br>en el <em>comercio de productos petrolíferos</em>',
-    about_p1:'Excondo Global Logistics FZC está registrada en los EAU con más de 7 años de experiencia en el comercio internacional de aceites base — Grupo I al IV (PAO) — y lubricantes terminados.',
+    about_p1:'Excondo Global Logistics está registrada en los EAU con más de 7 años de experiencia en el comercio internacional de aceites base — Grupo I al IV (PAO) — y lubricantes terminados.',
     about_p2:'Nos especializamos en envíos a granel en contenedores — entregando el producto directamente al usuario final, reduciendo costos intermediarios y preservando la calidad en tránsito.',
     b1:'Todos los productos incluyen Fichas de Seguridad y certificados de calidad',
     b2:'Lotes flexibles — desde un contenedor de 20 pies hasta un buque completo',
@@ -2266,12 +2269,12 @@ const T = {
     nav_about:'Hakkında', nav_products:'Ürünler', nav_adv:'Avantajlar', nav_geo:'Coğrafya', nav_contact:'İletişim',
     hero_label:'Baz Yağlar · PAO · Hazır Madeni Yağlar',
     hero_h1:'Küresel tedarik.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC, baz yağlar, PAO ve madeni yağları dökme olarak — rafineriden doğrudan tesislerinize — tedarik eder. BAE merkezli. 7+ yıl. 50+ pazar.',
+    hero_sub:'Excondo Global Logistics, baz yağlar, PAO ve madeni yağları dökme olarak — rafineriden doğrudan tesislerinize — tedarik eder. BAE merkezli. 7+ yıl. 50+ pazar.',
     hero_btn1:'Ürünleri Görüntüle', hero_btn2:'Teklif İste →',
     s1:'Yıllık pazar deneyimi', s2:'Hizmet verilen pazar', s3:'API grupları',
     about_tag:'Hakkında',
     about_h:'Petrol ürünleri ticaretinde<br><em>güvenilir ortağınız</em>',
-    about_p1:'Excondo Global Logistics FZC, BAE\'de kayıtlıdır ve baz yağlar — Grup I\'den IV\'e (PAO) — ve hazır madeni yağların uluslararası ticaretinde 7 yılı aşkın deneyime sahiptir.',
+    about_p1:'Excondo Global Logistics, BAE\'de kayıtlıdır ve baz yağlar — Grup I\'den IV\'e (PAO) — ve hazır madeni yağların uluslararası ticaretinde 7 yılı aşkın deneyime sahiptir.',
     about_p2:'Konteynerli dökme sevkiyatlar konusunda uzmanlaşmış durumdayız — ürünü doğrudan son kullanıcıya teslim ederek aracı maliyetleri azaltıyor ve transit kaliteyi koruyoruz.',
     b1:'Tüm ürünler SDS ve kalite sertifikalarıyla birlikte gelir',
     b2:'Esnek partiler — tek 20 fit konteynerden tam gemiye kadar',
@@ -2346,12 +2349,12 @@ const T = {
     nav_about:'Tentang', nav_products:'Produk', nav_adv:'Keunggulan', nav_geo:'Geografi', nav_contact:'Kontak',
     hero_label:'Base Oil · PAO · Pelumas Jadi',
     hero_h1:'Pasokan global.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC menyuplai base oil, PAO dan pelumas dalam jumlah besar — langsung dari kilang ke fasilitas Anda. Berbasis di UAE. 7+ tahun. 50+ pasar.',
+    hero_sub:'Excondo Global Logistics menyuplai base oil, PAO dan pelumas dalam jumlah besar — langsung dari kilang ke fasilitas Anda. Berbasis di UAE. 7+ tahun. 50+ pasar.',
     hero_btn1:'Lihat Produk', hero_btn2:'Minta Penawaran →',
     s1:'Tahun di pasar', s2:'Pasar yang dilayani', s3:'Kelompok API',
     about_tag:'Tentang',
     about_h:'Mitra terpercaya Anda<br>dalam <em>perdagangan produk minyak</em>',
-    about_p1:'Excondo Global Logistics FZC terdaftar di UAE dan memiliki pengalaman lebih dari 7 tahun dalam perdagangan internasional base oil — Kelompok I hingga IV (PAO) — dan pelumas jadi.',
+    about_p1:'Excondo Global Logistics terdaftar di UAE dan memiliki pengalaman lebih dari 7 tahun dalam perdagangan internasional base oil — Kelompok I hingga IV (PAO) — dan pelumas jadi.',
     about_p2:'Kami mengkhususkan diri dalam pengiriman curah berkontainer — mengantarkan produk langsung ke pengguna akhir, memangkas biaya perantara dan menjaga kualitas selama pengiriman.',
     b1:'Semua produk disertai Lembar Data Keselamatan dan sertifikat kualitas',
     b2:'Lot fleksibel — dari satu kontainer 20 kaki hingga kapal penuh',
@@ -2426,12 +2429,12 @@ const T = {
     nav_about:'เกี่ยวกับ', nav_products:'ผลิตภัณฑ์', nav_adv:'ข้อดี', nav_geo:'ภูมิภาค', nav_contact:'ติดต่อ',
     hero_label:'น้ำมันพื้นฐาน · PAO · น้ำมันหล่อลื่นสำเร็จรูป',
     hero_h1:'จัดหาทั่วโลก<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC จัดส่งน้ำมันพื้นฐาน PAO และน้ำมันหล่อลื่นแบบบัลก์ — ตรงจากโรงกลั่นถึงโรงงานของท่าน ตั้งอยู่ใน UAE 7+ ปี 50+ ตลาด',
+    hero_sub:'Excondo Global Logistics จัดส่งน้ำมันพื้นฐาน PAO และน้ำมันหล่อลื่นแบบบัลก์ — ตรงจากโรงกลั่นถึงโรงงานของท่าน ตั้งอยู่ใน UAE 7+ ปี 50+ ตลาด',
     hero_btn1:'ดูผลิตภัณฑ์', hero_btn2:'ขอใบเสนอราคา →',
     s1:'ปีในตลาด', s2:'ตลาดที่ให้บริการ', s3:'กลุ่ม API',
     about_tag:'เกี่ยวกับเรา',
     about_h:'พันธมิตรที่เชื่อถือได้<br>ใน<em>การค้าน้ำมันหล่อลื่น</em>',
-    about_p1:'Excondo Global Logistics FZC จดทะเบียนใน UAE และมีประสบการณ์กว่า 7 ปีในการค้าน้ำมันพื้นฐานระหว่างประเทศ — กลุ่ม I ถึง IV (PAO) — และน้ำมันหล่อลื่นสำเร็จรูป',
+    about_p1:'Excondo Global Logistics จดทะเบียนใน UAE และมีประสบการณ์กว่า 7 ปีในการค้าน้ำมันพื้นฐานระหว่างประเทศ — กลุ่ม I ถึง IV (PAO) — และน้ำมันหล่อลื่นสำเร็จรูป',
     about_p2:'เราเชี่ยวชาญในการจัดส่งแบบบัลก์ในตู้คอนเทนเนอร์ — ส่งตรงถึงผู้ใช้ปลายทาง ลดต้นทุนตัวกลาง และรักษาคุณภาพระหว่างการขนส่ง',
     b1:'ผลิตภัณฑ์ทุกชนิดมาพร้อม SDS และใบรับรองคุณภาพ',
     b2:'ล็อตที่ยืดหยุ่น — ตั้งแต่ตู้คอนเทนเนอร์ 20 ฟุตหนึ่งตู้ถึงเรือเต็มลำ',
@@ -2506,12 +2509,12 @@ const T = {
     nav_about:'Oor Ons', nav_products:'Produkte', nav_adv:'Voordele', nav_geo:'Geografie', nav_contact:'Kontak',
     hero_label:'Basisolies · PAO · Klaargemaakte Smeermiddels',
     hero_h1:'Globale voorsiening.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC lewer basisolies, PAO en smeermiddels in grootmaat — direk van die raffinadery na u fasiliteit. UAE-gebaseer. 7+ jaar. 50+ markte.',
+    hero_sub:'Excondo Global Logistics lewer basisolies, PAO en smeermiddels in grootmaat — direk van die raffinadery na u fasiliteit. UAE-gebaseer. 7+ jaar. 50+ markte.',
     hero_btn1:'Bekyk Produkte', hero_btn2:'Versoek \'n kwotasie →',
     s1:'Jaar in die mark', s2:'Markte bedien', s3:'API-groepe',
     about_tag:'Oor Ons',
     about_h:'U betroubare vennoot<br>in die <em>handel van petroleumprodukte</em>',
-    about_p1:'Excondo Global Logistics FZC is geregistreer in die VAE en het meer as 7 jaar ondervinding in die internasionale handel van basisolies — Groep I tot IV (PAO) — en klaargemaakte smeermiddels.',
+    about_p1:'Excondo Global Logistics is geregistreer in die VAE en het meer as 7 jaar ondervinding in die internasionale handel van basisolies — Groep I tot IV (PAO) — en klaargemaakte smeermiddels.',
     about_p2:'Ons spesialiseer in grootmaat-skeepsvrag in houers — lewer produkte direk aan die eindgebruiker, sny tussengangerkoste en bewaar kwaliteit tydens vervoer.',
     b1:'Alle produkte kom met veiligheidsdata-blaaie en kwaliteitssertifikate',
     b2:'Buigsame partye — van een 20-voet houer tot volle skip',
@@ -2586,12 +2589,12 @@ const T = {
     nav_about:'Kuhusu', nav_products:'Bidhaa', nav_adv:'Faida', nav_geo:'Jiografia', nav_contact:'Mawasiliano',
     hero_label:'Mafuta ya Msingi · PAO · Vilainishi Vilivyomalizika',
     hero_h1:'Usambazaji wa kimataifa.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC inasambaza mafuta ya msingi, PAO na vilainishi kwa wingi — moja kwa moja kutoka kiwandani hadi kwenye mtambo wako. UAE. Miaka 7+. Masoko 50+.',
+    hero_sub:'Excondo Global Logistics inasambaza mafuta ya msingi, PAO na vilainishi kwa wingi — moja kwa moja kutoka kiwandani hadi kwenye mtambo wako. UAE. Miaka 7+. Masoko 50+.',
     hero_btn1:'Tazama Bidhaa', hero_btn2:'Omba Bei →',
     s1:'Miaka sokoni', s2:'Masoko yanayohudumiwa', s3:'Makundi ya API',
     about_tag:'Kuhusu',
     about_h:'Mshirika wako wa kuaminika<br>katika <em>biashara ya mafuta</em>',
-    about_p1:'Excondo Global Logistics FZC imesajiliwa nchini UAE na ina uzoefu wa zaidi ya miaka 7 katika biashara ya kimataifa ya mafuta ya msingi — Kundi I hadi IV (PAO) — na vilainishi vilivyomalizika.',
+    about_p1:'Excondo Global Logistics imesajiliwa nchini UAE na ina uzoefu wa zaidi ya miaka 7 katika biashara ya kimataifa ya mafuta ya msingi — Kundi I hadi IV (PAO) — na vilainishi vilivyomalizika.',
     about_p2:'Tunabobea katika usafirishaji wa jumla katika kontena — kuwasilisha bidhaa moja kwa moja kwa mtumiaji wa mwisho, kupunguza gharama za kati na kuhifadhi ubora.',
     b1:'Bidhaa zote zinakuja na SDS na vyeti vya ubora',
     b2:'Mizigo inayoweza kubadilika — kutoka kontena moja la futi 20 hadi meli nzima',
@@ -2666,12 +2669,12 @@ const T = {
     nav_about:'Game da', nav_products:'Kayayyaki', nav_adv:'Fa\'idodi', nav_geo:'Yanki', nav_contact:'Tuntuɓa',
     hero_label:'Man Tushe · PAO · Man Siga',
     hero_h1:'Wadatarwa ta duniya.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC na samar da man tushe, PAO da mai da yawa — kai tsaye daga masana\'antar zuwa wurin ku. Tushe a UAE. Shekaru 7+. Kasuwanni 50+.',
+    hero_sub:'Excondo Global Logistics na samar da man tushe, PAO da mai da yawa — kai tsaye daga masana\'antar zuwa wurin ku. Tushe a UAE. Shekaru 7+. Kasuwanni 50+.',
     hero_btn1:'Duba Kayayyaki', hero_btn2:'Nemi Farashin →',
     s1:'Shekaru a kasuwa', s2:'Kasuwanni da ake sabis', s3:'Ƙungiyoyin API',
     about_tag:'Game da',
     about_h:'Abokin hulda ku na aminci<br>a <em>kasuwancin kayan mai</em>',
-    about_p1:'Excondo Global Logistics FZC an yi rajistarsa a UAE kuma yana da ƙwarewa sama da shekaru 7 a kasuwancin duniya na man tushe — Ƙungiya I zuwa IV (PAO) — da man siga.',
+    about_p1:'Excondo Global Logistics an yi rajistarsa a UAE kuma yana da ƙwarewa sama da shekaru 7 a kasuwancin duniya na man tushe — Ƙungiya I zuwa IV (PAO) — da man siga.',
     about_p2:'Muna ƙwarewa a jigilar kaya mai yawa a cikin kwantena — isar da kayan kai tsaye ga mai amfani na ƙarshe, rage kuɗin masu shiga tsakani da kiyaye inganci.',
     b1:'Duk kayayyaki suna zuwa da SDS da takardar shedar inganci',
     b2:'Ɗimbin kaya mai sassauci — daga kwantena 20ft ɗaya zuwa jirgi gaba ɗaya',
@@ -2746,12 +2749,12 @@ const T = {
     nav_about:'ܥܠܝܢ', nav_products:'ܡܢܦܩ̈ܬܐ', nav_adv:'ܝܘܬܪ̈ܢܐ', nav_geo:'ܐܬܪ̈ܘܬܐ', nav_contact:'ܩܒܘܠܬܐ',
     hero_label:'ܡܫܚ̈ܐ ܕܫܘܪܝܐ · PAO · ܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ',
     hero_h1:'ܡܘܒܠܢܘܬܐ ܥܠܡܝܬܐ.<br><em>Fueling forward.</em>',
-    hero_sub:'Excondo Global Logistics FZC ܡܘܒܠܐ ܡܫܚ̈ܐ ܕܫܘܪܝܐ ܘ PAO ܘܡܫܚ̈ܐ ܒܟܡܝܬܐ — ܡܢ ܒܝܬ ܟܘܒܫܐ ܥܕܡܐ ܠܒܝܬܟܘܢ. ܐܡܝܪ̈ܘܬܐ. 7+ ܫܢ̈ܐ. 50+ ܫܘܩ̈ܐ.',
+    hero_sub:'Excondo Global Logistics ܡܘܒܠܐ ܡܫܚ̈ܐ ܕܫܘܪܝܐ ܘ PAO ܘܡܫܚ̈ܐ ܒܟܡܝܬܐ — ܡܢ ܒܝܬ ܟܘܒܫܐ ܥܕܡܐ ܠܒܝܬܟܘܢ. ܐܡܝܪ̈ܘܬܐ. 7+ ܫܢ̈ܐ. 50+ ܫܘܩ̈ܐ.',
     hero_btn1:'ܚܙܝ ܡܢܦܩ̈ܬܐ', hero_btn2:'ܒܥܝ ܬܡܢܐ →',
     s1:'ܫܢ̈ܐ ܒܫܘܩܐ', s2:'ܫܘܩ̈ܐ', s3:'ܓܘܫ̈ܡܐ ܕ API',
     about_tag:'ܥܠܝܢ',
     about_h:'ܫܘܬܦܟܘܢ ܡܗܝܡܢܐ<br>ܒ<em>ܬܓܪܘܬ ܡܫܚ̈ܐ</em>',
-    about_p1:'Excondo Global Logistics FZC ܡܣܝܡ ܒܐܡܝܪ̈ܘܬܐ ܘܐܝܬ ܠܗ ܝܬܝܪ ܡܢ 7 ܫܢ̈ܐ ܕܬܓܪܘܬܐ ܒܡܫܚ̈ܐ ܕܫܘܪܝܐ — ܓܘܫܡܐ I ܥܕܡܐ IV (PAO) — ܘܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ.',
+    about_p1:'Excondo Global Logistics ܡܣܝܡ ܒܐܡܝܪ̈ܘܬܐ ܘܐܝܬ ܠܗ ܝܬܝܪ ܡܢ 7 ܫܢ̈ܐ ܕܬܓܪܘܬܐ ܒܡܫܚ̈ܐ ܕܫܘܪܝܐ — ܓܘܫܡܐ I ܥܕܡܐ IV (PAO) — ܘܡܫܚ̈ܐ ܡܫܠܡ̈ܢܐ.',
     about_p2:'ܡܗܝܪܝܢܢ ܒܡܘܒܠܢܘܬܐ ܒܓܘ ܩܘܦ̈ܣܐ — ܡܘܒܠܝܢܢ ܡܢܦܩ̈ܬܐ ܠܓܡܪܐ ܥܕܡܐ ܠܗܘ ܕܡܬܩܒܠ ܒܗ.',
     b1:'ܟܠ ܡܢܦܩ̈ܬܐ ܐܝܬ ܠܗܘܢ SDS ܘܣܗ̈ܕܘܬܐ ܕܛܝܒܘܬܐ',
     b2:'ܡܫܚ̈ܬܐ ܦܫܝ̈ܛܬܐ — ܡܢ ܚܕ ܩܘܦܣܐ ܥܕܡܐ ܠܐܠܦܐ ܪܒܐ',
@@ -2883,6 +2886,41 @@ document.querySelectorAll('.product-card[data-catalog]').forEach(card => {
     document.getElementById('catalog').scrollIntoView({behavior: 'smooth', block: 'start'});
   });
 });
+
+// Contact form submission
+const inquiryForm = document.getElementById('inquiry-form');
+if (inquiryForm) {
+  inquiryForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = inquiryForm.querySelector('.form-btn');
+    const msg = document.getElementById('form-msg');
+    const originalBtnText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = '...';
+    msg.style.display = 'none';
+    try {
+      const res = await fetch(inquiryForm.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(inquiryForm)
+      });
+      if (res.ok) {
+        msg.textContent = 'Thank you — your inquiry has been sent. We will be in touch within 24 hours.';
+        msg.style.color = 'var(--gold)';
+        inquiryForm.reset();
+      } else {
+        throw new Error('Request failed');
+      }
+    } catch (err) {
+      msg.textContent = 'Something went wrong. Please email us directly at sales@excondo.ae.';
+      msg.style.color = '#e06060';
+    } finally {
+      msg.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = originalBtnText;
+    }
+  });
+}
 
 setLang('en');
 </script>
